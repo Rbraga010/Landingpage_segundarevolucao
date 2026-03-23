@@ -189,22 +189,19 @@ export default function App() {
                      
                      <Reveal delay={200}>
                         <h1 className="text-2xl md:text-2xl lg:text-3xl font-light leading-snug tracking-tight text-slate-300 mb-6 max-w-lg mx-auto">
-                           Hoje, líderes que dominam o jogo combinam duas forças que a maioria ainda não sabe equilibrar:
+                           Hoje, líderes disputados no mercado combinam duas forças que a maioria sequer sabem que existe, liderar:
                         </h1>
                      </Reveal>
                      
                      <Reveal delay={300}>
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-yellow-400 mb-8 drop-shadow-[0_0_15px_rgba(234,179,8,0.4)] uppercase tracking-tighter leading-[1.1]">
-                           Liderança Humanizada <br/>+<br/> Inteligência Artificial
+                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#FBBF24] via-[#D97706] to-[#9333EA] mb-8 drop-shadow-[0_0_15px_rgba(245,158,11,0.3)] tracking-tighter leading-[1.1] pb-2">
+                           Gente + IA.gentes
                         </h2>
                      </Reveal>
                      
                      <Reveal delay={400}>
-                        <p className="text-lg md:text-xl font-light text-slate-400 leading-relaxed max-w-lg mx-auto mb-3 italic">
-                           E enquanto alguns já estão sendo promovidos por isso…
-                        </p>
-                        <p className="text-lg md:text-xl font-medium text-white mb-8">
-                           Outros estão sendo silenciosamente substituídos.
+                        <p className="text-lg md:text-xl font-light text-slate-300 leading-relaxed max-w-lg mx-auto mb-8 italic">
+                           E enquanto alguns já estão sendo promovidos por isso, <span className="font-medium text-white">outros estão sendo silenciosamente substituídos.</span>
                         </p>
                      </Reveal>
                      
