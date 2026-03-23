@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Workshop LHA + AI | Rodrigo Braga</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Outfit', 'sans-serif'],
+            },
+            colors: {
+              background: '#020617', // Slate 950
+              surface: '#0f172a',    // Slate 900
+              primary: '#22d3ee',    // Cyan 400
+              'primary-hover': '#67e8f9', // Cyan 300
+              text: {
+                main: '#ffffff',
+                muted: '#94a3b8',    // Slate 400
+              },
+              border: '#1e293b',     // Slate 800
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'glow': 'glow 2s ease-in-out infinite alternate',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              glow: {
+                '0%': { boxShadow: '0 0 20px rgba(34, 211, 238, 0.2)' },
+                '100%': { boxShadow: '0 0 30px rgba(34, 211, 238, 0.6)' },
+              },
+              spin: {
+                '0%': { transform: 'translate(-50%, -50%) rotate(0deg)' },
+                '100%': { transform: 'translate(-50%, -50%) rotate(360deg)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #020617;
+        color: #ffffff;
+        overflow-x: hidden;
+      }
+
+      /* Tech Grid Background */
+      .bg-tech-grid {
+        background-size: 50px 50px;
+        background-image: linear-gradient(to right, rgba(34, 211, 238, 0.03) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(34, 211, 238, 0.03) 1px, transparent 1px);
+        mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+      }
+
+      /* Floating Radial Gradient */
+      .radial-glow {
+        background: radial-gradient(circle, rgba(34, 211, 238, 0.12) 0%, rgba(2, 6, 23, 0) 70%);
+        filter: blur(40px);
+        pointer-events: none;
+      }
+
+      /* Glass Card */
+      .glass-card {
+        background: rgba(15, 23, 42, 0.5); /* Slate 900 / 0.5 */
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(34, 211, 238, 0.15);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      /* STANDARD CTA BUTTON STYLE: Green Border + Walking White Neon */
+      .btn-neon {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 0.5rem; /* rounded-lg */
+        color: white;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        background: transparent;
+        transition: all 0.3s ease;
+        z-index: 10;
+        box-shadow: 0 0 15px rgba(34, 197, 94, 0.15); /* Soft green shadow base */
+        border: 0; /* Clear default borders */
+      }
+
+      /* The Spinning Border Background (Green + White Neon) */
+      .btn-neon::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400%; 
+        height: 400%;
+        /* Conic gradient creating the green border with a white highlight */
+        background: conic-gradient(
+            from 0deg, 
+            #15803d 0%,    /* green-700 */
+            #22c55e 45%,   /* green-500 */
+            #ffffff 50%,   /* White neon spike */
+            #22c55e 55%,   /* green-500 */
+            #15803d 100%   /* green-700 */
+        );
+        transform: translate(-50%, -50%);
+        animation: spin 3s linear infinite;
+        z-index: -2;
+      }
+
+      /* The Inner Mask (The actual button dark surface) */
+      .btn-neon::after {
+        content: '';
+        position: absolute;
+        inset: 2px; /* Controls border thickness */
+        background: #020617; /* slate-950 */
+        border-radius: 0.4rem;
+        z-index: -1;
+      }
+
+      .btn-neon:hover {
+        box-shadow: 0 0 25px rgba(34, 197, 94, 0.5);
+        transform: translateY(-2px);
+      }
+      
+      .btn-neon:hover::before {
+        animation-duration: 1.5s; /* Speed up on hover */
+      }
+
+      .text-neon {
+        color: #22d3ee;
+        text-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
+      }
+
+      /* Marquee Animation */
+      @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      
+      .animate-scroll {
+        animation: scroll 60s linear infinite;
+      }
+      
+      .animate-scroll:hover {
+        animation-play-state: paused;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
