@@ -230,9 +230,9 @@ export default function App() {
                   <div className="max-w-3xl flex flex-col justify-center">
                      
                      <Reveal>
-                        <div className="flex items-center gap-8 mb-12 border-b border-yellow-500/10 pb-4 max-w-sm">
-                           <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.4em] text-slate-500 hover:text-yellow-400 transition-colors cursor-default">Typography</span>
-                           <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.4em] text-slate-500 hover:text-yellow-400 transition-colors cursor-default">Hero Design</span>
+                        <div className="flex items-center gap-8 mb-8 border-b border-yellow-500/10 pb-4 max-w-sm">
+                           <span className="text-[9px] font-bold uppercase tracking-[0.4em] text-slate-500">Visão Estratégica</span>
+                           <span className="text-[9px] font-bold uppercase tracking-[0.4em] text-slate-500">Liderança Híbrida</span>
                         </div>
                      </Reveal>
 
@@ -244,13 +244,13 @@ export default function App() {
                      </Reveal>
                      
                      <Reveal delay={200}>
-                        <h1 className="text-2xl md:text-3xl lg:text-4xl font-light leading-snug tracking-tight text-white mb-6">
-                           Hoje, líderes disputados no mercado combinam duas forças que a maioria sequer sabem que existe, liderar:
+                        <h1 className="text-xl md:text-2xl lg:text-4xl font-light leading-snug tracking-tight text-white mb-6">
+                           Hoje, líderes disputados no mercado operam em um nível que a maioria ainda nem percebe que existe, eles lideram:
                         </h1>
                      </Reveal>
                      
                      <Reveal delay={300}>
-                        <h2 className="text-6xl md:text-7xl lg:text-[6rem] font-black text-transparent bg-clip-text bg-gradient-to-r from-[#FBBF24] via-[#D97706] to-[#9333EA] mb-6 drop-shadow-[0_0_30px_rgba(245,158,11,0.2)] tracking-tighter leading-[1.05] pb-2">
+                        <h2 className="text-5xl md:text-7xl lg:text-[6rem] font-black text-transparent bg-clip-text bg-gradient-to-r from-[#FBBF24] via-[#D97706] to-[#9333EA] mb-6 drop-shadow-[0_0_30px_rgba(245,158,11,0.2)] tracking-tighter leading-[1] pb-2">
                            Gente<br/>+ IA.gentes
                         </h2>
                      </Reveal>
@@ -292,7 +292,7 @@ export default function App() {
                   <Reveal>
                      <div className="mb-24">
                         <h3 className="text-yellow-500 font-bold uppercase tracking-[0.4em] text-xs md:text-sm mb-6 text-center">A Evolução da Liderança</h3>
-                        <h2 className="text-4xl md:text-6xl font-heading font-black text-white text-center leading-tight uppercase tracking-tight mb-8">
+                        <h2 className="text-3xl md:text-6xl font-heading font-black text-white text-center leading-tight uppercase tracking-tight mb-8">
                            POR QUE A PRIMEIRA ONDA FOI <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-400 to-slate-200">BARULHENTA…</span><br/>
                            E POR QUE A SEGUNDA VAI SEPARAR LÍDER COMUM DE <span className="text-yellow-400">LÍDERES HÍBRIDOS</span>
                         </h2>
@@ -400,7 +400,7 @@ export default function App() {
                            <p className="text-2xl md:text-4xl text-white font-light leading-relaxed mb-12">
                               A segunda onda não é sobre ferramenta. <br className="hidden md:block"/> 
                               É sobre quem consegue integrar: <br className="hidden md:block"/>
-                              <strong className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-600 font-black uppercase text-3xl md:text-5xl block mt-4">Pessoas + IA</strong>
+                              <strong className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-600 font-black uppercase text-2xl md:text-5xl block mt-4">Pessoas + IA</strong>
                               na mesma operação.
                            </p>
                            <button onClick={scrollToOffer} className="btn-neon px-12 py-5 text-sm md:text-base tracking-widest flex items-center justify-center gap-3">
@@ -431,7 +431,7 @@ export default function App() {
 
                <div className="max-w-5xl mx-auto relative z-20 text-center">
                   <Reveal>
-                     <h2 className="text-4xl md:text-7xl font-heading font-black text-white uppercase tracking-tighter leading-[0.9] mb-12">
+                     <h2 className="text-3xl md:text-7xl font-heading font-black text-white uppercase tracking-tighter leading-[0.9] mb-12">
                         ISSO NÃO É CURSO. <br/>
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-500 to-yellow-600">
                            É SISTEMA OPERACIONAL.
@@ -564,7 +564,7 @@ export default function App() {
                   <Reveal>
                      <div className="glass-card bg-[#0a0f25]/60 border border-yellow-500/20 p-10 md:p-16 rounded-[40px] relative overflow-hidden group">
                         <div className="text-center mb-10">
-                           <h4 className="text-xl md:text-2xl font-black text-white uppercase tracking-widest mb-10">
+                           <h4 className="text-lg md:text-2xl font-black text-white uppercase tracking-widest mb-10">
                               E antes que pense: "Não tenho tempo." ou "é muito barato — deve ser raso." eu te digo:
                            </h4>
                         </div>
@@ -593,7 +593,7 @@ export default function App() {
                <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 md:gap-12">
                   <Reveal>
                      <div className="glass-card bg-primary/5 border border-primary/20 p-8 md:p-12 rounded-3xl h-full flex flex-col shadow-[0_0_30px_rgba(234,179,8,0.05)]">
-                        <h3 className="text-2xl md:text-3xl font-heading font-black text-white uppercase mb-8 flex items-center gap-4">
+                        <h3 className="text-xl md:text-3xl font-heading font-black text-white uppercase mb-8 flex items-center gap-4">
                            Isso aqui é pra você que:
                         </h3>
                         <ul className="space-y-6 flex-1 mb-10">
