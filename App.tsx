@@ -170,40 +170,78 @@ export default function App() {
 
          <main className="relative z-10">
 
-            {/* --- SECTION 1: HERO --- */}
-            <section className="relative min-h-[90vh] flex items-center pt-32 pb-20 px-6 lg:px-12">
-               <div className="max-w-4xl mx-auto w-full text-center">
-                  <Reveal>
-                     <div className="inline-flex items-center gap-3 px-5 py-2 glass-pill mb-10 hover:shadow-[0_0_20px_rgba(142,45,226,0.3)] transition-all">
-                        <div className="w-2 h-2 rounded-full glow-fill animate-pulse"></div>
-                        <span className="text-[9px] md:text-[11px] font-black uppercase tracking-[0.25em] bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">Workshop Liderança Humanizada + IA</span>
-                     </div>
-                  </Reveal>
-                  <Reveal delay={100}>
-                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-black leading-[1.1] tracking-tight text-white drop-shadow-2xl mb-8 uppercase">
-                        Como formar líderes, instalar governança e decidir melhor — sem centralizar tudo em você.
-                     </h1>
-                  </Reveal>
-                  <Reveal delay={200}>
-                     <h2 className="text-xl md:text-2xl font-light text-slate-400 leading-relaxed mb-10 max-w-3xl mx-auto border-l-0 md:border-l-4 border-primary/50 md:pl-6">
-                        Aprenda como sair da dependência operacional <span className="italic font-normal text-white">sem perder o controle e o comando</span> com método, governança e IA aplicada.
-                     </h2>
-                  </Reveal>
-                  <Reveal delay={300}>
-                     <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-                        <button onClick={scrollToOffer} className="btn-neon w-full md:w-auto px-12 py-6 text-sm md:text-base tracking-widest gap-3">
-                           🔵 QUERO BLINDAR MINHA EMPRESA
-                           <ArrowRight className="w-5 h-5 relative z-10" />
+            {/* --- SECTION 1: HERO (GOLD / TECH REDESIGN) --- */}
+            <section className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-20 px-6 lg:px-12 overflow-hidden">
+               {/* Ambient Glow for Gold */}
+               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-yellow-500/10 rounded-full blur-[150px] mix-blend-screen pointer-events-none"></div>
+
+               <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
+                  
+                  {/* LEFT: CENTRALIZED COPY */}
+                  <div className="text-center flex flex-col items-center">
+                     <Reveal delay={100}>
+                        <div className="inline-flex items-center gap-3 px-5 py-2 glass-pill mb-8 border-yellow-500/30 hover:shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-all">
+                           <div className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse shadow-[0_0_10px_rgba(250,204,21,0.8)]"></div>
+                           <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.25em] text-yellow-400 drop-shadow-md">O Novo Jogo Corporativo</span>
+                        </div>
+                     </Reveal>
+                     
+                     <Reveal delay={200}>
+                        <h1 className="text-2xl md:text-2xl lg:text-3xl font-light leading-snug tracking-tight text-slate-300 mb-6 max-w-lg mx-auto">
+                           Hoje, líderes que dominam o jogo combinam duas forças que a maioria ainda não sabe equilibrar:
+                        </h1>
+                     </Reveal>
+                     
+                     <Reveal delay={300}>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-yellow-400 mb-8 drop-shadow-[0_0_15px_rgba(234,179,8,0.4)] uppercase tracking-tighter leading-[1.1]">
+                           Liderança Humanizada <br/>+<br/> Inteligência Artificial
+                        </h2>
+                     </Reveal>
+                     
+                     <Reveal delay={400}>
+                        <p className="text-lg md:text-xl font-light text-slate-400 leading-relaxed max-w-lg mx-auto mb-3 italic">
+                           E enquanto alguns já estão sendo promovidos por isso…
+                        </p>
+                        <p className="text-lg md:text-xl font-medium text-white mb-8">
+                           Outros estão sendo silenciosamente substituídos.
+                        </p>
+                     </Reveal>
+                     
+                     <Reveal delay={500}>
+                        <p className="text-xs md:text-sm text-yellow-500 uppercase tracking-[0.3em] font-bold mb-8">
+                           Você já sabe de qual lado está?
+                        </p>
+                     </Reveal>
+                     
+                     <Reveal delay={600}>
+                        <button onClick={scrollToOffer} className="relative overflow-hidden group w-full md:w-auto px-8 py-4 rounded-xl border border-yellow-500/50 bg-yellow-500/5 hover:bg-yellow-500/20 backdrop-blur-xl transition-all shadow-[0_0_30px_rgba(234,179,8,0.15)] hover:shadow-[0_0_40px_rgba(234,179,8,0.4)] flex items-center justify-center gap-3">
+                           <span className="text-yellow-400 group-hover:text-yellow-300 font-bold uppercase tracking-widest text-xs md:text-sm relative z-10 transition-colors drop-shadow-md">
+                              👉 CLIQUE AGORA E ENTRE PARA O LADO QUE SOBE
+                           </span>
+                           <div className="absolute inset-0 bg-gradient-to-r from-yellow-600/0 via-yellow-400/20 to-yellow-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform -translate-x-full group-hover:translate-x-full"></div>
                         </button>
-                     </div>
-                  </Reveal>
-                  <Reveal delay={400}>
-                     <div className="flex flex-wrap justify-center gap-4 mt-12 opacity-60">
-                        <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5">
-                           <span className="text-[10px] md:text-[12px] uppercase tracking-widest text-white font-bold">100% online • direto ao ponto • assista onde quiser</span>
+                     </Reveal>
+                  </div>
+
+                  {/* RIGHT: IMAGE W/ TECH EFFECTS */}
+                  <Reveal>
+                     <div className="relative group w-full max-w-2xl mx-auto flex justify-center mb-10 lg:mb-0">
+                        {/* Glow effect */}
+                        <div className="absolute -inset-2 bg-gradient-to-r from-yellow-500 to-amber-300 rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                        <div className="relative rounded-2xl bg-[#070514]/80 p-2 ring-1 ring-white/10 backdrop-blur-xl w-full">
+                           <img src="/hero_new.png" alt="Liderança Tech" className="rounded-xl w-full lg:h-[600px] h-[400px] object-cover opacity-90 group-hover:opacity-100 transition-opacity" />
+                           {/* Floating elements */}
+                           <div className="absolute -top-6 -right-6 bg-yellow-500/10 border border-yellow-500/30 p-4 rounded-xl backdrop-blur-md shadow-[0_0_20px_rgba(234,179,8,0.3)] animate-bounce" style={{animationDuration: '3s'}}>
+                              <Zap className="w-10 h-10 text-yellow-400" />
+                           </div>
+                           <div className="absolute -bottom-6 -left-6 bg-black/60 border border-white/10 px-6 py-4 rounded-xl backdrop-blur-md flex items-center gap-4 shadow-xl">
+                              <div className="w-3 h-3 rounded-full bg-yellow-400 animate-pulse shadow-[0_0_10px_rgba(250,204,21,0.8)]"></div>
+                              <span className="text-white font-heading font-bold tracking-wider text-sm md:text-base">IA ATIVADA</span>
+                           </div>
                         </div>
                      </div>
                   </Reveal>
+
                </div>
             </section>
 
