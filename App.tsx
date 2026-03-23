@@ -17,6 +17,7 @@ import {
    BarChart4,
    Crosshair,
    Route,
+   X,
    ChevronDown,
    Fingerprint,
    Play,
@@ -245,132 +246,200 @@ export default function App() {
                </div>
             </section>
 
-            {/* --- TARGET AUDIENCE --- */}
-            <section className="relative py-16 px-6 lg:px-12 bg-background border-t border-white/5">
+            {/* --- SECTION 2: THE TWO FORCES --- */}
+            <section className="relative py-24 px-6 lg:px-12 bg-[#0a0f25] border-t border-yellow-500/10">
                <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none"></div>
                <div className="max-w-6xl mx-auto relative z-10">
                   <Reveal>
                      <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-heading font-bold text-white uppercase tracking-tight">
-                           Esse workshop é para empresários, gestores e executivos que:
+                        <h2 className="text-3xl md:text-5xl font-heading font-light text-white tracking-tight">
+                           Se você já lidera pessoas ou quer assumir uma posição de liderança:
                         </h2>
-                        <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-6"></div>
+                        <div className="w-24 h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent mx-auto mt-6"></div>
                      </div>
                   </Reveal>
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
-                     {audience.map((item, i) => (
-                        <Reveal key={i} delay={i * 100}>
-                           <div className="glass-card p-0 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 group h-full flex flex-col shadow-lg hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]">
-                              <div className="h-48 relative overflow-hidden group-hover:h-44 transition-all duration-500">
-                                 <div className="absolute inset-0 bg-slate-900/40 mix-blend-multiply z-10 transition-opacity duration-300 group-hover:opacity-0"></div>
-                                 <img src={item.image} alt="Público-alvo" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 grayscale group-hover:grayscale-0" />
-                                 <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent z-20"></div>
+                  <div className="grid md:grid-cols-2 gap-8 lg:gap-12 justify-center mb-20">
+                     {/* Card 1: IA */}
+                     <Reveal delay={100}>
+                        <div className="glass-card glass-card-purple p-8 md:p-12 border-purple-500/30 bg-purple-900/10 rounded-2xl flex flex-col h-full hover:border-purple-400/50 transition-all duration-300 group shadow-[0_0_40px_rgba(142,45,226,0.1)]">
+                           <div className="flex items-center gap-4 mb-8">
+                              <div className="w-14 h-14 rounded-xl flex items-center justify-center text-white glow-fill group-hover:scale-110 transition-transform relative">
+                                 <div className="absolute inset-0 bg-white/20 rounded-xl"></div>
+                                 <Brain className="w-7 h-7 relative z-10" />
                               </div>
-                              <div className="p-8 flex-1 flex items-start text-left relative z-30 -mt-6">
-                                 <div className="w-2 h-2 rounded-full bg-primary mt-2 mr-4 shrink-0 shadow-[0_0_10px_rgba(34,211,238,0.8)]"></div>
-                                 <p className="text-base text-white/90 font-light leading-relaxed group-hover:text-white transition-colors uppercase tracking-tight">
-                                    {item.text}
-                                 </p>
-                              </div>
+                              <h3 className="text-2xl font-bold text-white uppercase tracking-wider">Use a IA para:</h3>
                            </div>
-                        </Reveal>
-                     ))}
-                  </div>
-                  <div className="mt-16 text-center">
-                     <button onClick={scrollToOffer} className="btn-neon px-8 py-3 text-xs tracking-widest inline-flex items-center gap-2 mx-auto">
-                        🔵 ESSE WORKSHOP É PARA MIM <ArrowRight className="w-4 h-4 relative z-10" />
-                     </button>
-                  </div>
-               </div>
-            </section>
-
-            {/* --- CONTEXT --- */}
-            <section className="relative py-32 px-6 lg:px-12 bg-surface overflow-hidden">
-               <div className="absolute inset-0 pointer-events-none">
-                  <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-blue-900/20 rounded-full blur-[120px] mix-blend-screen opacity-60"></div>
-                  <div className="absolute -bottom-[20%] -right-[10%] w-[50%] h-[50%] bg-blue-600/10 rounded-full blur-[120px] mix-blend-screen opacity-60"></div>
-                  <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
-               </div>
-               <div className="max-w-6xl mx-auto relative z-10">
-                  <div className="text-center mb-24">
-                     <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-8 leading-tight">
-                        A maioria dos líderes não é mal-intencionada. <br />
-                        <span className="text-text-muted">Está pouco preparada para sustentar decisões em ambientes mais complexos.</span>
-                     </h2>
-                     <p className="text-xl text-blue-400 font-medium tracking-wide max-w-3xl mx-auto mb-10">
-                        Foram promovidos por tempo de casa, carisma ou performance individual — mas raramente passaram por uma formação estruturada de liderança.
-                     </p>
-                     <p className="text-primary font-black uppercase tracking-[0.2em] text-sm mb-4">O reflexo aparece rápido:</p>
-                  </div>
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-                     {[
-                        { icon: UserMinus, text: "Times exaustos" },
-                        { icon: Zap, text: "Decisões reativas" },
-                        { icon: ShieldAlert, text: "Clima instável" },
-                        { icon: BarChart4, text: "Crescimento travado" },
-                     ].map((item, i) => (
-                        <div key={i} className="glass-card glass-card-purple p-8 flex flex-col items-center gap-6 text-center hover:border-accent/50 transition-colors duration-300 group">
-                           <div className="w-14 h-14 rounded-full flex items-center justify-center text-white glow-fill group-hover:scale-110 transition-transform relative">
-                              <div className="absolute inset-0 bg-white/20 rounded-full"></div>
-                              <item.icon className="w-6 h-6 relative z-10" />
-                           </div>
-                           <p className="text-white font-bold text-lg uppercase tracking-wide">{item.text}</p>
+                           <ul className="space-y-6 flex-1">
+                              <li className="flex gap-4">
+                                 <CheckCircle2 className="w-6 h-6 text-purple-400 shrink-0" />
+                                 <span className="text-slate-300 text-lg">Automatizar decisões operacionais que consomem 12h+ por semana</span>
+                              </li>
+                              <li className="flex gap-4">
+                                 <CheckCircle2 className="w-6 h-6 text-purple-400 shrink-0" />
+                                 <span className="text-slate-300 text-lg">Multiplicar a produtividade do time sem contratar ninguém</span>
+                              </li>
+                              <li className="flex gap-4">
+                                 <CheckCircle2 className="w-6 h-6 text-purple-400 shrink-0" />
+                                 <span className="text-slate-300 text-lg">Criar sistemas que executam enquanto você pensa estratégico</span>
+                              </li>
+                           </ul>
                         </div>
-                     ))}
+                     </Reveal>
+                     
+                     {/* Card 2: Humanizada */}
+                     <Reveal delay={200}>
+                        <div className="glass-card p-8 md:p-12 border-yellow-500/30 bg-yellow-900/10 rounded-2xl flex flex-col h-full hover:border-yellow-400/50 transition-all duration-300 group shadow-[0_0_40px_rgba(234,179,8,0.1)] relative overflow-hidden">
+                           <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-600/10 blur-[80px]"></div>
+                           <div className="flex items-center gap-4 mb-8 relative z-10">
+                              <div className="w-14 h-14 rounded-xl flex items-center justify-center text-white bg-gradient-to-br from-yellow-400 to-yellow-600 shadow-[0_0_15px_rgba(250,204,21,0.5)] group-hover:scale-110 transition-transform relative">
+                                 <Users className="w-7 h-7 relative z-10" />
+                              </div>
+                              <h3 className="text-2xl font-bold text-white uppercase tracking-wider">Use a liderança para:</h3>
+                           </div>
+                           <ul className="space-y-6 flex-1 relative z-10">
+                              <li className="flex gap-4">
+                                 <CheckCircle2 className="w-6 h-6 text-yellow-400 shrink-0" />
+                                 <span className="text-slate-300 text-lg">Manter o time engajado mesmo num cenário dominado por tecnologia</span>
+                              </li>
+                              <li className="flex gap-4">
+                                 <CheckCircle2 className="w-6 h-6 text-yellow-400 shrink-0" />
+                                 <span className="text-slate-300 text-lg">Evitar resistência interna à implementação de IA</span>
+                              </li>
+                              <li className="flex gap-4">
+                                 <CheckCircle2 className="w-6 h-6 text-yellow-400 shrink-0" />
+                                 <span className="text-slate-300 text-lg">Transformar pressão por resultado em respeito e autoridade real</span>
+                              </li>
+                           </ul>
+                        </div>
+                     </Reveal>
                   </div>
-                  <div className="text-center mt-20">
-                     <div className="glass-card p-8 md:p-12 rounded-2xl max-w-4xl mx-auto border-blue-500/30 bg-blue-900/10 relative overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)]">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/20 blur-[80px]"></div>
-                        <p className="text-2xl md:text-4xl text-white font-bold leading-relaxed mb-6">
-                           E, no fim, <br className="hidden md:block" />
-                           <span className="text-blue-400 font-bold">tudo continua passando por você.</span>
-                        </p>
-                        <p className="text-slate-300 text-lg md:text-xl font-light leading-relaxed mb-10 max-w-2xl mx-auto">
-                           Neste workshop, você aprende como romper esse ciclo com método, clareza e ferramentas práticas — sem perder clareza, autoridade ou humanidade na liderança.
-                        </p>
-                        <button onClick={scrollToOffer} className="btn-neon px-8 py-4 text-xs md:text-sm tracking-widest inline-flex items-center gap-3 mx-auto">
-                           🔵 QUERO APRENDER COMO MUDAR ESSE CENÁRIO <ArrowRight className="w-4 h-4 relative z-10" />
+                  
+                  <Reveal delay={300}>
+                     <div className="text-center bg-[#070b1a] border border-white/5 p-10 rounded-2xl max-w-4xl mx-auto shadow-2xl relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-yellow-900/20 to-purple-900/20"></div>
+                        <p className="text-xl md:text-2xl font-light text-slate-400 italic mb-6 relative z-10">Porque no novo jogo…</p>
+                        <p className="text-2xl md:text-3xl text-slate-300 mb-2 relative z-10">não vence quem domina pessoas.</p>
+                        <p className="text-2xl md:text-3xl text-slate-300 mb-8 relative z-10">não vence quem domina tecnologia.</p>
+                        <h3 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-500 to-amber-600 mb-10 drop-shadow-lg relative z-10 uppercase">
+                           Vence quem domina os DOIS.
+                        </h3>
+                        <button onClick={scrollToOffer} className="relative z-10 overflow-hidden group w-full md:w-auto px-8 py-5 rounded-xl border border-yellow-500/50 bg-yellow-500/10 hover:bg-yellow-500/30 backdrop-blur-xl transition-all shadow-[0_0_30px_rgba(234,179,8,0.2)] flex items-center justify-center gap-3 mx-auto">
+                           <span className="text-yellow-400 group-hover:text-yellow-300 font-bold uppercase tracking-widest text-xs md:text-sm relative z-10 transition-colors drop-shadow-md">
+                              🔵 ENTRE AGORA E COMECE A OPERAR COMO LÍDER HÍBRIDO
+                           </span>
                         </button>
                      </div>
-                  </div>
+                  </Reveal>
                </div>
             </section>
 
-            {/* --- METHODOLOGY --- */}
-            <section className="py-32 px-6 lg:px-12 relative bg-background">
+            {/* --- SECTION 3: THE HYBRID LEADER (REPLACES CONTEXT) --- */}
+            <section className="relative py-32 px-6 lg:px-12 bg-[#070b1a] overflow-hidden">
+               <div className="absolute inset-0 pointer-events-none">
+                  <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-purple-900/20 rounded-full blur-[120px] mix-blend-screen opacity-60"></div>
+                  <div className="absolute -bottom-[20%] -right-[10%] w-[50%] h-[50%] bg-yellow-600/10 rounded-full blur-[120px] mix-blend-screen opacity-60"></div>
+                  <div className="absolute inset-0 bg-tech-grid opacity-10"></div>
+               </div>
+               <div className="max-w-5xl mx-auto relative z-10 text-center">
+                  <Reveal>
+                     <p className="text-2xl md:text-4xl text-white font-light leading-snug mb-4">
+                        Uma nova revolução já começou dentro das empresas.
+                     </p>
+                     <p className="text-xl md:text-3xl text-yellow-500 font-bold tracking-widest uppercase mb-16">
+                        Silenciosa. Irreversível.
+                     </p>
+                  </Reveal>
+                  
+                  <Reveal delay={100}>
+                     <div className="grid md:grid-cols-2 gap-6 mb-16 max-w-4xl mx-auto">
+                        <div className="border border-white/5 bg-slate-900/40 p-8 rounded-2xl flex flex-col items-center">
+                           <UserMinus className="w-10 h-10 text-slate-500 mb-4" />
+                           <p className="text-slate-400 text-lg uppercase tracking-wide">Ou sabem lidar com pessoas</p>
+                        </div>
+                        <div className="border border-white/5 bg-slate-900/40 p-8 rounded-2xl flex flex-col items-center">
+                           <MonitorPlay className="w-10 h-10 text-slate-500 mb-4" />
+                           <p className="text-slate-400 text-lg uppercase tracking-wide">Ou sabem usar tecnologia</p>
+                        </div>
+                     </div>
+                  </Reveal>
+
+                  <Reveal delay={200}>
+                     <h2 className="text-3xl md:text-5xl font-heading font-medium text-white mb-10 leading-relaxed">
+                        E a maioria dos líderes ainda está presa no modelo antigo... <br/>
+                        <span className="text-red-400 font-bold block mt-4">E os dois estão sendo substituídos.</span>
+                     </h2>
+                     <p className="text-2xl text-slate-300 font-light mb-12">
+                        O mercado agora busca um terceiro tipo:
+                     </p>
+                  </Reveal>
+
+                  <Reveal delay={300}>
+                     <div className="glass-card p-10 md:p-16 rounded-3xl max-w-4xl mx-auto border-yellow-500/40 bg-gradient-to-br from-yellow-900/20 to-purple-900/20 relative shadow-[0_0_60px_rgba(234,179,8,0.15)] flex flex-col items-center">
+                        <Crown className="w-16 h-16 text-yellow-400 mb-6 drop-shadow-[0_0_10px_rgba(250,204,21,0.6)] animate-pulse" />
+                        <h3 className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-600 uppercase tracking-tighter mb-8 text-center drop-shadow-md">
+                           O LÍDER HÍBRIDO
+                        </h3>
+                        <p className="text-xl md:text-2xl text-white font-light leading-relaxed max-w-2xl text-center mb-10">
+                           Aquele que orquestra gente e <span className="font-bold text-yellow-400">IA.gentes</span> na mesma operação gerando resultados que nenhum dos dois conseguiria sozinho.
+                        </p>
+                        <button onClick={scrollToOffer} className="relative overflow-hidden group w-full md:w-auto px-10 py-5 rounded-xl border border-yellow-500/50 bg-yellow-500 hover:bg-yellow-400 transition-all shadow-[0_0_30px_rgba(234,179,8,0.3)] flex items-center justify-center gap-3">
+                           <span className="text-black font-black uppercase tracking-widest text-sm md:text-base relative z-10 transition-colors">
+                              🔵 CLIQUE E ENTRE NO NOVO JOGO ANTES QUE SEJA TARDE
+                           </span>
+                        </button>
+                     </div>
+                  </Reveal>
+               </div>
+            </section>
+
+            {/* --- SECTION 4: IMPACT RUN (REPLACES METHODOLOGY) --- */}
+            <section className="py-24 px-6 lg:px-12 relative bg-[#0a0f25] border-t border-purple-500/20">
                <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
                   <div className="order-1 lg:order-1 text-left">
                      <Reveal>
-                        <h2 className="text-4xl md:text-6xl font-heading font-bold text-white mb-8 leading-tight">
-                           Este não é mais um <br />
-                           <span className="text-neon">curso sobre liderança.</span>
+                        <h2 className="text-4xl md:text-6xl font-heading font-black text-white mb-6 leading-tight uppercase tracking-tight">
+                           Em poucas horas de <span className="text-yellow-400">implementação prática</span>, você começa a:
                         </h2>
-                        <p className="text-xl md:text-2xl text-text-muted font-light leading-relaxed max-w-lg">
-                           É uma intervenção prática com método, diagnóstico e aplicação direta para:
-                        </p>
+                     </Reveal>
+                     <Reveal delay={100}>
+                        <ul className="space-y-4 mb-10 mt-10">
+                           <li className="flex items-start gap-4 p-4 rounded-xl bg-purple-900/10 border border-purple-500/20 backdrop-blur-sm">
+                              <Target className="w-6 h-6 text-purple-400 shrink-0 mt-1" />
+                              <span className="text-slate-200 text-lg md:text-xl font-medium">Reduzir retrabalho invisível que está drenando sua operação</span>
+                           </li>
+                           <li className="flex items-start gap-4 p-4 rounded-xl bg-purple-900/10 border border-purple-500/20 backdrop-blur-sm">
+                              <Zap className="w-6 h-6 text-purple-400 shrink-0 mt-1" />
+                              <span className="text-slate-200 text-lg md:text-xl font-medium">Tomar decisões com mais velocidade e menos desgaste mental</span>
+                           </li>
+                           <li className="flex items-start gap-4 p-4 rounded-xl bg-purple-900/10 border border-purple-500/20 backdrop-blur-sm">
+                              <Award className="w-6 h-6 text-purple-400 shrink-0 mt-1" />
+                              <span className="text-slate-200 text-lg md:text-xl font-medium">Se posicionar como o tipo de líder que a diretoria promove e o mercado disputa</span>
+                           </li>
+                        </ul>
                      </Reveal>
                   </div>
-                  <div className="order-2 lg:order-2">
-                     <div className="grid sm:grid-cols-2 gap-6">
-                        {[
-                           { icon: UserMinus, text: "Reduzir a dependência da operação em você" },
-                           { icon: Target, text: "Conectar decisões de liderança aos indicadores certos" },
-                           { icon: Network, text: "Implantar uma governança simples, moderna e funcional" },
-                           { icon: Brain, text: "Usar a IA como ferramenta executiva, not como distração" },
-                        ].map((item, i) => (
-                           <Reveal key={i} delay={i * 100}>
-                              <div className="relative overflow-hidden rounded-xl p-[1px] group h-full">
-                                 <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#0f172a_0%,#0f172a_50%,#22d3ee_100%)]" />
-                                 <div className="relative h-full bg-slate-950 rounded-xl p-8 flex flex-col gap-6 items-start border border-slate-800/50 hover:bg-slate-900 transition-colors">
-                                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0 border border-primary/20 shadow-[0_0_15px_rgba(34,211,238,0.15)]">
-                                       <item.icon className="w-6 h-6" />
-                                    </div>
-                                    <p className="text-lg text-white font-medium leading-snug">{item.text}</p>
-                                 </div>
-                              </div>
-                           </Reveal>
-                        ))}
-                     </div>
+                  <div className="order-2 lg:order-2 flex flex-col items-center lg:items-start text-center lg:text-left">
+                     <Reveal delay={200}>
+                        <div className="space-y-6 mb-12 w-full">
+                           <div className="flex items-center gap-4 bg-black/40 p-4 rounded-lg border border-red-500/20">
+                              <X className="w-6 h-6 text-red-500 shrink-0" />
+                              <span className="text-slate-300 text-lg uppercase tracking-wider font-medium">Sem precisar virar programador.</span>
+                           </div>
+                           <div className="flex items-center gap-4 bg-black/40 p-4 rounded-lg border border-red-500/20">
+                              <X className="w-6 h-6 text-red-500 shrink-0" />
+                              <span className="text-slate-300 text-lg uppercase tracking-wider font-medium">Sem depender do time de TI.</span>
+                           </div>
+                           <div className="flex items-center gap-4 bg-black/40 p-4 rounded-lg border border-red-500/20">
+                              <X className="w-6 h-6 text-red-500 shrink-0" />
+                              <span className="text-slate-300 text-lg uppercase tracking-wider font-medium">Sem mais um curso que vira gaveta.</span>
+                           </div>
+                        </div>
+                        <button onClick={scrollToOffer} className="relative overflow-hidden group w-full px-8 py-5 rounded-xl border border-yellow-500/50 bg-yellow-500 hover:bg-yellow-400 transition-all shadow-[0_0_30px_rgba(234,179,8,0.3)] flex items-center justify-center gap-3">
+                           <span className="text-black font-black uppercase tracking-widest text-sm relative z-10 transition-colors">
+                              🔵 COMECE HOJE E VEJA RESULTADOS JÁ NOS PRIMEIROS DIAS
+                           </span>
+                        </button>
+                     </Reveal>
                   </div>
                </div>
             </section>
