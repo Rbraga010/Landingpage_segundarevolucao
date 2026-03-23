@@ -174,9 +174,9 @@ export default function App() {
             <section className="relative min-h-[90vh] flex items-center pt-32 pb-20 px-6 lg:px-12">
                <div className="max-w-4xl mx-auto w-full text-center">
                   <Reveal>
-                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-md mb-8 shadow-[0_0_25px_rgba(34,211,238,0.15)]">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></div>
-                        <span className="text-[8px] md:text-[10px] font-bold uppercase tracking-[0.25em] text-primary">Workshop Liderança Humanizada + IA</span>
+                     <div className="inline-flex items-center gap-3 px-5 py-2 glass-pill mb-10 hover:shadow-[0_0_20px_rgba(142,45,226,0.3)] transition-all">
+                        <div className="w-2 h-2 rounded-full glow-fill animate-pulse"></div>
+                        <span className="text-[9px] md:text-[11px] font-black uppercase tracking-[0.25em] bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">Workshop Liderança Humanizada + IA</span>
                      </div>
                   </Reveal>
                   <Reveal delay={100}>
@@ -247,7 +247,7 @@ export default function App() {
             </section>
 
             {/* --- CONTEXT --- */}
-            <section className="relative py-32 px-6 lg:px-12 bg-black overflow-hidden">
+            <section className="relative py-32 px-6 lg:px-12 bg-surface overflow-hidden">
                <div className="absolute inset-0 pointer-events-none">
                   <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-blue-900/20 rounded-full blur-[120px] mix-blend-screen opacity-60"></div>
                   <div className="absolute -bottom-[20%] -right-[10%] w-[50%] h-[50%] bg-blue-600/10 rounded-full blur-[120px] mix-blend-screen opacity-60"></div>
@@ -271,9 +271,10 @@ export default function App() {
                         { icon: ShieldAlert, text: "Clima instável" },
                         { icon: BarChart4, text: "Crescimento travado" },
                      ].map((item, i) => (
-                        <div key={i} className="glass-card p-8 rounded-xl flex flex-col items-center gap-6 text-center hover:border-blue-500/50 transition-colors duration-300 group border-white/5 bg-slate-900/40">
-                           <div className="w-14 h-14 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 shadow-[0_0_20px_rgba(59,130,246,0.2)] group-hover:scale-110 transition-transform">
-                              <item.icon className="w-6 h-6" />
+                        <div key={i} className="glass-card glass-card-purple p-8 flex flex-col items-center gap-6 text-center hover:border-accent/50 transition-colors duration-300 group">
+                           <div className="w-14 h-14 rounded-full flex items-center justify-center text-white glow-fill group-hover:scale-110 transition-transform relative">
+                              <div className="absolute inset-0 bg-white/20 rounded-full"></div>
+                              <item.icon className="w-6 h-6 relative z-10" />
                            </div>
                            <p className="text-white font-bold text-lg uppercase tracking-wide">{item.text}</p>
                         </div>
@@ -377,8 +378,9 @@ export default function App() {
                      ].map((box, i) => (
                         <Reveal key={i} delay={i * 150}>
                            <div className="glass-card p-10 rounded-2xl h-full flex flex-col border-white/10 hover:border-primary/40 transition-all group bg-slate-900/40">
-                              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-8 border border-primary/20 shadow-[0_0_20px_rgba(34,211,238,0.1)] group-hover:scale-110 transition-transform">
-                                 <box.icon className="w-8 h-8" />
+                              <div className="w-14 h-14 rounded-xl flex items-center justify-center text-white mb-8 border border-white/20 glow-fill group-hover:scale-110 transition-transform relative">
+                                 <div className="absolute inset-0 bg-black/20 rounded-xl"></div>
+                                 <box.icon className="w-8 h-8 relative z-10" />
                               </div>
                               <h4 className="text-xl font-heading font-bold text-white mb-6 uppercase leading-snug">{box.title}</h4>
                               <p className="text-slate-400 mb-6 font-medium">{box.desc}</p>
@@ -424,9 +426,9 @@ export default function App() {
                               <div key={i} className="flex-1 flex flex-col items-center gap-6 relative z-10 px-4">
                                  {/* Brilliant/Glowing Indicator with Icon */}
                                  <div className="w-20 h-20 rounded-full bg-slate-900 border-2 border-primary/30 flex items-center justify-center relative shadow-[0_0_30px_rgba(34,211,238,0.1)] group cursor-default">
-                                    <div className="absolute inset-0 rounded-full bg-primary/5 animate-ping opacity-20"></div>
-                                    <div className="absolute inset-0 rounded-full border-2 border-primary opacity-50 shadow-[0_0_15px_rgba(34,211,238,0.8)]"></div>
-                                    <m.icon className="w-8 h-8 text-primary drop-shadow-glow" />
+                                    <div className="absolute inset-0 rounded-full glow-fill opacity-20 animate-pulse"></div>
+                                    <div className="absolute inset-0 rounded-full border-2 border-primary opacity-50 shadow-[0_0_15px_rgba(0,242,254,0.5)]"></div>
+                                    <m.icon className="w-8 h-8 text-white relative z-10" />
                                  </div>
 
                                  {/* Step Content */}
@@ -458,7 +460,7 @@ export default function App() {
             </section>
 
             {/* --- SECTION: OFFER (RETAIL STYLE REWORK) --- */}
-            <section id="section-offer" className="py-24 px-6 lg:px-12 relative overflow-hidden bg-slate-950 border-y border-primary/20 scroll-mt-28">
+            <section id="section-offer" className="py-24 px-6 lg:px-12 relative overflow-hidden bg-background border-y border-white/5 scroll-mt-28">
                <div className="absolute inset-0 bg-tech-grid opacity-30 pointer-events-none"></div>
                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
 
@@ -600,7 +602,7 @@ export default function App() {
             </section>
 
             {/* --- TESTIMONIALS --- */}
-            <section className="py-24 bg-[#020617] border-b border-white/5 overflow-hidden relative">
+            <section className="py-24 bg-surface border-b border-white/5 overflow-hidden relative">
                <div className="absolute inset-0 bg-tech-grid opacity-10 pointer-events-none mix-blend-overlay"></div>
                <div className="w-full relative z-10">
                   <Reveal>
