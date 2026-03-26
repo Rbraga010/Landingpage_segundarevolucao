@@ -727,44 +727,60 @@ export default function App() {
                   </div>
 
 
-                  <div className="max-w-4xl mx-auto glass-card border-2 border-green-500/50 bg-gradient-to-br from-slate-900 to-[#0a0f25] p-10 md:p-16 rounded-[40px] relative shadow-[0_0_100px_rgba(34,197,94,0.3)]">
+                  <div className="max-w-4xl mx-auto glass-card border-2 border-green-500/50 bg-gradient-to-br from-slate-900 to-[#0a0f25] p-10 md:p-16 rounded-[40px] relative shadow-[0_0_120px_rgba(34,197,94,0.25)]">
                      <div className="text-center mb-12">
                         <h3 className="text-2xl md:text-3xl font-black text-yellow-500 uppercase tracking-widest mb-6">Agora presta atenção.</h3>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed">Isso aqui NÃO é só um curso. <br className="hidden md:block"/> <strong className="text-white font-black uppercase text-2xl md:text-3xl mt-2 block">É um upgrade de posicionamento profissional.</strong></p>
+                        <p className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed italic">Isso aqui NÃO é só um curso. <br className="hidden md:block"/> <strong className="text-white font-black uppercase text-2xl md:text-3xl mt-2 block not-italic">É um upgrade de posicionamento profissional.</strong></p>
                      </div>
 
-                     <div className="bg-black/30 rounded-3xl p-8 border border-white/5 mb-12">
-                        <p className="text-primary font-black uppercase tracking-widest text-center mb-4 text-lg underline decoration-green-500/50 underline-offset-8">Você recebe 3 bônus especiais (GRATUITOS):</p>
-                        <p className="text-slate-400 font-light text-center mb-8">Além da Imersão líder de Gente + IA.gentes, você ganha:</p>
-                        <ul className="space-y-4">
-                           <li className="flex flex-col md:flex-row md:items-center justify-between p-5 bg-white/5 rounded-2xl border border-white/5 gap-4">
-                              <span className="text-white font-medium flex items-center gap-4 text-lg"><CheckCircle2 className="text-green-500 w-6 h-6 shrink-0" /> Curso Liderança Humanizada Aplicada</span>
-                              <span className="text-slate-500 line-through font-mono">R$297</span>
-                           </li>
-                           <li className="flex flex-col md:flex-row md:items-center justify-between p-5 bg-white/5 rounded-2xl border border-white/5 gap-4">
-                              <span className="text-white font-medium flex items-center gap-4 text-lg"><CheckCircle2 className="text-green-500 w-6 h-6 shrink-0" /> Kit c/ 10 Ferramentas Práticas do Líder</span>
-                              <span className="text-slate-500 line-through font-mono">R$470</span>
-                           </li>
-                           <li className="flex flex-col md:flex-row md:items-center justify-between p-5 bg-white/5 rounded-2xl border border-white/5 gap-4">
-                              <span className="text-white font-medium flex items-center gap-4 text-lg"><CheckCircle2 className="text-green-500 w-6 h-6 shrink-0" /> PulsarH System Prompt</span>
-                              <span className="text-slate-500 line-through font-mono">R$227</span>
-                           </li>
+                     <div className="flex flex-col md:flex-row items-center justify-between border-y border-white/10 py-12 mb-12 gap-8 relative">
+                        <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-1 h-12 bg-green-500 rounded-full blur-sm"></div>
+                        <div className="text-center md:text-left">
+                           <p className="text-slate-500 font-black uppercase tracking-widest text-xs mb-3">Investimento Único:</p>
+                           <p className="text-5xl md:text-7xl text-green-400 font-black tracking-tighter drop-shadow-[0_0_20px_rgba(34,197,94,0.4)]">R$ 297,00</p>
+                        </div>
+                        <div className="text-center md:text-right">
+                           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-yellow-500/30 bg-yellow-500/5 mb-4">
+                              <div className="w-2 h-2 rounded-full bg-yellow-500 animate-pulse"></div>
+                              <span className="text-[10px] font-black uppercase tracking-widest text-yellow-500">Lote de Abertura</span>
+                           </div>
+                           <p className="text-slate-400 text-xs uppercase tracking-widest font-bold">Vagas limitadas por turma</p>
+                        </div>
+                     </div>
+
+                     <div className="bg-white/[0.03] rounded-[32px] p-8 md:p-12 border border-white/5 mb-12 relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 p-4 bg-green-500 text-black text-[12px] font-black uppercase tracking-widest rounded-bl-2xl shadow-xl z-20">Presente</div>
+                        <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-green-500/5 blur-[100px] rounded-full"></div>
+                        
+                        <div className="relative z-10 text-center mb-10">
+                           <p className="text-primary font-black uppercase tracking-widest text-sm mb-4">Fazendo seu cadastro hoje você vai levar:</p>
+                           <h4 className="text-2xl md:text-3xl font-black text-white uppercase tracking-tight mb-4 leading-tight">
+                              3 BÔNUS ESPECIAIS <br/>
+                              <span className="text-green-400 underline decoration-green-500/30 underline-offset-8">DE R$ 994 POR ZERO</span>
+                           </h4>
+                        </div>
+
+                        <ul className="space-y-4 relative z-10">
+                           {[
+                              { name: "Curso Liderança Humanizada Aplicada", price: "R$297" },
+                              { name: "Kit c/ 10 Ferramentas Práticas do Líder", price: "R$470" },
+                              { name: "PulsarH System Prompt", price: "R$227" }
+                           ].map((bonus, i) => (
+                              <li key={i} className="flex flex-col md:flex-row md:items-center justify-between p-5 bg-black/40 rounded-2xl border border-white/5 gap-4 group/item hover:border-green-500/20 transition-colors">
+                                 <span className="text-slate-200 font-medium flex items-center gap-4">
+                                    <div className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center border border-green-500/20">
+                                       <CheckCircle2 className="text-green-500 w-5 h-5" />
+                                    </div>
+                                    {bonus.name}
+                                 </span>
+                                 <span className="text-slate-600 line-through font-mono text-sm">{bonus.price}</span>
+                              </li>
+                           ))}
                         </ul>
                      </div>
 
-                     <div className="flex flex-col md:flex-row items-center justify-between border-t border-white/10 pt-10 pb-12 gap-6">
-                        <div className="text-center md:text-left">
-                           <p className="text-slate-500 font-black uppercase tracking-widest text-sm mb-2">Valor real:</p>
-                           <p className="text-3xl text-slate-400 line-through decoration-red-500/50 font-mono">R$994+</p>
-                        </div>
-                        <div className="text-center md:text-right">
-                           <p className="text-yellow-400 font-black uppercase tracking-widest text-sm md:text-base mb-2">Preço Especial:</p>
-                           <p className="text-4xl md:text-6xl text-green-400 font-black tracking-tighter drop-shadow-[0_0_20px_rgba(34,197,94,0.4)]">R$ 297,00</p>
-                        </div>
-                     </div>
-
                      <div className="mt-4">
-                        <RegistrationForm btnText="🔵 CLIQUE AGORA E GARANTA ACESSO COMPLETO" />
+                        <RegistrationForm btnText="🔵 GARANTIR MINHA VAGA AGORA" />
                      </div>
                   </div>
                </div>
