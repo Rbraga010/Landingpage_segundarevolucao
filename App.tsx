@@ -229,12 +229,6 @@ export default function App() {
                   {/* LEFT: CONTENT OVERLAY */}
                   <div className="max-w-3xl flex flex-col justify-center">
                      
-                     <Reveal>
-                        <div className="flex items-center gap-8 mb-8 border-b border-yellow-500/10 pb-4 max-w-sm">
-                           <span className="text-[9px] font-bold uppercase tracking-[0.4em] text-slate-500">Visão Estratégica</span>
-                           <span className="text-[9px] font-bold uppercase tracking-[0.4em] text-slate-500">Liderança Híbrida</span>
-                        </div>
-                     </Reveal>
 
                      <Reveal delay={100}>
                         <div className="inline-flex items-center gap-3 px-4 py-1.5 glass-pill mb-8 border-yellow-500/20 bg-yellow-500/5 backdrop-blur-sm">
@@ -245,7 +239,7 @@ export default function App() {
                      
                      <Reveal delay={200}>
                         <h1 className="text-xl md:text-2xl lg:text-4xl font-light leading-snug tracking-tight text-white mb-6">
-                           Hoje, líderes disputados no mercado operam em um nível que a maioria ainda nem percebe que existe, eles lideram:
+                           Hoje, líderes disputados no mercado operam em um nível que a maioria sequer perceberam que existe. Eles lideram:
                         </h1>
                      </Reveal>
                      
@@ -291,10 +285,10 @@ export default function App() {
                <div className="max-w-5xl mx-auto relative z-10">
                   <Reveal>
                      <div className="mb-24">
-                        <h3 className="text-yellow-500 font-bold uppercase tracking-[0.4em] text-xs md:text-sm mb-6 text-center">A Evolução da Liderança</h3>
+                        <h3 className="text-yellow-500 font-bold uppercase tracking-[0.4em] text-xs md:text-sm mb-6 text-center">A segunda revolução da inteligência artificial</h3>
                         <h2 className="text-3xl md:text-6xl font-heading font-black text-white text-center leading-tight uppercase tracking-tight mb-8">
-                           POR QUE A PRIMEIRA ONDA FOI <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-400 to-slate-200">BARULHENTA…</span><br/>
-                           E POR QUE A SEGUNDA VAI SEPARAR LÍDER COMUM DE <span className="text-yellow-400">LÍDERES HÍBRIDOS</span>
+                           POR QUE A PRIMEIRA ONDA DA IA FOI <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-400 to-slate-200">APENAS UM TESTE…</span><br/>
+                           E A ERA DOS AGENTES VAI EXTERMINAR O <span className="text-yellow-400">LÍDER QUE SÓ GERE PESSOAS</span>
                         </h2>
                      </div>
                   </Reveal>
@@ -303,15 +297,11 @@ export default function App() {
                      <Reveal>
                         <div className="space-y-8">
                            <p className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed">
-                              A primeira onda da Inteligência Artificial fez barulho. Mas não porque mudou a liderança. E sim porque colocou ferramentas novas na mão de todo mundo. Foi quando algo que já existia há décadas finalmente ficou acessível.
+                              A primeira onda da IA gerou deslumbramento tecnológico. Foi barulhenta, mas mudou pouco a hierarquia das empresas. A segunda onda, a Era dos Agentes, está reescrevendo o organograma.
                            </p>
-                           <div className="flex flex-wrap gap-3">
-                              {['ChatGPT', 'Gemini', 'Midjourney', 'Claude', 'Copilot', 'Sora'].map((tool) => (
-                                 <span key={tool} className="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-slate-400 text-xs font-medium tracking-wider uppercase">
-                                    {tool}
-                                 </span>
-                              ))}
-                           </div>
+                           <p className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed">
+                              Hoje, algoritmos já tomam decisões e executam rotinas complexas de ponta a ponta. Se a sua única habilidade for "entender de pessoas" ou "cuidar de processos manuais", a sua cadeira está ameaçada. O líder que se recusa a comandar agentes de Inteligência Artificial ao lado do seu time humano será engolido pela velocidade dos concorrentes. Você não precisa aprender a programar, mas tem a obrigação inegociável de aprender a comandar. O futuro só tem espaço para o Líder Híbrido.
+                           </p>
                         </div>
                      </Reveal>
                      <Reveal delay={100}>
