@@ -89,8 +89,9 @@ export const RegistrationForm = ({ btnText, className = "h-full" }: Registration
              </div>
              <input 
                type="email" 
+               required
                className="w-full bg-slate-900/50 border border-slate-800 px-12 py-4 text-white text-sm focus:outline-none focus:border-cyan-400 focus:shadow-[0_0_15px_rgba(34,211,238,0.2)] transition-all placeholder-slate-600 rounded-lg font-light"
-               placeholder="Seu melhor e-mail (Opcional)"
+               placeholder="Seu melhor e-mail *"
                value={formData.email}
                onChange={(e) => setFormData({...formData, email: e.target.value})}
              />
@@ -106,7 +107,7 @@ export const RegistrationForm = ({ btnText, className = "h-full" }: Registration
                  onChange={(e) => setFormData({...formData, role: e.target.value})}
                  value={formData.role}
                >
-                 <option value="" disabled className="text-slate-500">Selecione seu cargo (Opcional)</option>
+                 <option value="" disabled className="text-slate-500">Selecione seu cargo</option>
                  <option value="Empresario" className="bg-slate-900 text-white">Empresário</option>
                  <option value="CEO" className="bg-slate-900 text-white">CEO</option>
                  <option value="Diretor" className="bg-slate-900 text-white">Diretor</option>
@@ -129,13 +130,12 @@ export const RegistrationForm = ({ btnText, className = "h-full" }: Registration
                  className={`w-full bg-slate-900/50 border border-slate-800 px-12 py-4 text-sm focus:outline-none focus:border-cyan-400 focus:shadow-[0_0_15px_rgba(34,211,238,0.2)] transition-all rounded-lg font-light appearance-none cursor-pointer ${formData.revenue === '' ? 'text-slate-600' : 'text-white'}`}
                  onChange={(e) => setFormData({...formData, revenue: e.target.value})}
                  value={formData.revenue}
+                 required
                >
-                 <option value="" disabled className="text-slate-500">Faturamento Mensal (Opcional)</option>
-                 <option value="Ate50k" className="bg-slate-900 text-white">Até R$ 50k</option>
-                 <option value="50k-200k" className="bg-slate-900 text-white">R$ 50k - R$ 200k</option>
-                 <option value="200k-500k" className="bg-slate-900 text-white">R$ 200k - R$ 500k</option>
-                 <option value="500k-1M" className="bg-slate-900 text-white">R$ 500k - R$ 1M</option>
-                 <option value="Acima1M" className="bg-slate-900 text-white">Acima de R$ 1M</option>
+                 <option value="" disabled className="text-slate-500">Faturamento Mensal</option>
+                 <option value="Ate10k" className="bg-slate-900 text-white">Até R$ 10k</option>
+                 <option value="10k-50k" className="bg-slate-900 text-white">R$ 10k - R$ 50k</option>
+                 <option value="Acima50k" className="bg-slate-900 text-white">Acima de R$ 50k</option>
                </select>
                <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-600">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
