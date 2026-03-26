@@ -282,51 +282,96 @@ export default function App() {
                   <div className="absolute inset-0 bg-tech-grid opacity-5"></div>
                </div>
 
-               <div className="max-w-5xl mx-auto relative z-10">
-                  <Reveal>
-                     <div className="mb-24">
-                        <h3 className="text-yellow-500 font-bold uppercase tracking-[0.4em] text-xs md:text-sm mb-6 text-center">A segunda revolução da inteligência artificial</h3>
-                        <h2 className="text-3xl md:text-6xl font-heading font-black text-white text-center leading-tight uppercase tracking-tight mb-8">
-                           POR QUE A PRIMEIRA ONDA DA IA FOI <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-400 to-slate-200">APENAS UM TESTE…</span><br/>
-                           E A ERA DOS AGENTES VAI EXTERMINAR O <span className="text-yellow-400">LÍDER QUE SÓ GERE PESSOAS</span>
-                        </h2>
-                     </div>
-                  </Reveal>
-
-                  <div className="grid lg:grid-cols-2 gap-16 items-start mb-32">
-                     <Reveal>
-                        <div className="space-y-8">
-                           <p className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed">
-                              A primeira onda da IA gerou deslumbramento tecnológico. Foi barulhenta, mas mudou pouco a hierarquia das empresas. A segunda onda, a Era dos Agentes, está reescrevendo o organograma.
-                           </p>
-                           <p className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed">
-                              Hoje, algoritmos já tomam decisões e executam rotinas complexas de ponta a ponta. Se a sua única habilidade for "entender de pessoas" ou "cuidar de processos manuais", a sua cadeira está ameaçada. O líder que se recusa a comandar agentes de Inteligência Artificial ao lado do seu time humano será engolido pela velocidade dos concorrentes. Você não precisa aprender a programar, mas tem a obrigação inegociável de aprender a comandar. O futuro só tem espaço para o Líder Híbrido.
-                           </p>
-                        </div>
-                     </Reveal>
-                     <Reveal delay={100}>
-                        <div className="grid grid-cols-1 gap-4">
-                           <div className="p-6 rounded-2xl border border-white/5 bg-slate-900/30 backdrop-blur-sm flex items-center gap-6 group hover:border-yellow-500/20 transition-colors">
-                              <div className="w-12 h-12 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-500">
-                                 <Users className="w-6 h-6" />
-                              </div>
-                              <span className="text-slate-200 text-lg font-light tracking-wide">Líderes curiosos.</span>
-                           </div>
-                           <div className="p-6 rounded-2xl border border-white/5 bg-slate-900/30 backdrop-blur-sm flex items-center gap-6 group hover:border-yellow-500/20 transition-colors">
-                              <div className="w-12 h-12 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-500">
-                                 <Zap className="w-6 h-6" />
-                              </div>
-                              <span className="text-slate-200 text-lg font-light tracking-wide">Equipes experimentando.</span>
-                           </div>
-                           <div className="p-6 rounded-2xl border border-white/5 bg-slate-900/30 backdrop-blur-sm flex items-center gap-6 group hover:border-yellow-500/20 transition-colors">
-                              <div className="w-12 h-12 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-500">
-                                 <Search className="w-6 h-6" />
-                              </div>
-                              <span className="text-slate-200 text-lg font-light tracking-wide">Empresas tentando entender.</span>
-                           </div>
-                        </div>
-                     </Reveal>
-                  </div>
+                   <div className="max-w-5xl mx-auto relative z-10">
+                      <Reveal>
+                         <div className="mb-24 relative">
+                            <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-64 h-64 bg-yellow-500/10 blur-[100px] rounded-full"></div>
+                            <div className="flex justify-center mb-6">
+                               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-yellow-500/30 bg-yellow-500/5 backdrop-blur-md">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 animate-pulse"></div>
+                                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-yellow-500/80">System Status: Evolution Active</span>
+                               </div>
+                            </div>
+                            <h3 className="text-yellow-500/60 font-bold uppercase tracking-[0.4em] text-[10px] md:text-xs mb-4 text-center">A segunda revolução da inteligência artificial</h3>
+                            <h2 className="text-4xl md:text-7xl font-heading font-black text-white text-center leading-[0.9] uppercase tracking-tighter mb-8">
+                               POR QUE A PRIMEIRA ONDA DA IA FOI <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-500 to-slate-300">APENAS UM TESTE…</span><br/>
+                               E A ERA DOS AGENTES VAI EXTERMINAR O <span className="text-yellow-400 drop-shadow-[0_0_15px_rgba(250,204,21,0.3)]">LÍDER QUE SÓ GERE PESSOAS</span>
+                            </h2>
+                         </div>
+                      </Reveal>
+    
+                      <div className="grid lg:grid-cols-12 gap-12 items-start mb-32">
+                         <div className="lg:col-span-7 space-y-10">
+                            <Reveal>
+                               <div className="relative p-8 rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-xl group hover:border-yellow-500/30 transition-all duration-500">
+                                  <div className="absolute top-4 right-6 text-[10px] font-mono text-slate-600 tracking-widest uppercase">Log // 01.A</div>
+                                  <div className="absolute -left-1 top-8 bottom-8 w-[2px] bg-gradient-to-b from-transparent via-yellow-500/40 to-transparent"></div>
+                                  <p className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed">
+                                     A primeira onda da IA gerou <span className="text-white font-medium">deslumbramento tecnológico.</span> Foi barulhenta, mas mudou pouco a hierarquia das empresas. A segunda onda, a Era dos Agentes, está <span className="text-yellow-400">reescrevendo o organograma.</span>
+                                  </p>
+                               </div>
+                            </Reveal>
+                            
+                            <Reveal delay={100}>
+                               <div className="relative p-8 rounded-3xl border border-red-500/20 bg-red-500/[0.02] backdrop-blur-xl group hover:border-red-500/40 transition-all duration-500">
+                                  <div className="absolute top-4 right-6 flex items-center gap-2">
+                                     <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></div>
+                                     <span className="text-[10px] font-mono text-red-500/60 tracking-widest uppercase">Critical // Threat Detected</span>
+                                  </div>
+                                  <div className="absolute -left-1 top-8 bottom-8 w-[2px] bg-gradient-to-b from-transparent via-red-500/40 to-transparent"></div>
+                                  <p className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed">
+                                     Hoje, algoritmos já tomam decisões e <span className="text-white font-medium">executam rotinas complexas</span> de ponta a ponta. Se a sua única habilidade for "entender de pessoas" ou "cuidar de processos manuais", a sua cadeira está ameaçada. 
+                                  </p>
+                                  <div className="mt-6 pt-6 border-t border-red-500/10">
+                                     <p className="text-lg md:text-xl text-slate-400 font-light leading-relaxed italic">
+                                        O líder que se recusa a comandar agentes de Inteligência Artificial ao lado do seu time humano será engolido pela velocidade dos concorrentes. Você não precisa aprender a programar, mas tem a <span className="text-white font-bold not-italic">obrigação inegociável de aprender a comandar.</span>
+                                     </p>
+                                  </div>
+                                  <div className="mt-8 flex justify-center">
+                                     <div className="px-6 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 text-[10px] font-bold uppercase tracking-[0.3em]">
+                                        O futuro só tem espaço para o Líder Híbrido
+                                     </div>
+                                  </div>
+                               </div>
+                            </Reveal>
+                         </div>
+    
+                         <div className="lg:col-span-5 relative">
+                            <div className="absolute inset-0 bg-yellow-500/5 blur-[80px] rounded-full pointer-events-none"></div>
+                            <Reveal delay={200}>
+                               <div className="grid grid-cols-1 gap-6 relative z-10">
+                                  {[
+                                     { icon: Users, title: "Líderes curiosos.", status: "Phase 01" },
+                                     { icon: Zap, title: "Equipes experimentando.", status: "Phase 02" },
+                                     { icon: Search, title: "Empresas tentando entender.", status: "Phase 03" }
+                                  ].map((item, i) => (
+                                     <div key={i} className="group relative p-6 rounded-2xl border border-white/5 bg-slate-900/40 backdrop-blur-md flex items-center justify-between hover:bg-slate-900/60 transition-all duration-300 overflow-hidden">
+                                        <div className="absolute top-0 left-0 w-1 h-full bg-yellow-500/0 group-hover:bg-yellow-500/60 transition-all"></div>
+                                        <div className="flex items-center gap-6">
+                                           <div className="w-14 h-14 rounded-xl bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center text-yellow-500 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(234,179,8,0.1)]">
+                                              <item.icon className="w-7 h-7" />
+                                           </div>
+                                           <span className="text-slate-200 text-lg font-light tracking-wide group-hover:text-white transition-colors">{item.title}</span>
+                                        </div>
+                                        <div className="hidden md:block">
+                                           <span className="text-[10px] font-mono text-slate-600 uppercase tracking-widest">{item.status}</span>
+                                        </div>
+                                     </div>
+                                  ))}
+                                  
+                                  {/* Technical Decoration */}
+                                  <div className="mt-4 p-6 border-t border-white/5 border-dashed flex justify-between items-center opacity-40">
+                                     <div className="flex gap-2">
+                                        <div className="w-1 h-1 bg-yellow-500 rounded-full"></div>
+                                        <div className="w-1 h-1 bg-yellow-500 rounded-full"></div>
+                                        <div className="w-1 h-1 bg-yellow-500 rounded-full"></div>
+                                     </div>
+                                     <div className="text-[9px] font-mono text-slate-500 uppercase tracking-widest">Targeting: Hybrid Efficiency</div>
+                                  </div>
+                               </div>
+                            </Reveal>
+                         </div>
+                      </div>
 
                   <Reveal>
                      <div className="glass-card bg-[#0a0f25]/60 border border-red-500/20 p-10 md:p-16 rounded-[40px] mb-32 relative overflow-hidden group">
