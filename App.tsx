@@ -681,20 +681,15 @@ export default function App() {
                      </div>
                   </div>
 
-                  <div className="text-center mb-24">
-                     <button onClick={scrollToOffer} className="btn-neon px-12 py-5 text-sm md:text-base tracking-widest inline-flex items-center gap-3">
-                        🔵 GARANTA SUA VAGA E COMECE HOJE <ArrowRight className="w-5 h-5 relative z-10" />
-                     </button>
-                  </div>
 
-                  <div className="max-w-4xl mx-auto glass-card border-yellow-500/40 bg-gradient-to-br from-slate-900 to-[#0a0f25] p-10 md:p-16 rounded-[40px] relative shadow-[0_0_80px_rgba(234,179,8,0.15)]">
+                  <div className="max-w-4xl mx-auto glass-card border-2 border-green-500/50 bg-gradient-to-br from-slate-900 to-[#0a0f25] p-10 md:p-16 rounded-[40px] relative shadow-[0_0_100px_rgba(34,197,94,0.3)]">
                      <div className="text-center mb-12">
                         <h3 className="text-2xl md:text-3xl font-black text-yellow-500 uppercase tracking-widest mb-6">Agora presta atenção.</h3>
                         <p className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed">Isso aqui NÃO é só um curso. <br className="hidden md:block"/> <strong className="text-white font-black uppercase text-2xl md:text-3xl mt-2 block">É um upgrade de posicionamento profissional.</strong></p>
                      </div>
 
                      <div className="bg-black/30 rounded-3xl p-8 border border-white/5 mb-12">
-                        <p className="text-primary font-black uppercase tracking-widest text-center mb-4 text-lg">Você recebe 3 bônus especiais:</p>
+                        <p className="text-primary font-black uppercase tracking-widest text-center mb-4 text-lg underline decoration-green-500/50 underline-offset-8">Você recebe 3 bônus especiais (GRATUITOS):</p>
                         <p className="text-slate-400 font-light text-center mb-8">Além da Imersão líder de Gente + IA.gentes, você ganha:</p>
                         <ul className="space-y-4">
                            <li className="flex flex-col md:flex-row md:items-center justify-between p-5 bg-white/5 rounded-2xl border border-white/5 gap-4">
@@ -718,8 +713,8 @@ export default function App() {
                            <p className="text-3xl text-slate-400 line-through decoration-red-500/50 font-mono">R$994+</p>
                         </div>
                         <div className="text-center md:text-right">
-                           <p className="text-yellow-400 font-black uppercase tracking-widest text-sm md:text-base mb-2">Hoje, tudo isso está:</p>
-                           <p className="text-4xl md:text-5xl text-green-400 font-black uppercase tracking-tighter">Incluso gratuitamente</p>
+                           <p className="text-yellow-400 font-black uppercase tracking-widest text-sm md:text-base mb-2">Preço Especial:</p>
+                           <p className="text-4xl md:text-6xl text-green-400 font-black tracking-tighter drop-shadow-[0_0_20px_rgba(34,197,94,0.4)]">R$ 297,00</p>
                         </div>
                      </div>
 
