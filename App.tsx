@@ -466,93 +466,97 @@ export default function App() {
                         <h3 className="text-4xl md:text-6xl font-heading font-black text-white text-center mb-12 uppercase tracking-tight">Aqui você vai <span className="text-yellow-400">aprender...</span></h3>
                         
                         <div className="space-y-4">
-                           <AccordionItem title="MÓDULO 1 — O CHÃO SUMIU (E A MAIORIA NÃO PERCEBEU)" icon={<Eye className="w-5 h-5" />}>
+                           <AccordionItem title="MÓDULO 1 — O PONTO DE RUPTURA (O CHÃO SUMIU)" icon={<Eye className="w-5 h-5" />}>
                               <div className="space-y-8">
                                  <div>
-                                    <p className="text-yellow-500 font-black uppercase text-xs tracking-widest mb-2">Objetivo</p>
-                                    <p className="text-white text-lg font-light italic">Criar o choque de realidade. O aluno entra achando que está bem. Sai sabendo que precisa agir agora.</p>
+                                    <p className="text-white text-lg font-light italic">Desconstruir a falsa sensação de segurança do líder tradicional e injetar a urgência da ação imediata.</p>
                                  </div>
                                  <div className="grid md:grid-cols-1 gap-6">
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 1.1 — Os 3 Dados Que Mudam Tudo</h5>
-                                       <p className="text-slate-400 text-sm leading-relaxed">O que Google, McKinsey e Microsoft já sabem sobre o futuro do seu cargo — e que o seu RH ainda não te contou. 5% são fluentes em IA e ganham 4,5x mais. 90% dos CEOs não veem resultado com IA. 82% dos líderes dizem que este é o ano pivotal. A pergunta: de que lado você está?</p>
+                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 1.1 — O Código da Sobrevivência: Os 3 Dados que Mudam Tudo</h5>
+                                       <p className="text-slate-400 text-sm leading-relaxed">O choque de realidade através dos números que Google, McKinsey e Microsoft já dominam. Você entenderá por que 5% dos líderes ganham 4,5x mais e por que 82% das empresas consideram este o "ano pivotal". Ao final, você saberá exatamente de qual lado da mesa quer estar.</p>
                                     </div>
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 1.2 — Os 2 Líderes Em Extinção</h5>
-                                       <p className="text-slate-400 text-sm leading-relaxed">O líder só de gente (terceiriza tech pra TI) e o líder só de tech (terceiriza gente pro RH). Os dois estão sendo substituídos. O mercado quer o terceiro tipo: o líder que domina gente e IA.gentes ao mesmo tempo. Esta aula mostra com exemplos reais por que metade de um líder não é suficiente.</p>
+                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 1.2 — A Extinção dos Líderes Unidimensionais</h5>
+                                       <p className="text-slate-400 text-sm leading-relaxed">Por que "entender de gente" ou "entender de tecnologia" isoladamente virou sentença de morte profissional. Através de exemplos reais, você descobrirá por que o mercado não aceita mais "metade de um líder" e como se tornar o terceiro tipo: o líder que domina humanos e algoritmos.</p>
                                     </div>
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 1.3 — O Líder Híbrido: A Revolução Que Está Acontecendo Agora</h5>
-                                       <p className="text-slate-400 text-sm leading-relaxed">Pela primeira vez na história, líderes gerenciam pessoas e agentes de IA na mesma operação. Não é futuro — já está acontecendo. Jensen Huang projeta 50.000 humanos ao lado de 100 milhões de agentes. A HBR formalizou o cargo de gerente de agentes. O estudo NBER prova: bons líderes de gente são bons líderes de IA.gentes — a correlação é de 0,81. O aluno faz seu primeiro autodiagnóstico: em que ponto está nessa revolução?</p>
+                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 1.3 — A Era dos Agentes: A Revolução em Tempo Real</h5>
+                                       <p className="text-slate-400 text-sm leading-relaxed">Deixe de ver a IA como futuro e entenda como a gestão de agentes (IA.gentes) já é a norma na HBR e nas empresas de elite. Você fará seu primeiro autodiagnóstico para mapear sua posição nesta transição histórica de 100 milhões de agentes no mercado.</p>
                                     </div>
                                  </div>
                               </div>
                            </AccordionItem>
 
-                           <AccordionItem title="MÓDULO 2 — AS 5 DIMENSÕES QUE DEFINEM QUEM FICA E QUEM SAI" icon={<Layers className="w-5 h-5" />}>
+                           <AccordionItem title="MÓDULO 2 — AS 5 DIMENSÕES DO COMANDO (QUEM FICA E QUEM SAI)" icon={<Layers className="w-5 h-5" />}>
                               <div className="space-y-8">
                                  <div>
-                                    <p className="text-yellow-500 font-black uppercase text-xs tracking-widest mb-2">Objetivo</p>
-                                    <p className="text-white text-lg font-light italic">Instalar o mapa de competências. O aluno descobre exatamente onde está forte e onde está vulnerável.</p>
+                                    <p className="text-white text-lg font-light italic">Instalar o mapa de competências da elite e identificar as vulnerabilidades ocultas na sua liderança.</p>
                                  </div>
                                  <div className="grid md:grid-cols-1 gap-6">
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 2.1 — Líder Conector + Líder Hiperprodutivo</h5>
-                                       <p className="text-slate-400 text-sm leading-relaxed">Dimensão Tecnológica: não precisa codar, precisa conectar pontos entre mercado, gente e tecnologia. Dimensão Estratégica: IA como exoesqueleto da mente — eliminar o robótico pra focar no que importa. Exercício: mapear 5 tarefas que a IA deveria estar fazendo por você hoje.</p>
+                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 2.1 — O Líder Conector (Dimensão Tecnológica)</h5>
+                                       <p className="text-slate-400 text-sm leading-relaxed">Domine a arte de conectar mercado, gente e tecnologia sem precisar escrever uma linha de código. Você aprenderá a ser o arquiteto da solução, não o operário da ferramenta.</p>
                                     </div>
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 2.2 — Líder Humilde + Líder Sistêmico</h5>
-                                       <p className="text-slate-400 text-sm leading-relaxed">Dimensão Psicológica: suprimir o ego, mente de principiante, discernimento acima de informação. Dimensão Cultural: decisões por dados sem perder humanidade, cultura que sobrevive à troca de pessoas. Exercício: diário de fixed mindset — onde você trava por orgulho?</p>
+                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 2.2 — O Líder Hiperprodutivo (Dimensão Estratégica)</h5>
+                                       <p className="text-slate-400 text-sm leading-relaxed">Instale a IA como o seu "exoesqueleto mental". Aprenda a terceirizar o trabalho robótico para focar no que realmente gera ROI. Exercício: O Extermínio das 5 Tarefas Inúteis.</p>
                                     </div>
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 2.3 — Líder Humano: O Único Trabalho Que Nenhum Agente de IA Faz</h5>
-                                       <p className="text-slate-400 text-sm leading-relaxed">Dimensão Comportamental: a biologia da confiança (ocitocina, serotonina, cortisol). O Círculo de Segurança. Agentes de IA executam tarefas. Não geram confiança. Não geram pertencimento. Não olham no olho de alguém que está prestes a pedir demissão. Isso é trabalho do líder humano — e a tecnologia libera tempo exatamente pra isso. Exercício: quantas horas cuido de planilha vs quantas horas cuido de gente?</p>
+                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 2.3 — O Líder Humilde (Dimensão Psicológica)</h5>
+                                       <p className="text-slate-400 text-sm leading-relaxed">Como vencer o ego e adotar a "Mente de Principiante" para manter o discernimento acima do excesso de informação. Identifique onde seu orgulho está travando o crescimento do seu time.</p>
+                                    </div>
+                                    <div className="p-6 bg-white/5 rounded-xl border border-white/5">
+                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 2.4 — O Líder Sistêmico (Dimensão Cultural)</h5>
+                                       <p className="text-slate-400 text-sm leading-relaxed">Aprenda a criar uma cultura que sobrevive à troca de pessoas, usando decisões baseadas em dados sem perder a essência humana. O sistema trabalha para você, não o contrário.</p>
+                                    </div>
+                                    <div className="p-6 bg-white/5 rounded-xl border border-white/5">
+                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 2.5 — O Líder Humano (Dimensão Comportamental)</h5>
+                                       <p className="text-slate-400 text-sm leading-relaxed">O domínio da "Biologia da Confiança". Entenda por que nenhum IA.gente gera pertencimento ou evita demissões. Descubra como usar o tempo livre da tecnologia para focar na única coisa que as máquinas nunca farão: olhar no olho e liderar almas.</p>
                                     </div>
                                  </div>
                               </div>
                            </AccordionItem>
 
-                           <AccordionItem title="MÓDULO 3 — 3 FERRAMENTAS QUE MUDAM O JOGO EM 7 DIAS" icon={<Zap className="w-5 h-5" />}>
+                           <AccordionItem title="MÓDULO 3 — IMPACTO IMEDIATO: 7 DIAS PARA A VIRADA" icon={<Zap className="w-5 h-5" />}>
                               <div className="space-y-8">
                                  <div>
-                                    <p className="text-yellow-500 font-black uppercase text-xs tracking-widest mb-2">Objetivo</p>
-                                    <p className="text-white text-lg font-light italic">Dar resultado rápido e concreto. O aluno implementa 3 coisas na mesma semana e sente a diferença.</p>
+                                    <p className="text-white text-lg font-light italic">Implementação prática e ROI instantâneo. Três ferramentas prontas para rodar na sua operação na mesma semana.</p>
                                  </div>
                                  <div className="grid md:grid-cols-1 gap-6">
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 3.1 — Sua Primeira 1:1 Que Transforma (Gente)</h5>
-                                       <p className="text-slate-400 text-sm leading-relaxed">A estrutura completa da 1:1 PulsarH em 6 momentos: Abertura (Sensibilizar), Check-in Pessoal, Revisão (Engajar), Desenvolvimento (Respeitar/Educar), Próximos Passos, Fechamento. Template pronto. O aluno conduz a próxima 1:1 real com esse método.</p>
+                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 3.1 — A 1:1 Magnética: O Script da Retenção</h5>
+                                       <p className="text-slate-400 text-sm leading-relaxed">Saia da conversa morna e aplique a Estrutura PulsarH em 6 momentos. Você receberá o template pronto para transformar sua próxima reunião individual em um motor de engajamento e clareza.</p>
                                     </div>
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 3.2 — Sua Primeira Conversa Difícil Com Método (Gente)</h5>
-                                       <p className="text-slate-400 text-sm leading-relaxed">O Método dos Andares resumido e aplicável: Empatia + Fato + Consequência + Sentimento + Pedido + Acordo. Roteiro pronto pra conversa que o aluno está adiando. Missão: ter essa conversa em até 72 horas.</p>
+                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 3.2 — O Método dos Andares: Conversas Difíceis sem Medo</h5>
+                                       <p className="text-slate-400 text-sm leading-relaxed">Como resolver conflitos e cobrar resultados usando a técnica de Empatia + Fato + Acordo. Um roteiro pronto para você ter aquela conversa que está adiando há meses em até 72 horas.</p>
                                     </div>
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 3.3 — Seu Primeiro IA.gente Funcionando (Agentes de IA)</h5>
-                                       <p className="text-slate-400 text-sm leading-relaxed">Em 30 minutos, o aluno cria um agente de IA simples que prepara suas reuniões com dados do time. Passo a passo guiado. Sem código. O aluno sai com um IA.gente rodando na operação real — não com teoria sobre como poderia funcionar. Esse é o momento em que o líder entende na prática o que significa liderar gente e agentes ao mesmo tempo.</p>
+                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 3.3 — Nascimento do seu Primeiro IA.gente Operacional</h5>
+                                       <p className="text-slate-400 text-sm leading-relaxed">O fim da teoria. Em 30 minutos e sem código, você criará um agente de IA real para preparar suas reuniões e monitorar dados. É o momento onde você sente, na prática, o poder de ter um braço digital de execução.</p>
                                     </div>
                                  </div>
                               </div>
                            </AccordionItem>
 
-                           <AccordionItem title="MÓDULO 4 — O SISTEMA OPERACIONAL COMPLETO DO LÍDER HÍBRIDO" icon={<Cpu className="w-5 h-5" />}>
+                           <AccordionItem title="MÓDULO 4 — O SISTEMA OPERACIONAL PULSARH" icon={<Cpu className="w-5 h-5" />}>
                               <div className="space-y-8">
                                  <div>
-                                    <p className="text-yellow-500 font-black uppercase text-xs tracking-widest mb-2">Objetivo</p>
-                                    <p className="text-white text-lg font-light italic">Mostrar o mapa completo da transformação. O aluno vê o que é possível — e entende que precisa do programa inteiro pra chegar lá.</p>
+                                    <p className="text-white text-lg font-light italic">A visão do todo. O mapa completo para sair da imersão e entrar na jornada de mestre da nova era.</p>
                                  </div>
                                  <div className="grid md:grid-cols-1 gap-6">
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 4.1 — Os 10 Mandamentos do Líder Moderno: O Mapa Completo</h5>
-                                       <p className="text-slate-400 text-sm leading-relaxed">Apresentação dos 10 Mandamentos com exemplos reais de antes/depois de líderes que aplicaram. O aluno percebe que os módulos 1 a 3 foram apenas a fundação — e que existe um edifício inteiro a ser construído. Cada mandamento é apresentado com o resultado que gera e a consequência de não dominar.</p>
+                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 4.1 — O Decálogo do Novo Mundo: Os 10 Mandamentos do Líder</h5>
+                                       <p className="text-slate-400 text-sm leading-relaxed">Conheça os pilares inegociáveis de quem lidera o mercado atual. Você verá o "antes e depois" de quem aplicou o método e entenderá que a fundação foi apenas o começo de um edifício de autoridade.</p>
                                     </div>
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 4.2 — O Ciclo PULSAR + IA.gentes: Como Rodar Uma Operação Híbrida</h5>
-                                       <p className="text-slate-400 text-sm leading-relaxed">Demonstração do ciclo completo PULSAR com IA.gentes integrados em cada etapa. Planejar com cenários gerados por agentes. Executar com dashboards monitorados por agentes. Lapidar com padrões que agentes identificam. Sustentar com celebração baseada em dados que agentes coletam. Alavancar com ROI que agentes projetam. Replicar com pipeline que agentes mapeiam. O aluno vê a máquina híbrida funcionando — gente e IA.gentes em sincronia — e entende que precisa aprender a operar isso.</p>
+                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 4.2 — O Ciclo PULSAR + IA.gentes: A Máquina Híbrida em Ação</h5>
+                                       <p className="text-slate-400 text-sm leading-relaxed">A demonstração final. Veja como Planejar, Executar, Lapidar e Alavancar usando humanos e agentes em sincronia total. É a visão da sua futura operação: produtividade infinita com engajamento humano real.</p>
                                     </div>
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 4.3 — O Convite: Sua Cadeira Na Formação Líder PulsarH.ai</h5>
-                                       <p className="text-slate-400 text-sm leading-relaxed">Depoimentos de quem passou pela formação. Resultados concretos: rotatividade que caiu, produtividade que subiu, IA.gentes rodando, times híbridos transformados. Apresentação da formação completa: 12 módulos, 65 aulas, mentoria semanal, certificação, comunidade. A revolução do líder híbrido não é opcional — é inevitável. A pergunta é se você vai liderar essa revolução ou ser atropelado por ela. Oferta exclusiva para quem fez a imersão. Vagas limitadas por turma. CTA direto.</p>
+                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 4.3 — O Convite de Elite: Sua Cadeira na Formação Líder PulsarH.ai</h5>
+                                       <p className="text-slate-400 text-sm leading-relaxed">O acesso ao programa completo de 12 módulos e 65 aulas. Depoimentos, resultados de ROI comprovado e a oferta exclusiva para quem não quer apenas "assistir à revolução", mas liderá-la.</p>
                                     </div>
                                  </div>
                               </div>
