@@ -197,7 +197,7 @@ export default function App() {
                />
                <span className="font-heading font-black text-lg tracking-tight uppercase text-white">PulsarH<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-purple-600 to-yellow-500">.AI</span></span>
             </div>
-            <button onClick={scrollToOffer} className="hidden md:flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-text-muted hover:text-primary transition-colors">
+            <button onClick={scrollToOffer} className="hidden md:flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-text-muted hover:text-green-500 transition-colors">
                <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></div>
                Imersão PulsarH.AI
             </button>
@@ -653,7 +653,7 @@ export default function App() {
                         <div className="mt-auto border-t border-white/10 pt-8">
                            <p className="text-slate-400 font-light italic mb-4">Se você quer conforto…</p>
                            <p className="text-white font-black text-2xl uppercase tracking-widest mb-8">Sai agora.</p>
-                           <button onClick={scrollToOffer} className="w-full px-6 py-5 rounded-xl border border-red-500/50 bg-red-500/10 hover:bg-red-500/20 text-red-500 font-bold uppercase tracking-widest text-xs md:text-sm transition-colors flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(239,68,68,0.2)]">
+                           <button onClick={scrollToOffer} className="btn-neon w-full px-6 py-5 text-xs md:text-sm tracking-widest flex items-center justify-center gap-2">
                               SE QUER DOMÍNIO, ENTRE AGORA
                            </button>
                         </div>
