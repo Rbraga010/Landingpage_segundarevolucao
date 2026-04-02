@@ -11,7 +11,7 @@ export default async function handler(req, res) {
       origem: "Imersao.AI"
     };
     
-    const response = await fetch("https://warroom.pulsarh.ai/api/webhooks/leads", {
+    const response = await fetch("http://72.60.6.61:3000/api/webhooks/leads", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
