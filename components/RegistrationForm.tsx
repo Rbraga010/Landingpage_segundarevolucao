@@ -37,6 +37,22 @@ export const RegistrationForm = ({ btnText, className = "h-full" }: Registration
       console.error("Erro ao salvar lead:", error);
     }
 
+    // Enviar lead ao War Room PulsarH
+    try {
+      await fetch("http://72.60.6.61:3000/api/webhooks/leads?token=pulsarh_sec_lead_99887766", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          lp_origin: "Imers\u00e3o in.PULSO.AI"
+        })
+      });
+    } catch (e) {
+      console.warn("War Room: falha ao registrar lead", e);
+    }
+
     setTimeout(() => {
       setLoading(false);
       window.location.href = CHECKOUT_URL;
