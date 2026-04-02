@@ -39,7 +39,7 @@ export const RegistrationForm = ({ btnText, className = "h-full" }: Registration
 
     // Enviar lead ao War Room PulsarH
     try {
-      await fetch("http://72.60.6.61:3000/api/webhooks/leads?token=pulsarh_sec_lead_99887766", {
+      await fetch("/api/lead-proxy", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
