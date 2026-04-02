@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Loader2, ArrowRight, Lock, User, Mail, Smartphone, Briefcase, DollarSign, Target, Zap, Clock, Users, ShieldCheck } from 'lucide-react';
 
 interface RegistrationFormProps {
@@ -26,17 +26,6 @@ const CHALLENGES = [
 export const RegistrationForm = ({ btnText, className = "h-full" }: RegistrationFormProps) => {
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', role: '', income: '', challenge: '' });
-  const [spotsLeft, setSpotsLeft] = useState(12);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSpotsLeft(prev => {
-        if (prev <= 3) return 3;
-        return Math.random() > 0.7 ? prev - 1 : prev;
-      });
-    }, 15000);
-    return () => clearInterval(interval);
-  }, []);
 
   const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/mUZEjZcfs8vJQPN3EnCF/webhook-trigger/ndzaV1VsS9nD1Gx82jdt";
   const CHECKOUT_URL = "https://pay.hotmart.com/M103870619B";
@@ -98,18 +87,10 @@ export const RegistrationForm = ({ btnText, className = "h-full" }: Registration
 
       <div className="relative h-full flex flex-col justify-center">
 
-        {/* URGENCY HEADER */}
+        {/* HEADER */}
         <div className="mb-6">
-          <div className="flex items-center justify-center gap-2 mb-3">
-            <div className="relative flex items-center gap-2 bg-red-600/20 border border-red-500/40 rounded-full px-4 py-1.5 animate-pulse">
-              <div className="w-2 h-2 rounded-full bg-red-500 animate-ping absolute left-3" />
-              <div className="w-2 h-2 rounded-full bg-red-500 relative" />
-              <span className="text-red-400 text-[11px] font-bold uppercase tracking-widest ml-1">AO VIVO</span>
-            </div>
-          </div>
-
           <h3 className="text-center text-2xl md:text-3xl font-black text-white uppercase tracking-tight leading-tight mb-2">
-            Sua vaga est&aacute; <span className="text-red-500">expirando</span>
+            Garanta sua vaga <span className="text-red-500">agora</span>
           </h3>
 
           <div className="flex items-center justify-center gap-6 mt-3">
@@ -119,7 +100,7 @@ export const RegistrationForm = ({ btnText, className = "h-full" }: Registration
             </div>
             <div className="flex items-center gap-2 text-red-400">
               <Users className="w-4 h-4" />
-              <span className="text-xs font-bold uppercase tracking-wider">Restam {spotsLeft} vagas</span>
+              <span className="text-xs font-bold uppercase tracking-wider">Vagas limitadas</span>
             </div>
           </div>
         </div>
