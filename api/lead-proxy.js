@@ -5,9 +5,15 @@ export default async function handler(req, res) {
   if (req.method === "OPTIONS") return res.status(200).end();
   if (req.method !== "POST") return res.status(405).end();
   try {
-    // Enviar para War Room PulsarH com tag de origem
+    const { name, email, phone, role, income, challenge, lp_origin } = req.body;
     const payload = {
-      ...req.body,
+      name,
+      email,
+      phone,
+      role,
+      income,
+      challenge,
+      lp_origin: lp_origin || "IMERSAO",
       origem: "Imersao.AI"
     };
     
