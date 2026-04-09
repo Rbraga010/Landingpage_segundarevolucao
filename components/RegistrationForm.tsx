@@ -153,69 +153,6 @@ export const RegistrationForm = ({ btnText, className = "h-full" }: Registration
             />
           </div>
 
-          {/* Cargo */}
-          <div className="relative group/input">
-            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-red-500/60 group-focus-within/input:text-red-400 transition-colors z-10">
-              <Briefcase className="w-5 h-5" />
-            </div>
-            <div className="relative">
-              <select
-                required
-                className={selectBase(formData.role)}
-                onChange={(e) => setFormData({...formData, role: e.target.value})}
-                value={formData.role}
-              >
-                <option value="" disabled className="text-slate-500">Selecione seu cargo *</option>
-                {ROLES.map(r => <option key={r} value={r} className="bg-slate-900 text-white">{r}</option>)}
-              </select>
-              <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-600">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
-              </div>
-            </div>
-          </div>
-
-          {/* Faixa de Renda */}
-          <div className="relative group/input">
-            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-red-500/60 group-focus-within/input:text-red-400 transition-colors z-10">
-              <DollarSign className="w-5 h-5" />
-            </div>
-            <div className="relative">
-              <select
-                required
-                className={selectBase(formData.income)}
-                onChange={(e) => setFormData({...formData, income: e.target.value})}
-                value={formData.income}
-              >
-                <option value="" disabled className="text-slate-500">Faixa de renda mensal *</option>
-                {INCOMES.map(i => <option key={i} value={i} className="bg-slate-900 text-white">{i}</option>)}
-              </select>
-              <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-600">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
-              </div>
-            </div>
-          </div>
-
-          {/* Maior Desafio */}
-          <div className="relative group/input">
-            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-red-500/60 group-focus-within/input:text-red-400 transition-colors z-10">
-              <Target className="w-5 h-5" />
-            </div>
-            <div className="relative">
-              <select
-                required
-                className={selectBase(formData.challenge)}
-                onChange={(e) => setFormData({...formData, challenge: e.target.value})}
-                value={formData.challenge}
-              >
-                <option value="" disabled className="text-slate-500">Seu maior desafio atual *</option>
-                {CHALLENGES.map(c => <option key={c} value={c} className="bg-slate-900 text-white">{c}</option>)}
-              </select>
-              <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-600">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
-              </div>
-            </div>
-          </div>
-
           {/* CTA BUTTON */}
           <div className="pt-2">
             <button
@@ -236,6 +173,11 @@ export const RegistrationForm = ({ btnText, className = "h-full" }: Registration
             </button>
           </div>
         </form>
+
+        {/* PARCELAMENTO */}
+        <div className="mt-3 text-center">
+          <p className="text-green-400 font-bold text-sm">ou 12x de R$24,75</p>
+        </div>
 
         {/* TRUST BADGES */}
         <div className="mt-5 space-y-3">

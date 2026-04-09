@@ -181,7 +181,7 @@ export default function App() {
 
    return (
       <div className="min-h-screen bg-background text-text-main font-sans selection:bg-primary selection:text-background">
-         <SocialProofPopup />
+         {/* SocialProofPopup removed */}
 
          {/* --- BACKGROUND FX --- */}
          <div className="fixed inset-0 bg-tech-grid opacity-30 pointer-events-none z-0"></div>
@@ -233,44 +233,140 @@ export default function App() {
                      <Reveal delay={100}>
                         <div className="inline-flex items-center gap-3 px-4 py-1.5 glass-pill mb-8 border-yellow-500/20 bg-yellow-500/5 backdrop-blur-sm">
                            <div className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse shadow-[0_0_10px_rgba(250,204,21,0.8)]"></div>
-                           <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-yellow-400 drop-shadow-md">O Novo Jogo Corporativo</span>
+                           <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-yellow-400 drop-shadow-md">A 2a Revolucao da IA ja comecou</span>
                         </div>
                      </Reveal>
-                     
+
                      <Reveal delay={200}>
-                        <h1 className="text-xl md:text-2xl lg:text-4xl font-light leading-snug tracking-tight text-white mb-6">
-                           Hoje, líderes disputados no mercado operam em um nível que a maioria sequer perceberam que existe. Eles lideram:
+                        <h1 className="text-xl md:text-2xl lg:text-4xl font-bold leading-snug tracking-tight text-white mb-6">
+                           O mercado nao quer mais lideres que so entendem de gente. Nem lideres que so entendem de IA. Quer quem lidera <span className="text-yellow-400 font-black uppercase">OS DOIS</span> na mesma operacao.
                         </h1>
                      </Reveal>
-                     
-                     <Reveal delay={300}>
-                        <h2 className="text-5xl md:text-7xl lg:text-[6rem] font-black text-transparent bg-clip-text bg-gradient-to-r from-[#FBBF24] via-[#D97706] to-[#9333EA] mb-6 drop-shadow-[0_0_30px_rgba(245,158,11,0.2)] tracking-tighter leading-[1] pb-2">
-                           Gente<br/>+ IA.gentes
-                        </h2>
-                     </Reveal>
-                     
+
                      <Reveal delay={400}>
                         <p className="text-lg md:text-xl font-light text-slate-300 leading-relaxed max-w-xl mb-12 italic border-l-2 border-yellow-500/30 pl-6">
-                           E enquanto alguns já estão sendo promovidos por isso, <strong className="font-bold text-white not-italic">outros estão sendo silenciosamente substituídos.</strong>
+                           Imersao PulsarH — O metodo pratico das <strong className="font-bold text-white not-italic">5 Dimensoes do Lider na Era da IA.</strong>
                         </p>
                      </Reveal>
-                     
+
                      <Reveal delay={500}>
                         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
                            <button onClick={scrollToOffer} className="relative overflow-hidden group px-10 py-5 rounded-2xl border border-yellow-500/40 bg-yellow-500/10 hover:bg-yellow-500/20 backdrop-blur-xl transition-all shadow-[0_0_30px_rgba(234,179,8,0.15)] hover:shadow-[0_0_50px_rgba(234,179,8,0.4)] flex items-center justify-center gap-3">
                               <span className="text-yellow-400 group-hover:text-yellow-300 font-bold uppercase tracking-widest text-xs md:text-sm relative z-10 transition-colors drop-shadow-md">
-                                 👉 ENTRE PARA O LADO QUE SOBE
+                                 QUERO LIDERAR A REVOLUCAO
                               </span>
                               <div className="absolute inset-0 bg-gradient-to-r from-yellow-600/0 via-yellow-400/20 to-yellow-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform -translate-x-full group-hover:translate-x-full"></div>
                            </button>
-                           
-                           <p className="text-[10px] text-yellow-500/60 uppercase tracking-[0.3em] font-bold">
-                              Você já sabe<br/> de qual lado está?
-                           </p>
                         </div>
                      </Reveal>
                      
                   </div>
+               </div>
+            </section>
+
+            {/* --- NEW SECTION: CHEGA DE IMERSAO PRA 300 PESSOAS --- */}
+            <section className="relative py-24 px-6 lg:px-12 bg-[#070514] overflow-hidden">
+               <div className="max-w-5xl mx-auto relative z-10">
+                  <Reveal>
+                     <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-heading font-black text-white uppercase tracking-tighter mb-8">
+                           CHEGA DE IMERSAO PRA 300 PESSOAS
+                        </h2>
+                        <p className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed max-w-3xl mx-auto mb-4">
+                           Chega de imersao com 300 pessoas num Zoom onde ninguem te ouve, ninguem te conhece, e no final tentam te empurrar uma mentoria de R$15 mil.
+                        </p>
+                        <p className="text-2xl md:text-3xl text-yellow-400 font-black uppercase tracking-wider mt-8">
+                           Aqui e diferente.
+                        </p>
+                     </div>
+                  </Reveal>
+
+                  <div className="grid md:grid-cols-3 gap-6 mb-16">
+                     <Reveal delay={100}>
+                        <div className="glass-card p-8 border-white/5 bg-slate-900/40 rounded-2xl hover:border-yellow-500/30 transition-all h-full">
+                           <p className="text-white text-lg font-light leading-relaxed">
+                              <strong className="text-yellow-400 font-black">12 aulas de 15 minutos</strong> — direto ao ponto. Sem teoria inutil.
+                           </p>
+                        </div>
+                     </Reveal>
+                     <Reveal delay={200}>
+                        <div className="glass-card p-8 border-white/5 bg-slate-900/40 rounded-2xl hover:border-yellow-500/30 transition-all h-full">
+                           <p className="text-white text-lg font-light leading-relaxed">
+                              <strong className="text-yellow-400 font-black">1 reuniao 1:1 com Rodrigo Braga</strong> — so voce e ele, 30 minutos, resolvendo O SEU problema.
+                           </p>
+                        </div>
+                     </Reveal>
+                     <Reveal delay={300}>
+                        <div className="glass-card p-8 border-white/5 bg-slate-900/40 rounded-2xl hover:border-yellow-500/30 transition-all h-full">
+                           <p className="text-white text-lg font-light leading-relaxed">
+                              Voce <strong className="text-yellow-400 font-black">SAI com seu primeiro IA.gente funcionando.</strong> Criado por voce. Sem codigo.
+                           </p>
+                        </div>
+                     </Reveal>
+                  </div>
+
+                  <Reveal delay={400}>
+                     <div className="text-center">
+                        <p className="text-xl text-slate-300 font-light mb-4">
+                           Nao e teoria. Nao e palestra. E <strong className="text-white font-bold">implementacao.</strong>
+                        </p>
+                        <p className="text-2xl text-green-400 font-black mb-8">
+                           R$297 ou 12x de R$24,75
+                        </p>
+                        <button onClick={scrollToOffer} className="btn-neon px-12 py-5 text-sm md:text-base tracking-widest flex items-center justify-center gap-3 mx-auto">
+                           QUERO IMPLEMENTAR AGORA
+                        </button>
+                     </div>
+                  </Reveal>
+               </div>
+            </section>
+
+            {/* --- NEW SECTION: AS 5 DIMENSOES DO LIDER NA ERA DA IA --- */}
+            <section className="relative py-24 px-6 lg:px-12 bg-[#070514] overflow-hidden">
+               <div className="max-w-5xl mx-auto relative z-10">
+                  <Reveal>
+                     <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-heading font-black text-white uppercase tracking-tighter mb-6">
+                           AS 5 DIMENSOES DO LIDER NA ERA DA IA
+                        </h2>
+                        <p className="text-xl md:text-2xl text-slate-400 font-light leading-relaxed max-w-3xl mx-auto">
+                           Seu time nao engaja? Talento vai embora? Voce apaga incendio o dia todo?
+                        </p>
+                     </div>
+                  </Reveal>
+
+                  <div className="grid md:grid-cols-1 gap-6 mb-16">
+                     {[
+                        { emoji: "\uD83D\uDD17", title: "CONECTOR", text: "Seu time trabalha desconectado? Cada um usa IA pra um lado? O Lider Conector integra gente + IA.gentes numa direcao so. Imagine um IA.gente que alinha as prioridades do time toda segunda-feira antes de voce chegar." },
+                        { emoji: "\u26A1", title: "HIPERPRODUTIVO", text: "Voce trabalha 12h e nao sai do operacional? O Lider Hiperprodutivo delega o braco robotico pra IA. Imagine um IA.gente que prepara suas reunioes, organiza dados e te entrega so o que importa decidir." },
+                        { emoji: "\uD83E\uDDE0", title: "HUMILDE", text: "Seu ego trava o time? O Lider Humilde sabe que nao sabe tudo — e usa IA pra enxergar o que sozinho nao ve. Imagine um IA.gente que monitora clima do time e te alerta antes de alguem pedir demissao." },
+                        { emoji: "\uD83D\uDCCA", title: "SISTEMICO", text: "Voce decide no achismo? O Lider Sistemico usa dados pra decidir e gente pra executar. Imagine um IA.gente que cruza seus indicadores e te mostra onde esta o gargalo real." },
+                        { emoji: "\u2764\uFE0F", title: "HUMANO", text: "Tecnologia sem gente e maquina fria. O Lider Humano usa o tempo que a IA libera pra CUIDAR de gente. Imagine ter 2 horas extras por dia pra fazer 1:1, reconhecer e desenvolver quem merece." }
+                     ].map((card, i) => (
+                        <Reveal key={i} delay={i * 100}>
+                           <div className="glass-card p-8 border-white/5 bg-slate-900/40 rounded-2xl hover:border-yellow-500/30 transition-all">
+                              <div className="flex items-start gap-6">
+                                 <span className="text-4xl shrink-0">{card.emoji}</span>
+                                 <div>
+                                    <h4 className="text-yellow-400 font-black uppercase tracking-wider text-lg mb-3">{card.title}</h4>
+                                    <p className="text-slate-300 text-lg font-light leading-relaxed">{card.text}</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </Reveal>
+                     ))}
+                  </div>
+
+                  <Reveal>
+                     <div className="text-center">
+                        <p className="text-xl text-slate-300 font-light mb-8">
+                           A Imersao ensina as 5 Dimensoes <strong className="text-white font-bold">E te entrega o primeiro IA.gente funcionando.</strong>
+                        </p>
+                        <button onClick={scrollToOffer} className="btn-neon px-12 py-5 text-sm md:text-base tracking-widest flex items-center justify-center gap-3 mx-auto">
+                           QUERO AS 5 DIMENSOES
+                        </button>
+                     </div>
+                  </Reveal>
                </div>
             </section>
 
@@ -483,9 +579,10 @@ export default function App() {
                            <span className="font-black text-yellow-400">CRIAR UM AGENTE DE IA</span> e <span className="font-black text-yellow-400">LIDERAR PESSOAS</span> <br className="hidden md:block"/> 
                            ao mesmo tempo. <span className="uppercase text-yellow-500 tracking-widest font-black ml-2 underline underline-offset-8">Esse ensina.</span>
                         </p>
-                        <div className="p-6 bg-yellow-500/5 rounded-2xl border border-yellow-500/20 inline-block">
-                           <p className="text-yellow-500 font-bold tracking-widest uppercase text-sm">
-                              🛡️ SE NADA MUDAR EM 7 DIAS, DEVOLVO SEU DINHEIRO.
+                        <div className="p-8 md:p-10 bg-green-500/5 rounded-2xl border-2 border-green-500/30 shadow-[0_0_40px_rgba(34,197,94,0.15)] max-w-2xl mx-auto">
+                           <h4 className="text-green-400 font-black uppercase tracking-widest text-lg mb-4 text-center">Garantia Rodrigo Braga</h4>
+                           <p className="text-slate-200 text-lg font-light leading-relaxed text-center">
+                              Entre, assista, aplique por 7 dias. Se nao perceber mudanca real na sua lideranca, devolvo 100% do seu dinheiro. <strong className="text-white font-bold">Sem perguntas.</strong>
                            </p>
                         </div>
                      </div>
