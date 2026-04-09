@@ -80,16 +80,16 @@ const Reveal: React.FC<{ children: React.ReactNode; className?: string; delay?: 
 const AccordionItem: React.FC<{ title: string; children: React.ReactNode; icon?: React.ReactNode }> = ({ title, children, icon }) => {
    const [isOpen, setIsOpen] = useState(false);
    return (
-      <div className="border border-white/5 bg-slate-900/20 rounded-2xl overflow-hidden transition-all duration-300 hover:border-yellow-500/20 mb-4">
+      <div className="border border-white/5 bg-slate-900/20 rounded-2xl overflow-hidden transition-all duration-300 hover:border-[#C5A572]/20 mb-4">
          <button 
             onClick={() => setIsOpen(!isOpen)}
             className="w-full flex items-center justify-between p-6 text-left group"
          >
             <div className="flex items-center gap-4">
-               {icon && <div className="text-yellow-500 group-hover:scale-110 transition-transform">{icon}</div>}
+               {icon && <div className="text-[#C5A572] group-hover:scale-110 transition-transform">{icon}</div>}
                <span className="text-slate-200 font-bold uppercase tracking-widest text-sm md:text-base">{title}</span>
             </div>
-            <div className={`transition-transform duration-300 ${isOpen ? 'rotate-180 text-yellow-500' : 'text-slate-500'}`}>
+            <div className={`transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#C5A572]' : 'text-slate-500'}`}>
                <ChevronDown className="w-5 h-5" />
             </div>
          </button>
@@ -195,9 +195,9 @@ export default function App() {
                   alt="Logo PulsarH"
                   className="h-10 w-auto object-contain"
                />
-               <span className="font-heading font-black text-lg tracking-tight uppercase text-white">PulsarH<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-purple-600 to-yellow-500">.AI</span></span>
+               <span className="font-heading font-black text-lg tracking-tight uppercase text-white">PulsarH<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] via-[#8B5CB8] to-[#C5A572]">.AI</span></span>
             </div>
-            <button onClick={scrollToOffer} className="hidden md:flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-text-muted hover:text-green-500 transition-colors">
+            <button onClick={scrollToOffer} className="hidden md:flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-text-muted hover:text-[#C5A572] transition-colors">
                <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></div>
                Imersão PulsarH.AI
             </button>
@@ -231,31 +231,31 @@ export default function App() {
                      
 
                      <Reveal delay={100}>
-                        <div className="inline-flex items-center gap-3 px-4 py-1.5 glass-pill mb-8 border-yellow-500/20 bg-yellow-500/5 backdrop-blur-sm">
-                           <div className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse shadow-[0_0_10px_rgba(250,204,21,0.8)]"></div>
-                           <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-yellow-400 drop-shadow-md">A 2a Revolucao da IA ja comecou</span>
+                        <div className="inline-flex items-center gap-3 px-4 py-1.5 glass-pill mb-8 border-[#C5A572]/20 bg-[#C5A572]/5 backdrop-blur-sm">
+                           <div className="w-1.5 h-1.5 rounded-full bg-[#C5A572] animate-pulse shadow-[0_0_10px_rgba(197,165,114,0.8)]"></div>
+                           <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-[#C5A572] drop-shadow-md">A 2a Revolucao da IA ja comecou</span>
                         </div>
                      </Reveal>
 
                      <Reveal delay={200}>
                         <h1 className="text-xl md:text-2xl lg:text-4xl font-bold leading-snug tracking-tight text-white mb-6">
-                           O mercado nao quer mais lideres que so entendem de gente. Nem lideres que so entendem de IA. Quer quem lidera <span className="text-yellow-400 font-black uppercase">OS DOIS</span> na mesma operacao.
+                           O mercado nao quer mais lideres que so entendem de gente. Nem lideres que so entendem de IA. Quer quem lidera <span className="text-[#C5A572] font-black uppercase">OS DOIS</span> na mesma operacao.
                         </h1>
                      </Reveal>
 
                      <Reveal delay={400}>
-                        <p className="text-lg md:text-xl font-light text-slate-300 leading-relaxed max-w-xl mb-12 italic border-l-2 border-yellow-500/30 pl-6">
+                        <p className="text-lg md:text-xl font-light text-slate-300 leading-relaxed max-w-xl mb-12 italic border-l-2 border-[#C5A572]/30 pl-6">
                            Imersao PulsarH — O metodo pratico das <strong className="font-bold text-white not-italic">5 Dimensoes do Lider na Era da IA.</strong>
                         </p>
                      </Reveal>
 
                      <Reveal delay={500}>
                         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-                           <button onClick={scrollToOffer} className="relative overflow-hidden group px-10 py-5 rounded-2xl border border-yellow-500/40 bg-yellow-500/10 hover:bg-yellow-500/20 backdrop-blur-xl transition-all shadow-[0_0_30px_rgba(234,179,8,0.15)] hover:shadow-[0_0_50px_rgba(234,179,8,0.4)] flex items-center justify-center gap-3">
-                              <span className="text-yellow-400 group-hover:text-yellow-300 font-bold uppercase tracking-widest text-xs md:text-sm relative z-10 transition-colors drop-shadow-md">
+                           <button onClick={scrollToOffer} className="relative overflow-hidden group px-8 py-4 rounded-xl md:rounded-2xl border border-[#C5A572]/40 bg-[#C5A572]/10 hover:bg-[#C5A572]/20 backdrop-blur-xl transition-all shadow-[0_0_30px_rgba(197,165,114,0.15)] hover:shadow-[0_0_50px_rgba(197,165,114,0.4)] flex items-center justify-center gap-3">
+                              <span className="text-[#C5A572] group-hover:text-[#E8D5B0] font-bold uppercase tracking-widest text-xs md:text-sm relative z-10 transition-colors drop-shadow-md">
                                  QUERO LIDERAR A REVOLUCAO
                               </span>
-                              <div className="absolute inset-0 bg-gradient-to-r from-yellow-600/0 via-yellow-400/20 to-yellow-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform -translate-x-full group-hover:translate-x-full"></div>
+                              <div className="absolute inset-0 bg-gradient-to-r from-[#C5A572]/0 via-[#C5A572]/20 to-[#C5A572]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform -translate-x-full group-hover:translate-x-full"></div>
                            </button>
                         </div>
                      </Reveal>
@@ -269,13 +269,13 @@ export default function App() {
                <div className="max-w-5xl mx-auto relative z-10">
                   <Reveal>
                      <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-heading font-black text-white uppercase tracking-tighter mb-8">
+                        <h2 className="text-2xl md:text-4xl font-heading font-black text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572] uppercase tracking-tighter mb-8">
                            CHEGA DE IMERSAO PRA 300 PESSOAS
                         </h2>
                         <p className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed max-w-3xl mx-auto mb-4">
                            Chega de imersao com 300 pessoas num Zoom onde ninguem te ouve, ninguem te conhece, e no final tentam te empurrar uma mentoria de R$15 mil.
                         </p>
-                        <p className="text-2xl md:text-3xl text-yellow-400 font-black uppercase tracking-wider mt-8">
+                        <p className="text-xl md:text-2xl text-[#C5A572] font-black uppercase tracking-wider mt-8">
                            Aqui e diferente.
                         </p>
                      </div>
@@ -283,23 +283,23 @@ export default function App() {
 
                   <div className="grid md:grid-cols-3 gap-6 mb-16">
                      <Reveal delay={100}>
-                        <div className="glass-card p-8 border-white/5 bg-slate-900/40 rounded-2xl hover:border-yellow-500/30 transition-all h-full">
+                        <div className="glass-card p-8 border-white/5 bg-slate-900/40 rounded-2xl hover:border-[#C5A572]/30 transition-all h-full">
                            <p className="text-white text-lg font-light leading-relaxed">
-                              <strong className="text-yellow-400 font-black">12 aulas de 15 minutos</strong> — direto ao ponto. Sem teoria inutil.
+                              <strong className="text-[#C5A572] font-black">12 aulas de 15 minutos</strong> — direto ao ponto. Sem teoria inutil.
                            </p>
                         </div>
                      </Reveal>
                      <Reveal delay={200}>
-                        <div className="glass-card p-8 border-white/5 bg-slate-900/40 rounded-2xl hover:border-yellow-500/30 transition-all h-full">
+                        <div className="glass-card p-8 border-white/5 bg-slate-900/40 rounded-2xl hover:border-[#C5A572]/30 transition-all h-full">
                            <p className="text-white text-lg font-light leading-relaxed">
-                              <strong className="text-yellow-400 font-black">1 reuniao 1:1 com Rodrigo Braga</strong> — so voce e ele, 30 minutos, resolvendo O SEU problema.
+                              <strong className="text-[#C5A572] font-black">1 reuniao 1:1 com Rodrigo Braga</strong> — so voce e ele, 30 minutos, resolvendo O SEU problema.
                            </p>
                         </div>
                      </Reveal>
                      <Reveal delay={300}>
-                        <div className="glass-card p-8 border-white/5 bg-slate-900/40 rounded-2xl hover:border-yellow-500/30 transition-all h-full">
+                        <div className="glass-card p-8 border-white/5 bg-slate-900/40 rounded-2xl hover:border-[#C5A572]/30 transition-all h-full">
                            <p className="text-white text-lg font-light leading-relaxed">
-                              Voce <strong className="text-yellow-400 font-black">SAI com seu primeiro IA.gente funcionando.</strong> Criado por voce. Sem codigo.
+                              Voce <strong className="text-[#C5A572] font-black">SAI com seu primeiro IA.gente funcionando.</strong> Criado por voce. Sem codigo.
                            </p>
                         </div>
                      </Reveal>
@@ -310,10 +310,10 @@ export default function App() {
                         <p className="text-xl text-slate-300 font-light mb-4">
                            Nao e teoria. Nao e palestra. E <strong className="text-white font-bold">implementacao.</strong>
                         </p>
-                        <p className="text-2xl text-green-400 font-black mb-8">
+                        <p className="text-2xl text-[#C5A572] font-black mb-8">
                            R$297 ou 12x de R$24,75
                         </p>
-                        <button onClick={scrollToOffer} className="btn-neon px-12 py-5 text-sm md:text-base tracking-widest flex items-center justify-center gap-3 mx-auto">
+                        <button onClick={scrollToOffer} className="btn-neon py-4 px-8 text-sm md:text-base tracking-widest flex items-center justify-center gap-3 mx-auto">
                            QUERO IMPLEMENTAR AGORA
                         </button>
                      </div>
@@ -326,7 +326,7 @@ export default function App() {
                <div className="max-w-5xl mx-auto relative z-10">
                   <Reveal>
                      <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-heading font-black text-white uppercase tracking-tighter mb-6">
+                        <h2 className="text-2xl md:text-4xl font-heading font-black text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572] uppercase tracking-tighter mb-6">
                            AS 5 DIMENSOES DO LIDER NA ERA DA IA
                         </h2>
                         <p className="text-xl md:text-2xl text-slate-400 font-light leading-relaxed max-w-3xl mx-auto">
@@ -344,11 +344,11 @@ export default function App() {
                         { emoji: "\u2764\uFE0F", title: "HUMANO", text: "Tecnologia sem gente e maquina fria. O Lider Humano usa o tempo que a IA libera pra CUIDAR de gente. Imagine ter 2 horas extras por dia pra fazer 1:1, reconhecer e desenvolver quem merece." }
                      ].map((card, i) => (
                         <Reveal key={i} delay={i * 100}>
-                           <div className="glass-card p-8 border-white/5 bg-slate-900/40 rounded-2xl hover:border-yellow-500/30 transition-all">
+                           <div className="glass-card p-8 border-white/5 bg-slate-900/40 rounded-2xl hover:border-[#C5A572]/30 transition-all">
                               <div className="flex items-start gap-6">
                                  <span className="text-4xl shrink-0">{card.emoji}</span>
                                  <div>
-                                    <h4 className="text-yellow-400 font-black uppercase tracking-wider text-lg mb-3">{card.title}</h4>
+                                    <h4 className="text-[#C5A572] font-black uppercase tracking-wider text-lg mb-3">{card.title}</h4>
                                     <p className="text-slate-300 text-lg font-light leading-relaxed">{card.text}</p>
                                  </div>
                               </div>
@@ -362,7 +362,7 @@ export default function App() {
                         <p className="text-xl text-slate-300 font-light mb-8">
                            A Imersao ensina as 5 Dimensoes <strong className="text-white font-bold">E te entrega o primeiro IA.gente funcionando.</strong>
                         </p>
-                        <button onClick={scrollToOffer} className="btn-neon px-12 py-5 text-sm md:text-base tracking-widest flex items-center justify-center gap-3 mx-auto">
+                        <button onClick={scrollToOffer} className="btn-neon py-4 px-8 text-sm md:text-base tracking-widest flex items-center justify-center gap-3 mx-auto">
                            QUERO AS 5 DIMENSOES
                         </button>
                      </div>
@@ -371,27 +371,27 @@ export default function App() {
             </section>
 
             {/* --- SECTION 2: THE SECOND WAVE --- */}
-            <section className="relative py-32 px-6 lg:px-12 bg-[#070514] overflow-hidden">
+            <section className="relative py-16 md:py-24 px-6 lg:px-12 bg-[#070514] overflow-hidden">
                <div className="absolute inset-0 z-0 pointer-events-none">
-                  <div className="absolute top-[10%] left-[-10%] w-[40vw] h-[40vw] bg-purple-900/10 rounded-full blur-[120px] mix-blend-screen opacity-40"></div>
-                  <div className="absolute bottom-[10%] right-[-10%] w-[40vw] h-[40vw] bg-yellow-900/10 rounded-full blur-[120px] mix-blend-screen opacity-40"></div>
+                  <div className="absolute top-[10%] left-[-10%] w-[40vw] h-[40vw] bg-[#6B2D8B]/10 rounded-full blur-[120px] mix-blend-screen opacity-40"></div>
+                  <div className="absolute bottom-[10%] right-[-10%] w-[40vw] h-[40vw] bg-[#C5A572]/10 rounded-full blur-[120px] mix-blend-screen opacity-40"></div>
                   <div className="absolute inset-0 bg-tech-grid opacity-5"></div>
                </div>
 
                    <div className="max-w-5xl mx-auto relative z-10">
                       <Reveal>
                          <div className="mb-24 relative">
-                            <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-64 h-64 bg-yellow-500/10 blur-[100px] rounded-full"></div>
+                            <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-64 h-64 bg-[#C5A572]/10 blur-[100px] rounded-full"></div>
                             <div className="flex justify-center mb-6">
-                               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-yellow-500/30 bg-yellow-500/5 backdrop-blur-md">
-                                  <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 animate-pulse"></div>
-                                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-yellow-500/80">System Status: Evolution Active</span>
+                               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#C5A572]/30 bg-[#C5A572]/5 backdrop-blur-md">
+                                  <div className="w-1.5 h-1.5 rounded-full bg-[#C5A572] animate-pulse"></div>
+                                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#C5A572]/80">System Status: Evolution Active</span>
                                </div>
                             </div>
-                            <h3 className="text-yellow-500/60 font-bold uppercase tracking-[0.4em] text-[10px] md:text-xs mb-4 text-center">A segunda revolução da inteligência artificial</h3>
-                            <h2 className="text-4xl md:text-7xl font-heading font-black text-white text-center leading-[0.9] uppercase tracking-tighter mb-8">
+                            <h3 className="text-[#C5A572]/60 font-bold uppercase tracking-[0.4em] text-[10px] md:text-xs mb-4 text-center">A segunda revolução da inteligência artificial</h3>
+                            <h2 className="text-2xl md:text-5xl font-heading font-black text-white text-center leading-[0.9] uppercase tracking-tighter mb-8">
                                POR QUE A PRIMEIRA ONDA DA IA FOI <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-500 to-slate-300">APENAS UM TESTE…</span><br/>
-                               E A ERA DOS AGENTES VAI EXTERMINAR O <span className="text-yellow-400 drop-shadow-[0_0_15px_rgba(250,204,21,0.3)]">LÍDER QUE SÓ GERE PESSOAS</span>
+                               E A ERA DOS AGENTES VAI EXTERMINAR O <span className="text-[#C5A572] drop-shadow-[0_0_15px_rgba(197,165,114,0.3)]">LÍDER QUE SÓ GERE PESSOAS</span>
                             </h2>
                          </div>
                       </Reveal>
@@ -399,11 +399,11 @@ export default function App() {
                       <div className="grid lg:grid-cols-12 gap-12 items-start mb-32">
                          <div className="lg:col-span-7 space-y-10">
                             <Reveal>
-                               <div className="relative p-8 rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-xl group hover:border-yellow-500/30 transition-all duration-500">
+                               <div className="relative p-8 rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-xl group hover:border-[#C5A572]/30 transition-all duration-500">
                                   <div className="absolute top-4 right-6 text-[10px] font-mono text-slate-600 tracking-widest uppercase">Log // 01.A</div>
-                                  <div className="absolute -left-1 top-8 bottom-8 w-[2px] bg-gradient-to-b from-transparent via-yellow-500/40 to-transparent"></div>
+                                  <div className="absolute -left-1 top-8 bottom-8 w-[2px] bg-gradient-to-b from-transparent via-[#C5A572]/40 to-transparent"></div>
                                   <p className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed">
-                                     A primeira onda da IA gerou <span className="text-white font-medium">deslumbramento tecnológico.</span> Foi barulhenta, mas mudou pouco a hierarquia das empresas. A segunda onda, a Era dos Agentes, está <span className="text-yellow-400">reescrevendo o organograma.</span>
+                                     A primeira onda da IA gerou <span className="text-white font-medium">deslumbramento tecnológico.</span> Foi barulhenta, mas mudou pouco a hierarquia das empresas. A segunda onda, a Era dos Agentes, está <span className="text-[#C5A572]">reescrevendo o organograma.</span>
                                   </p>
                                </div>
                             </Reveal>
@@ -433,7 +433,7 @@ export default function App() {
                          </div>
     
                          <div className="lg:col-span-5 relative">
-                            <div className="absolute inset-0 bg-yellow-500/5 blur-[80px] rounded-full pointer-events-none"></div>
+                            <div className="absolute inset-0 bg-[#C5A572]/5 blur-[80px] rounded-full pointer-events-none"></div>
                             <Reveal delay={200}>
                                <div className="grid grid-cols-1 gap-6 relative z-10">
                                   {[
@@ -442,9 +442,9 @@ export default function App() {
                                      { icon: Search, title: "Empresas tentando entender.", status: "Phase 03" }
                                   ].map((item, i) => (
                                      <div key={i} className="group relative p-6 rounded-2xl border border-white/5 bg-slate-900/40 backdrop-blur-md flex items-center justify-between hover:bg-slate-900/60 transition-all duration-300 overflow-hidden">
-                                        <div className="absolute top-0 left-0 w-1 h-full bg-yellow-500/0 group-hover:bg-yellow-500/60 transition-all"></div>
+                                        <div className="absolute top-0 left-0 w-1 h-full bg-[#C5A572]/0 group-hover:bg-[#C5A572]/60 transition-all"></div>
                                         <div className="flex items-center gap-6">
-                                           <div className="w-14 h-14 rounded-xl bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center text-yellow-500 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(234,179,8,0.1)]">
+                                           <div className="w-14 h-14 rounded-xl bg-[#C5A572]/10 border border-[#C5A572]/20 flex items-center justify-center text-[#C5A572] group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(197,165,114,0.1)]">
                                               <item.icon className="w-7 h-7" />
                                            </div>
                                            <span className="text-slate-200 text-lg font-light tracking-wide group-hover:text-white transition-colors">{item.title}</span>
@@ -458,9 +458,9 @@ export default function App() {
                                   {/* Technical Decoration */}
                                   <div className="mt-4 p-6 border-t border-white/5 border-dashed flex justify-between items-center opacity-40">
                                      <div className="flex gap-2">
-                                        <div className="w-1 h-1 bg-yellow-500 rounded-full"></div>
-                                        <div className="w-1 h-1 bg-yellow-500 rounded-full"></div>
-                                        <div className="w-1 h-1 bg-yellow-500 rounded-full"></div>
+                                        <div className="w-1 h-1 bg-[#C5A572] rounded-full"></div>
+                                        <div className="w-1 h-1 bg-[#C5A572] rounded-full"></div>
+                                        <div className="w-1 h-1 bg-[#C5A572] rounded-full"></div>
                                      </div>
                                      <div className="text-[9px] font-mono text-slate-500 uppercase tracking-widest">Targeting: Hybrid Efficiency</div>
                                   </div>
@@ -470,9 +470,9 @@ export default function App() {
                       </div>
 
                   <Reveal>
-                     <div className="glass-card bg-[#0a0f25]/60 border border-red-500/20 p-10 md:p-16 rounded-[40px] mb-32 relative overflow-hidden group">
+                     <div className="glass-card bg-[#0a0f25]/60 border border-red-500/20 p-6 md:p-10 rounded-2xl md:rounded-3xl mb-32 relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-96 h-96 bg-red-500/5 blur-[120px] rounded-full"></div>
-                        <h4 className="text-2xl md:text-3xl font-black text-white uppercase tracking-tighter mb-10 flex items-center gap-4">
+                        <h4 className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter mb-10 flex items-center gap-4">
                            <ShieldAlert className="text-red-500 w-10 h-10" />
                            O PROBLEMA QUE ESTÁ CRIANDO LÍDERES OBSOLETOS
                         </h4>
@@ -504,13 +504,13 @@ export default function App() {
 
                   <Reveal>
                      <div className="text-center max-w-4xl mx-auto">
-                        <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full border border-yellow-500/20 bg-yellow-500/5 text-yellow-500 text-xs font-bold uppercase tracking-widest mb-10">
+                        <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full border border-[#C5A572]/20 bg-[#C5A572]/5 text-[#C5A572] text-xs font-bold uppercase tracking-widest mb-10">
                            <Crown className="w-4 h-4" />
                            A Nova Orquestração
                         </div>
-                        <h3 className="text-3xl md:text-5xl font-heading font-black text-white uppercase mb-12 leading-tight">
+                        <h3 className="text-2xl md:text-4xl font-heading font-black text-white uppercase mb-12 leading-tight">
                            O líder híbrido não usa IA pra trabalhar mais. <br/>
-                           <span className="text-yellow-400">Ele usa IA pra liderar melhor.</span>
+                           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572]">Ele usa IA pra liderar melhor.</span>
                         </h3>
                         
                         <div className="grid md:grid-cols-3 gap-6 mb-16 text-left">
@@ -519,22 +519,22 @@ export default function App() {
                               { label: 'Pessoas evoluem', icon: TrendingUp, desc: 'O líder foca na evolução humana e estratégica do time.' },
                               { label: 'O resultado escala', icon: RocketIcon, desc: 'A operação cresce sem depender da sua presença 24/7.' }
                            ].map((item, i) => (
-                              <div key={i} className="glass-card p-8 border-white/5 bg-slate-900/40 rounded-2xl hover:border-yellow-500/30 transition-all group">
-                                 <item.icon className="w-10 h-10 text-yellow-500 mb-6 group-hover:scale-110 transition-transform" />
+                              <div key={i} className="glass-card p-8 border-white/5 bg-slate-900/40 rounded-2xl hover:border-[#C5A572]/30 transition-all group">
+                                 <item.icon className="w-10 h-10 text-[#C5A572] mb-6 group-hover:scale-110 transition-transform" />
                                  <p className="text-white font-black uppercase tracking-wider mb-2">{item.label}</p>
                                  <p className="text-slate-500 text-sm font-light">{item.desc}</p>
                               </div>
                            ))}
                         </div>
 
-                        <div className="p-10 md:p-16 rounded-[40px] bg-gradient-to-br from-[#0a0f25] to-[#070514] border border-yellow-500/40 relative shadow-[0_0_80px_rgba(234,179,8,0.15)] flex flex-col items-center">
+                        <div className="p-6 md:p-10 rounded-2xl md:rounded-3xl bg-gradient-to-br from-[#0a0f25] to-[#070514] border border-[#C5A572]/40 relative shadow-[0_0_80px_rgba(197,165,114,0.15)] flex flex-col items-center">
                            <p className="text-2xl md:text-4xl text-white font-light leading-relaxed mb-12">
                               A segunda onda não é sobre ferramenta. <br className="hidden md:block"/> 
                               É sobre quem consegue integrar: <br className="hidden md:block"/>
-                              <strong className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-600 font-black uppercase text-2xl md:text-5xl block mt-4">Pessoas + IA</strong>
+                              <strong className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572] font-black uppercase text-2xl md:text-5xl block mt-4">Pessoas + IA</strong>
                               na mesma operação.
                            </p>
-                           <button onClick={scrollToOffer} className="btn-neon px-12 py-5 text-sm md:text-base tracking-widest flex items-center justify-center gap-3">
+                           <button onClick={scrollToOffer} className="btn-neon py-4 px-8 text-sm md:text-base tracking-widest flex items-center justify-center gap-3">
                               🔵 CLIQUE AGORA E COMECE A SE TORNAR UM LÍDER HÍBRIDO
                            </button>
                         </div>
@@ -544,7 +544,7 @@ export default function App() {
             </section>
 
             {/* --- NEW SECTION: THE SYSTEM REVELATION --- */}
-            <section className="relative min-h-[70vh] flex items-center justify-center py-32 px-6 lg:px-12 overflow-hidden">
+            <section className="relative min-h-[70vh] flex items-center justify-center py-16 md:py-24 px-6 lg:px-12 overflow-hidden">
                {/* Background Video */}
                <div className="absolute inset-0 z-0">
                   <video 
@@ -562,22 +562,22 @@ export default function App() {
 
                <div className="max-w-5xl mx-auto relative z-20 text-center">
                   <Reveal>
-                     <h2 className="text-3xl md:text-7xl font-heading font-black text-white uppercase tracking-tighter leading-[0.9] mb-12">
+                     <h2 className="text-2xl md:text-5xl font-heading font-black text-white uppercase tracking-tighter leading-[0.9] mb-12">
                         ISSO NÃO É CURSO. <br/>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-500 to-yellow-600">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] via-[#8B5CB8] to-[#C5A572]">
                            É SISTEMA OPERACIONAL.
                         </span>
                      </h2>
                      
-                     <div className="glass-card bg-white/5 backdrop-blur-xl border border-white/10 p-10 md:p-16 rounded-[40px] shadow-[0_0_100px_rgba(234,179,8,0.1)] inline-block max-w-4xl">
+                     <div className="glass-card bg-white/5 backdrop-blur-xl border border-white/10 p-6 md:p-10 rounded-2xl md:rounded-3xl shadow-[0_0_100px_rgba(197,165,114,0.1)] inline-block max-w-4xl">
                         <p className="text-xl md:text-2xl text-slate-200 font-light leading-relaxed mb-8">
                            Nossa imersão é objetiva e direto ao ponto. <br className="hidden md:block"/> 
-                           E para você que pensa: <span className="italic text-yellow-500">"Mas eu já fiz cursos de liderança..."</span>
+                           E para você que pensa: <span className="italic text-[#C5A572]">"Mas eu já fiz cursos de liderança..."</span>
                         </p>
-                        <p className="text-2xl md:text-3xl text-white font-medium mb-10 leading-snug">
+                        <p className="text-xl md:text-2xl text-white font-medium mb-10 leading-snug">
                            Nenhum treinamento que você fez te ensinou a <br className="hidden md:block"/>
-                           <span className="font-black text-yellow-400">CRIAR UM AGENTE DE IA</span> e <span className="font-black text-yellow-400">LIDERAR PESSOAS</span> <br className="hidden md:block"/> 
-                           ao mesmo tempo. <span className="uppercase text-yellow-500 tracking-widest font-black ml-2 underline underline-offset-8">Esse ensina.</span>
+                           <span className="font-black text-[#C5A572]">CRIAR UM AGENTE DE IA</span> e <span className="font-black text-[#C5A572]">LIDERAR PESSOAS</span> <br className="hidden md:block"/> 
+                           ao mesmo tempo. <span className="uppercase text-[#C5A572] tracking-widest font-black ml-2 underline underline-offset-8">Esse ensina.</span>
                         </p>
                         <div className="p-8 md:p-10 bg-green-500/5 rounded-2xl border-2 border-green-500/30 shadow-[0_0_40px_rgba(34,197,94,0.15)] max-w-2xl mx-auto">
                            <h4 className="text-green-400 font-black uppercase tracking-widest text-lg mb-4 text-center">Garantia Rodrigo Braga</h4>
@@ -595,7 +595,7 @@ export default function App() {
                <div className="max-w-5xl mx-auto relative z-10">
                   <Reveal>
                      <div className="mb-16">
-                        <h3 className="text-4xl md:text-6xl font-heading font-black text-white text-center mb-12 uppercase tracking-tight">Aqui você vai <span className="text-yellow-400">aprender...</span></h3>
+                        <h3 className="text-2xl md:text-5xl font-heading font-black text-white text-center mb-12 uppercase tracking-tight">Aqui você vai <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572]">aprender...</span></h3>
                         
                         <div className="space-y-4">
                            <AccordionItem title="MÓDULO 1 — O PONTO DE RUPTURA (O CHÃO SUMIU)" icon={<Eye className="w-5 h-5" />}>
@@ -605,15 +605,15 @@ export default function App() {
                                  </div>
                                  <div className="grid md:grid-cols-1 gap-6">
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 1.1 — O Código da Sobrevivência: Os 3 Dados que Mudam Tudo</h5>
+                                       <h5 className="text-[#C5A572] font-bold mb-3 uppercase tracking-wider">Aula 1.1 — O Código da Sobrevivência: Os 3 Dados que Mudam Tudo</h5>
                                        <p className="text-slate-400 text-sm leading-relaxed">O choque de realidade através dos números que Google, McKinsey e Microsoft já dominam. Você entenderá por que 5% dos líderes ganham 4,5x mais e por que 82% das empresas consideram este o "ano pivotal". Ao final, você saberá exatamente de qual lado da mesa quer estar.</p>
                                     </div>
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 1.2 — A Extinção dos Líderes Unidimensionais</h5>
+                                       <h5 className="text-[#C5A572] font-bold mb-3 uppercase tracking-wider">Aula 1.2 — A Extinção dos Líderes Unidimensionais</h5>
                                        <p className="text-slate-400 text-sm leading-relaxed">Por que "entender de gente" ou "entender de tecnologia" isoladamente virou sentença de morte profissional. Através de exemplos reais, você descobrirá por que o mercado não aceita mais "metade de um líder" e como se tornar o terceiro tipo: o líder que domina humanos e algoritmos.</p>
                                     </div>
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 1.3 — A Era dos Agentes: A Revolução em Tempo Real</h5>
+                                       <h5 className="text-[#C5A572] font-bold mb-3 uppercase tracking-wider">Aula 1.3 — A Era dos Agentes: A Revolução em Tempo Real</h5>
                                        <p className="text-slate-400 text-sm leading-relaxed">Deixe de ver a IA como futuro e entenda como a gestão de agentes (IA.gentes) já é a norma na HBR e nas empresas de elite. Você fará seu primeiro autodiagnóstico para mapear sua posição nesta transição histórica de 100 milhões de agentes no mercado.</p>
                                     </div>
                                  </div>
@@ -627,23 +627,23 @@ export default function App() {
                                  </div>
                                  <div className="grid md:grid-cols-1 gap-6">
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 2.1 — O Líder Conector (Dimensão Tecnológica)</h5>
+                                       <h5 className="text-[#C5A572] font-bold mb-3 uppercase tracking-wider">Aula 2.1 — O Líder Conector (Dimensão Tecnológica)</h5>
                                        <p className="text-slate-400 text-sm leading-relaxed">Domine a arte de conectar mercado, gente e tecnologia sem precisar escrever uma linha de código. Você aprenderá a ser o arquiteto da solução, não o operário da ferramenta.</p>
                                     </div>
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 2.2 — O Líder Hiperprodutivo (Dimensão Estratégica)</h5>
+                                       <h5 className="text-[#C5A572] font-bold mb-3 uppercase tracking-wider">Aula 2.2 — O Líder Hiperprodutivo (Dimensão Estratégica)</h5>
                                        <p className="text-slate-400 text-sm leading-relaxed">Instale a IA como o seu "exoesqueleto mental". Aprenda a terceirizar o trabalho robótico para focar no que realmente gera ROI. Exercício: O Extermínio das 5 Tarefas Inúteis.</p>
                                     </div>
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 2.3 — O Líder Humilde (Dimensão Psicológica)</h5>
+                                       <h5 className="text-[#C5A572] font-bold mb-3 uppercase tracking-wider">Aula 2.3 — O Líder Humilde (Dimensão Psicológica)</h5>
                                        <p className="text-slate-400 text-sm leading-relaxed">Como vencer o ego e adotar a "Mente de Principiante" para manter o discernimento acima do excesso de informação. Identifique onde seu orgulho está travando o crescimento do seu time.</p>
                                     </div>
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 2.4 — O Líder Sistêmico (Dimensão Cultural)</h5>
+                                       <h5 className="text-[#C5A572] font-bold mb-3 uppercase tracking-wider">Aula 2.4 — O Líder Sistêmico (Dimensão Cultural)</h5>
                                        <p className="text-slate-400 text-sm leading-relaxed">Aprenda a criar uma cultura que sobrevive à troca de pessoas, usando decisões baseadas em dados sem perder a essência humana. O sistema trabalha para você, não o contrário.</p>
                                     </div>
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 2.5 — O Líder Humano (Dimensão Comportamental)</h5>
+                                       <h5 className="text-[#C5A572] font-bold mb-3 uppercase tracking-wider">Aula 2.5 — O Líder Humano (Dimensão Comportamental)</h5>
                                        <p className="text-slate-400 text-sm leading-relaxed">O domínio da "Biologia da Confiança". Entenda por que nenhum IA.gente gera pertencimento ou evita demissões. Descubra como usar o tempo livre da tecnologia para focar na única coisa que as máquinas nunca farão: olhar no olho e liderar almas.</p>
                                     </div>
                                  </div>
@@ -657,15 +657,15 @@ export default function App() {
                                  </div>
                                  <div className="grid md:grid-cols-1 gap-6">
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 3.1 — A 1:1 Magnética: O Script da Retenção</h5>
+                                       <h5 className="text-[#C5A572] font-bold mb-3 uppercase tracking-wider">Aula 3.1 — A 1:1 Magnética: O Script da Retenção</h5>
                                        <p className="text-slate-400 text-sm leading-relaxed">Saia da conversa morna e aplique a Estrutura PulsarH em 6 momentos. Você receberá o template pronto para transformar sua próxima reunião individual em um motor de engajamento e clareza.</p>
                                     </div>
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 3.2 — O Método dos Andares: Conversas Difíceis sem Medo</h5>
+                                       <h5 className="text-[#C5A572] font-bold mb-3 uppercase tracking-wider">Aula 3.2 — O Método dos Andares: Conversas Difíceis sem Medo</h5>
                                        <p className="text-slate-400 text-sm leading-relaxed">Como resolver conflitos e cobrar resultados usando a técnica de Empatia + Fato + Acordo. Um roteiro pronto para você ter aquela conversa que está adiando há meses em até 72 horas.</p>
                                     </div>
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 3.3 — Nascimento do seu Primeiro IA.gente Operacional</h5>
+                                       <h5 className="text-[#C5A572] font-bold mb-3 uppercase tracking-wider">Aula 3.3 — Nascimento do seu Primeiro IA.gente Operacional</h5>
                                        <p className="text-slate-400 text-sm leading-relaxed">O fim da teoria. Em 30 minutos e sem código, você criará um agente de IA real para preparar suas reuniões e monitorar dados. É o momento onde você sente, na prática, o poder de ter um braço digital de execução.</p>
                                     </div>
                                  </div>
@@ -679,15 +679,15 @@ export default function App() {
                                  </div>
                                  <div className="grid md:grid-cols-1 gap-6">
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 4.1 — O Decálogo do Novo Mundo: Os 10 Mandamentos do Líder</h5>
+                                       <h5 className="text-[#C5A572] font-bold mb-3 uppercase tracking-wider">Aula 4.1 — O Decálogo do Novo Mundo: Os 10 Mandamentos do Líder</h5>
                                        <p className="text-slate-400 text-sm leading-relaxed">Conheça os pilares inegociáveis de quem lidera o mercado atual. Você verá o "antes e depois" de quem aplicou o método e entenderá que a fundação foi apenas o começo de um edifício de autoridade.</p>
                                     </div>
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 4.2 — O Ciclo PULSAR + IA.gentes: A Máquina Híbrida em Ação</h5>
+                                       <h5 className="text-[#C5A572] font-bold mb-3 uppercase tracking-wider">Aula 4.2 — O Ciclo PULSAR + IA.gentes: A Máquina Híbrida em Ação</h5>
                                        <p className="text-slate-400 text-sm leading-relaxed">A demonstração final. Veja como Planejar, Executar, Lapidar e Alavancar usando humanos e agentes em sincronia total. É a visão da sua futura operação: produtividade infinita com engajamento humano real.</p>
                                     </div>
                                     <div className="p-6 bg-white/5 rounded-xl border border-white/5">
-                                       <h5 className="text-yellow-400 font-bold mb-3 uppercase tracking-wider">Aula 4.3 — O Convite de Elite: Sua Cadeira na Formação Líder PulsarH.ai</h5>
+                                       <h5 className="text-[#C5A572] font-bold mb-3 uppercase tracking-wider">Aula 4.3 — O Convite de Elite: Sua Cadeira na Formação Líder PulsarH.ai</h5>
                                        <p className="text-slate-400 text-sm leading-relaxed">O acesso ao programa completo de 12 módulos e 65 aulas. Depoimentos, resultados de ROI comprovado e a oferta exclusiva para quem não quer apenas "assistir à revolução", mas liderá-la.</p>
                                     </div>
                                  </div>
@@ -698,24 +698,24 @@ export default function App() {
                   </Reveal>
 
                   <Reveal>
-                     <div className="glass-card bg-[#0a0f25]/60 border border-yellow-500/20 p-10 md:p-16 rounded-[40px] relative overflow-hidden group">
+                     <div className="glass-card bg-[#0a0f25]/60 border border-[#C5A572]/20 p-6 md:p-10 rounded-2xl md:rounded-3xl relative overflow-hidden group">
                         <div className="text-center mb-10">
                            <h4 className="text-lg md:text-2xl font-black text-white uppercase tracking-widest mb-10">
                               E antes que pense: "Não tenho tempo." ou "é muito barato — deve ser raso." eu te digo:
                            </h4>
                         </div>
                         <div className="grid md:grid-cols-2 gap-8">
-                           <div className="p-8 bg-white/5 rounded-2xl border border-white/5 hover:border-yellow-500/20 transition-all">
-                              <p className="text-yellow-500 font-black text-3xl mb-4">01</p>
+                           <div className="p-8 bg-white/5 rounded-2xl border border-white/5 hover:border-[#C5A572]/20 transition-all">
+                              <p className="text-[#C5A572] font-black text-3xl mb-4">01</p>
                               <p className="text-white text-lg font-light leading-relaxed">São 12 aulas de ~15 minutos. Menos de 3 horas no total. E você tem uma reunião 1:1 de 30 minutos direto com Rodrigo Braga pra focar exatamente onde o calo aperta. Zero teoria inútil. Só o que muda resultado.</p>
                            </div>
-                           <div className="p-8 bg-white/5 rounded-2xl border border-white/5 hover:border-yellow-500/20 transition-all">
-                              <p className="text-yellow-500 font-black text-3xl mb-4">02</p>
+                           <div className="p-8 bg-white/5 rounded-2xl border border-white/5 hover:border-[#C5A572]/20 transition-all">
+                              <p className="text-[#C5A572] font-black text-3xl mb-4">02</p>
                               <p className="text-white text-lg font-light leading-relaxed">O preço é um filtro. Queremos achar os líderes comprometidos que vão pra Formação Core. Por isso entregamos desproporcional: 12 aulas + 1:1 individual + seu primeiro IA.gente funcionando. Se fosse pelo valor real, seria R$2.000+. Estamos investindo em você antes de você investir na formação.</p>
                            </div>
                         </div>
                         <div className="mt-16 text-center">
-                           <button onClick={scrollToOffer} className="btn-neon px-12 py-5 text-sm md:text-base tracking-widest flex items-center justify-center gap-3 mx-auto">
+                           <button onClick={scrollToOffer} className="btn-neon py-4 px-8 text-sm md:text-base tracking-widest flex items-center justify-center gap-3 mx-auto">
                               🔵 COMECE HOJE E VEJA OS RESULTADOS NOS PRIMEIROS DIAS
                            </button>
                         </div>
@@ -728,7 +728,7 @@ export default function App() {
             <section className="py-24 px-6 lg:px-12 relative bg-[#0a0f25] border-b border-white/5">
                <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 md:gap-12">
                   <Reveal>
-                     <div className="glass-card bg-primary/5 border border-primary/20 p-8 md:p-12 rounded-3xl h-full flex flex-col shadow-[0_0_30px_rgba(234,179,8,0.05)]">
+                     <div className="glass-card bg-primary/5 border border-primary/20 p-8 md:p-12 rounded-3xl h-full flex flex-col shadow-[0_0_30px_rgba(197,165,114,0.05)]">
                         <h3 className="text-xl md:text-3xl font-heading font-black text-white uppercase mb-8 flex items-center gap-4">
                            Isso aqui é pra você que:
                         </h3>
@@ -758,7 +758,7 @@ export default function App() {
 
                   <Reveal delay={100}>
                      <div className="glass-card bg-red-900/10 border border-red-500/20 p-8 md:p-12 rounded-3xl h-full flex flex-col shadow-[0_0_30px_rgba(239,68,68,0.05)]">
-                        <h3 className="text-2xl md:text-3xl font-heading font-black text-white uppercase mb-8 flex items-center gap-4">
+                        <h3 className="text-xl md:text-2xl font-heading font-black text-white uppercase mb-8 flex items-center gap-4">
                            Isso NÃO é pra você que:
                         </h3>
                         <ul className="space-y-6 flex-1 mb-10">
@@ -785,7 +785,7 @@ export default function App() {
                         <div className="mt-auto border-t border-white/10 pt-8">
                            <p className="text-slate-400 font-light italic mb-4">Se você quer conforto…</p>
                            <p className="text-white font-black text-2xl uppercase tracking-widest mb-8">Sai agora.</p>
-                           <button onClick={scrollToOffer} className="btn-neon w-full px-6 py-5 text-xs md:text-sm tracking-widest flex items-center justify-center gap-2">
+                           <button onClick={scrollToOffer} className="btn-neon w-full px-6 py-4 text-xs md:text-sm tracking-widest flex items-center justify-center gap-2">
                               SE QUER DOMÍNIO, ENTRE AGORA
                            </button>
                         </div>
@@ -800,8 +800,8 @@ export default function App() {
                <div className="max-w-7xl mx-auto relative z-10">
                   <div className="text-center mb-16">
                      <p className="text-primary font-bold uppercase tracking-[0.3em] text-sm md:text-base mb-6 animate-pulse">ACESSO LIBERADO</p>
-                     <h2 className="text-4xl md:text-6xl lg:text-7xl font-heading font-black text-white tracking-tight uppercase mb-8 leading-tight">
-                        Você não vai receber <br className="hidden md:block"/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">só conteúdo.</span>
+                     <h2 className="text-2xl md:text-5xl lg:text-6xl font-heading font-black text-white tracking-tight uppercase mb-8 leading-tight">
+                        Você não vai receber <br className="hidden md:block"/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572]">só conteúdo.</span>
                      </h2>
                      <p className="text-xl md:text-3xl font-light text-slate-300">
                         Você vai entrar em uma <strong className="text-white font-medium">imersão com Rodrigo</strong> e levar:
@@ -809,49 +809,49 @@ export default function App() {
                   </div>
 
                   <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mb-16">
-                     <div className="glass-card bg-slate-900/60 p-10 border border-primary/20 rounded-3xl text-center shadow-[0_0_30px_rgba(234,179,8,0.1)] hover:-translate-y-2 transition-transform">
+                     <div className="glass-card bg-slate-900/60 p-10 border border-primary/20 rounded-3xl text-center shadow-[0_0_30px_rgba(197,165,114,0.1)] hover:-translate-y-2 transition-transform">
                         <div className="text-6xl font-black text-primary mb-6 drop-shadow-md">4</div>
                         <p className="text-slate-300 text-lg font-light">Módulos estruturados pra reprogramar sua forma de liderar</p>
                      </div>
-                     <div className="glass-card bg-slate-900/60 p-10 border border-primary/20 rounded-3xl text-center shadow-[0_0_30px_rgba(234,179,8,0.1)] hover:-translate-y-2 transition-transform">
+                     <div className="glass-card bg-slate-900/60 p-10 border border-primary/20 rounded-3xl text-center shadow-[0_0_30px_rgba(197,165,114,0.1)] hover:-translate-y-2 transition-transform">
                         <div className="text-6xl font-black text-primary mb-6 drop-shadow-md">12</div>
                         <p className="text-slate-300 text-lg font-light">Aulas focadas em aplicação real para liderar gente + IA.gentes</p>
                      </div>
-                     <div className="glass-card bg-slate-900/60 p-10 border border-primary/20 rounded-3xl text-center shadow-[0_0_30px_rgba(234,179,8,0.1)] hover:-translate-y-2 transition-transform">
+                     <div className="glass-card bg-slate-900/60 p-10 border border-primary/20 rounded-3xl text-center shadow-[0_0_30px_rgba(197,165,114,0.1)] hover:-translate-y-2 transition-transform">
                         <div className="text-6xl font-black text-primary mb-6 drop-shadow-md">1</div>
                         <p className="text-slate-300 text-lg font-light">Sessão de mentoria INDIVIDUAL estratégica pra ajustar sua liderança na era da IA</p>
                      </div>
                   </div>
 
 
-                  <div className="max-w-4xl mx-auto glass-card border-2 border-green-500/50 bg-gradient-to-br from-slate-900 to-[#0a0f25] p-10 md:p-16 rounded-[40px] relative shadow-[0_0_120px_rgba(34,197,94,0.25)]">
+                  <div className="max-w-4xl mx-auto glass-card border-2 border-green-500/50 bg-gradient-to-br from-slate-900 to-[#0a0f25] p-6 md:p-10 rounded-2xl md:rounded-3xl relative shadow-[0_0_120px_rgba(34,197,94,0.25)]">
                      <div className="text-center mb-12">
-                        <h3 className="text-2xl md:text-3xl font-black text-yellow-500 uppercase tracking-widest mb-6">Agora presta atenção.</h3>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed italic">Isso aqui NÃO é só um curso. <br className="hidden md:block"/> <strong className="text-white font-black uppercase text-2xl md:text-3xl mt-2 block not-italic">É um upgrade de posicionamento profissional.</strong></p>
+                        <h3 className="text-xl md:text-2xl font-black text-[#C5A572] uppercase tracking-widest mb-6">Agora presta atenção.</h3>
+                        <p className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed italic">Isso aqui NÃO é só um curso. <br className="hidden md:block"/> <strong className="text-white font-black uppercase text-xl md:text-2xl mt-2 block not-italic">É um upgrade de posicionamento profissional.</strong></p>
                      </div>
 
                      <div className="flex flex-col md:flex-row items-center justify-between border-y border-white/10 py-12 mb-12 gap-8 relative">
                         <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-1 h-12 bg-green-500 rounded-full blur-sm"></div>
                         <div className="text-center md:text-left">
                            <p className="text-slate-500 font-black uppercase tracking-widest text-xs mb-3">Investimento Único:</p>
-                           <p className="text-5xl md:text-7xl text-green-400 font-black tracking-tighter drop-shadow-[0_0_20px_rgba(34,197,94,0.4)]">R$ 297,00</p>
+                           <p className="text-4xl md:text-6xl text-green-400 font-black tracking-tighter drop-shadow-[0_0_20px_rgba(34,197,94,0.4)]">R$ 297,00</p>
                         </div>
                         <div className="text-center md:text-right">
-                           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-yellow-500/30 bg-yellow-500/5 mb-4">
-                              <div className="w-2 h-2 rounded-full bg-yellow-500 animate-pulse"></div>
-                              <span className="text-[10px] font-black uppercase tracking-widest text-yellow-500">Lote de Abertura</span>
+                           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#C5A572]/30 bg-[#C5A572]/5 mb-4">
+                              <div className="w-2 h-2 rounded-full bg-[#C5A572] animate-pulse"></div>
+                              <span className="text-[10px] font-black uppercase tracking-widest text-[#C5A572]">Lote de Abertura</span>
                            </div>
                            <p className="text-slate-400 text-xs uppercase tracking-widest font-bold">Vagas limitadas por turma</p>
                         </div>
                      </div>
 
-                     <div className="bg-white/[0.03] rounded-[32px] p-8 md:p-12 border border-white/5 mb-12 relative overflow-hidden group">
+                     <div className="bg-white/[0.03] rounded-2xl p-6 md:p-8 border border-white/5 mb-12 relative overflow-hidden group">
                         <div className="absolute top-0 right-0 p-4 bg-green-500 text-black text-[12px] font-black uppercase tracking-widest rounded-bl-2xl shadow-xl z-20">Presente</div>
                         <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-green-500/5 blur-[100px] rounded-full"></div>
                         
                         <div className="relative z-10 text-center mb-10">
                            <p className="text-primary font-black uppercase tracking-widest text-sm mb-4">Fazendo seu cadastro hoje você vai levar:</p>
-                           <h4 className="text-2xl md:text-3xl font-black text-white uppercase tracking-tight mb-4 leading-tight">
+                           <h4 className="text-xl md:text-2xl font-black text-white uppercase tracking-tight mb-4 leading-tight">
                               3 BÔNUS ESPECIAIS <br/>
                               <span className="text-green-400 underline decoration-green-500/30 underline-offset-8">DE R$ 994 POR ZERO</span>
                            </h4>
@@ -887,7 +887,7 @@ export default function App() {
                <div className="w-full relative z-10">
                   <Reveal>
                      <div className="text-center mb-16 px-6">
-                        <h3 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
+                        <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">
                            💬 Quem participou sentiu a diferença na prática
                         </h3>
                         <p className="text-xl text-primary font-medium tracking-wide">
@@ -896,16 +896,16 @@ export default function App() {
                      </div>
                   </Reveal>
                   <div className="relative w-full overflow-hidden mb-16">
-                     <div className="absolute left-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-r from-[#020617] to-transparent pointer-events-none"></div>
-                     <div className="absolute right-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-l from-[#020617] to-transparent pointer-events-none"></div>
+                     <div className="absolute left-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-r from-surface to-transparent pointer-events-none"></div>
+                     <div className="absolute right-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-l from-surface to-transparent pointer-events-none"></div>
                      <div className="flex w-max animate-scroll hover:[animation-play-state:paused] group">
                         {[...testimonials, ...testimonials].map((t, i) => (
-                           <div key={i} className="w-[300px] md:w-[400px] mx-3 md:mx-5 p-6 md:p-8 rounded-2xl border border-primary/20 bg-slate-900/40 backdrop-blur-md hover:border-primary/50 transition-all duration-300 flex flex-col shadow-lg hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] group/card shrink-0">
+                           <div key={i} className="w-[300px] md:w-[400px] mx-3 md:mx-5 p-6 md:p-8 rounded-2xl border border-primary/20 bg-slate-900/40 backdrop-blur-md hover:border-primary/50 transition-all duration-300 flex flex-col shadow-lg hover:shadow-[0_0_30px_rgba(107,45,139,0.15)] group/card shrink-0">
                               <div className="mb-4 md:mb-6">
                                  <div className="flex justify-between items-start mb-3 md:mb-4">
                                     <div className="flex gap-1">
                                        {[1, 2, 3, 4, 5].map(star => (
-                                          <svg key={star} className="w-4 h-4 text-cyan-400 fill-cyan-400" viewBox="0 0 20 20">
+                                          <svg key={star} className="w-4 h-4 text-[#C5A572] fill-[#C5A572]" viewBox="0 0 20 20">
                                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                                           </svg>
                                        ))}
@@ -915,12 +915,12 @@ export default function App() {
                                  <p className="text-slate-200 text-base md:text-lg font-light leading-relaxed">"{t.text}"</p>
                               </div>
                               <div className="mt-auto pt-4 md:pt-6 border-t border-white/5 flex items-center gap-4">
-                                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center text-slate-950 font-bold text-sm">
+                                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-[#6B2D8B] flex items-center justify-center text-slate-950 font-bold text-sm">
                                     {t.name.charAt(0)}
                                  </div>
                                  <div>
                                     <p className="text-white font-bold text-base">{t.name}</p>
-                                    <p className="text-cyan-400 text-xs uppercase tracking-widest font-bold mt-0.5">{t.role}</p>
+                                    <p className="text-[#C5A572] text-xs uppercase tracking-widest font-bold mt-0.5">{t.role}</p>
                                  </div>
                               </div>
                            </div>
@@ -930,7 +930,7 @@ export default function App() {
 
                   <div className="text-center px-6">
                      <p className="text-slate-400 text-lg mb-8 font-light italic">Junte-se a centenas de líderes que transformaram sua gestão.</p>
-                     <button onClick={scrollToOffer} className="btn-neon px-12 py-5 text-sm md:text-base tracking-widest gap-3 mx-auto">
+                     <button onClick={scrollToOffer} className="btn-neon py-4 px-8 text-sm md:text-base tracking-widest gap-3 mx-auto">
                         🔵 QUERO TER ESSE NÍVEL DE CLAREZA NA MINHA LIDERANÇA
                         <ArrowRight className="w-5 h-5 relative z-10" />
                      </button>
@@ -940,12 +940,12 @@ export default function App() {
 
             {/* --- BIO --- */}
             <section className="py-24 px-6 lg:px-12 relative bg-background border-b border-white/5 overflow-hidden">
-               <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[100px] pointer-events-none"></div>
+               <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#0D1847]/20 rounded-full blur-[100px] pointer-events-none"></div>
                <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
                   <div className="relative order-1">
                      <Reveal>
                         <div className="relative z-10">
-                           <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-blue-600/30 rounded-2xl blur-xl -z-10 transform translate-y-4 translate-x-4"></div>
+                           <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-[#6B2D8B]/30 rounded-2xl blur-xl -z-10 transform translate-y-4 translate-x-4"></div>
                            <img src="https://storage.googleapis.com/msgsndr/mUZEjZcfs8vJQPN3EnCF/media/693c55bae918008870673d5d.png" alt="Rodrigo Braga" className="w-full h-auto rounded-2xl border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)]" />
                            <div className="absolute -bottom-6 -right-6 glass-card p-4 rounded-xl border border-primary/20 shadow-xl hidden md:block">
                               <div className="flex items-center gap-3">
@@ -963,7 +963,7 @@ export default function App() {
                   </div>
                   <div className="order-2">
                      <Reveal delay={200}>
-                        <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-2">
+                        <h2 className="text-2xl md:text-4xl font-heading font-bold text-white mb-2">
                            Rodrigo Braga
                         </h2>
                         <p className="text-primary font-bold tracking-wider uppercase text-sm mb-8 flex items-center gap-2">
@@ -1001,9 +1001,9 @@ export default function App() {
             </section>
 
             {/* --- FAQ --- */}
-            <section className="py-32 px-6 lg:px-12 relative bg-background border-t border-white/5">
+            <section className="py-16 md:py-24 px-6 lg:px-12 relative bg-background border-t border-white/5">
                <div className="max-w-3xl mx-auto text-center">
-                  <h2 className="text-3xl font-heading font-bold text-white mb-16 uppercase tracking-tight">Perguntas Frequentes</h2>
+                  <h2 className="text-2xl md:text-3xl font-heading font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572] mb-16 uppercase tracking-tight">Perguntas Frequentes</h2>
                   <div className="space-y-4 mb-16">
                      {faqs.map((faq, index) => (
                         <div key={index} className="glass-card rounded-lg overflow-hidden border border-white/5 hover:border-primary/30 transition-all">
@@ -1022,7 +1022,7 @@ export default function App() {
 
                   <div className="px-6">
                      <p className="text-slate-400 text-lg mb-8 font-light italic">Ainda tem alguma dúvida? Comece agora e veja na prática.</p>
-                     <button onClick={scrollToOffer} className="btn-neon px-12 py-5 text-sm md:text-base tracking-widest gap-3 mx-auto">
+                     <button onClick={scrollToOffer} className="btn-neon py-4 px-8 text-sm md:text-base tracking-widest gap-3 mx-auto">
                         GARANTIR MEU ACESSO AGORA
                         <ArrowRight className="w-5 h-5 relative z-10" />
                      </button>
@@ -1032,14 +1032,14 @@ export default function App() {
 
             {/* --- FOOTER --- */}
             <footer className="py-12 px-6 bg-[#020617] text-center border-t border-white/5 relative">
-               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-gradient-to-r from-transparent via-[#6B2D8B]/40 to-transparent"></div>
                <div className="flex items-center justify-center gap-2 mb-6 opacity-50">
                   <img
                      src="https://storage.googleapis.com/msgsndr/mUZEjZcfs8vJQPN3EnCF/media/69655adcf88d5a6b434054ac.png"
                      alt="Logo PulsarH"
                      className="h-8 w-auto object-contain"
                   />
-                  <span className="font-heading font-black uppercase tracking-tight text-white">PulsarH<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-purple-600 to-yellow-500">.AI</span></span>
+                  <span className="font-heading font-black uppercase tracking-tight text-white">PulsarH<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] via-[#8B5CB8] to-[#C5A572]">.AI</span></span>
                </div>
                <p className="text-[10px] text-slate-600 uppercase tracking-[0.2em] font-bold">&copy; {new Date().getFullYear()} Todos os direitos reservados. PulsarH - Rodrigo Braga.</p>
             </footer>
