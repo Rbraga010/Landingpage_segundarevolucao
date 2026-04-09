@@ -282,27 +282,20 @@ export default function App() {
                   </Reveal>
 
                   <div className="grid md:grid-cols-3 gap-6 mb-16">
-                     <Reveal delay={100}>
-                        <div className="glass-card p-8 border-white/5 bg-slate-900/40 rounded-2xl hover:border-[#C5A572]/30 transition-all h-full">
-                           <p className="text-white text-lg font-light leading-relaxed">
-                              <strong className="text-[#C5A572] font-black">12 aulas de 15 minutos</strong> — direto ao ponto. Sem teoria inutil.
-                           </p>
-                        </div>
-                     </Reveal>
-                     <Reveal delay={200}>
-                        <div className="glass-card p-8 border-white/5 bg-slate-900/40 rounded-2xl hover:border-[#C5A572]/30 transition-all h-full">
-                           <p className="text-white text-lg font-light leading-relaxed">
-                              <strong className="text-[#C5A572] font-black">1 reuniao 1:1 com Rodrigo Braga</strong> — so voce e ele, 30 minutos, resolvendo O SEU problema.
-                           </p>
-                        </div>
-                     </Reveal>
-                     <Reveal delay={300}>
-                        <div className="glass-card p-8 border-white/5 bg-slate-900/40 rounded-2xl hover:border-[#C5A572]/30 transition-all h-full">
-                           <p className="text-white text-lg font-light leading-relaxed">
-                              Voce <strong className="text-[#C5A572] font-black">SAI com seu primeiro IA.gente funcionando.</strong> Criado por voce. Sem codigo.
-                           </p>
-                        </div>
-                     </Reveal>
+                     {[
+                        { icon: "🎯", num: "12", label: "aulas de 15 min", desc: "Direto ao ponto. Sem teoria inutil. Assista no seu ritmo." },
+                        { icon: "👤", num: "1:1", label: "com Rodrigo Braga", desc: "So voce e ele. 30 minutos resolvendo O SEU problema." },
+                        { icon: "🤖", num: "1", label: "IA.gente criado", desc: "Voce SAI com seu agente funcionando. Sem codigo." },
+                     ].map((item, i) => (
+                        <Reveal key={i} delay={i * 100}>
+                           <div className="glass-card p-6 md:p-8 border-[#6B2D8B]/20 bg-gradient-to-b from-[#6B2D8B]/10 to-transparent rounded-2xl hover:border-[#C5A572]/40 transition-all h-full text-center group hover:shadow-[0_0_40px_rgba(197,165,114,0.1)]">
+                              <span className="text-4xl mb-4 block group-hover:scale-110 transition-transform">{item.icon}</span>
+                              <p className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#C5A572] to-[#E8D5B0] mb-1">{item.num}</p>
+                              <p className="text-sm font-bold uppercase tracking-wider text-white mb-3">{item.label}</p>
+                              <p className="text-sm text-slate-400 font-light leading-relaxed">{item.desc}</p>
+                           </div>
+                        </Reveal>
+                     ))}
                   </div>
 
                   <Reveal delay={400}>
@@ -335,21 +328,27 @@ export default function App() {
                      </div>
                   </Reveal>
 
-                  <div className="grid md:grid-cols-1 gap-6 mb-16">
+                  <div className="grid md:grid-cols-2 gap-5 mb-16">
                      {[
-                        { emoji: "\uD83D\uDD17", title: "CONECTOR", text: "Seu time trabalha desconectado? Cada um usa IA pra um lado? O Lider Conector integra gente + IA.gentes numa direcao so. Imagine um IA.gente que alinha as prioridades do time toda segunda-feira antes de voce chegar." },
-                        { emoji: "\u26A1", title: "HIPERPRODUTIVO", text: "Voce trabalha 12h e nao sai do operacional? O Lider Hiperprodutivo delega o braco robotico pra IA. Imagine um IA.gente que prepara suas reunioes, organiza dados e te entrega so o que importa decidir." },
-                        { emoji: "\uD83E\uDDE0", title: "HUMILDE", text: "Seu ego trava o time? O Lider Humilde sabe que nao sabe tudo — e usa IA pra enxergar o que sozinho nao ve. Imagine um IA.gente que monitora clima do time e te alerta antes de alguem pedir demissao." },
-                        { emoji: "\uD83D\uDCCA", title: "SISTEMICO", text: "Voce decide no achismo? O Lider Sistemico usa dados pra decidir e gente pra executar. Imagine um IA.gente que cruza seus indicadores e te mostra onde esta o gargalo real." },
-                        { emoji: "\u2764\uFE0F", title: "HUMANO", text: "Tecnologia sem gente e maquina fria. O Lider Humano usa o tempo que a IA libera pra CUIDAR de gente. Imagine ter 2 horas extras por dia pra fazer 1:1, reconhecer e desenvolver quem merece." }
+                        { emoji: "\uD83D\uDD17", title: "CONECTOR", color: "#8B5CF6", pain: "Seu time trabalha desconectado?", solution: "O Lider Conector integra gente + IA.gentes numa direcao so.", agent: "IA.gente que alinha as prioridades do time toda segunda-feira antes de voce chegar." },
+                        { emoji: "\u26A1", title: "HIPERPRODUTIVO", color: "#C5A572", pain: "Voce trabalha 12h e nao sai do operacional?", solution: "O Lider Hiperprodutivo delega o braco robotico pra IA.", agent: "IA.gente que prepara suas reunioes, organiza dados e te entrega so o que importa decidir." },
+                        { emoji: "\uD83E\uDDE0", title: "HUMILDE", color: "#6B2D8B", pain: "Seu ego trava o time?", solution: "O Lider Humilde usa IA pra enxergar o que sozinho nao ve.", agent: "IA.gente que monitora clima do time e te alerta antes de alguem pedir demissao." },
+                        { emoji: "\uD83D\uDCCA", title: "SISTEMICO", color: "#3B82F6", pain: "Voce decide no achismo?", solution: "O Lider Sistemico usa dados pra decidir e gente pra executar.", agent: "IA.gente que cruza seus indicadores e te mostra onde esta o gargalo real." },
+                        { emoji: "\u2764\uFE0F", title: "HUMANO", color: "#EF4444", pain: "Tecnologia sem gente e maquina fria.", solution: "O Lider Humano usa o tempo que a IA libera pra CUIDAR de gente.", agent: "2 horas extras por dia pra fazer 1:1, reconhecer e desenvolver quem merece." }
                      ].map((card, i) => (
-                        <Reveal key={i} delay={i * 100}>
-                           <div className="glass-card p-8 border-white/5 bg-slate-900/40 rounded-2xl hover:border-[#C5A572]/30 transition-all">
-                              <div className="flex items-start gap-6">
-                                 <span className="text-4xl shrink-0">{card.emoji}</span>
-                                 <div>
-                                    <h4 className="text-[#C5A572] font-black uppercase tracking-wider text-lg mb-3">{card.title}</h4>
-                                    <p className="text-slate-300 text-lg font-light leading-relaxed">{card.text}</p>
+                        <Reveal key={i} delay={i * 80}>
+                           <div className={`relative overflow-hidden rounded-2xl border border-white/10 p-6 md:p-8 transition-all duration-300 hover:border-[${card.color}]/40 hover:shadow-[0_0_30px_rgba(107,45,139,0.12)] group ${i === 4 ? 'md:col-span-2 md:max-w-lg md:mx-auto' : ''}`} style={{ background: `linear-gradient(135deg, ${card.color}10 0%, rgba(7,5,20,0.8) 100%)` }}>
+                              <div className="absolute top-0 right-0 w-32 h-32 rounded-full blur-[60px] opacity-20 group-hover:opacity-40 transition-opacity" style={{ background: card.color }} />
+                              <div className="relative z-10">
+                                 <div className="flex items-center gap-3 mb-4">
+                                    <span className="text-3xl">{card.emoji}</span>
+                                    <h4 className="font-black uppercase tracking-wider text-sm" style={{ color: card.color }}>{card.title}</h4>
+                                 </div>
+                                 <p className="text-white font-bold text-base md:text-lg mb-2">{card.pain}</p>
+                                 <p className="text-slate-400 text-sm font-light leading-relaxed mb-4">{card.solution}</p>
+                                 <div className="flex items-start gap-2 p-3 rounded-xl bg-white/5 border border-white/5">
+                                    <span className="text-[10px] text-[#C5A572] font-bold uppercase shrink-0 mt-0.5">Imagine:</span>
+                                    <p className="text-xs text-slate-300 font-light leading-relaxed">{card.agent}</p>
                                  </div>
                               </div>
                            </div>
@@ -370,8 +369,8 @@ export default function App() {
                </div>
             </section>
 
-            {/* --- SECTION 2: THE SECOND WAVE --- */}
-            <section className="relative py-16 md:py-24 px-6 lg:px-12 bg-[#070514] overflow-hidden">
+            {/* --- SECTION 2: SECOND WAVE — HIDDEN (content now in hero + 5 dimensions) --- */}
+            <section className="hidden">
                <div className="absolute inset-0 z-0 pointer-events-none">
                   <div className="absolute top-[10%] left-[-10%] w-[40vw] h-[40vw] bg-[#6B2D8B]/10 rounded-full blur-[120px] mix-blend-screen opacity-40"></div>
                   <div className="absolute bottom-[10%] right-[-10%] w-[40vw] h-[40vw] bg-[#C5A572]/10 rounded-full blur-[120px] mix-blend-screen opacity-40"></div>
