@@ -132,18 +132,16 @@ export default function App() {
    const toggleFaq = (index: number) => setOpenFaqIndex(openFaqIndex === index ? null : index);
 
    const faqs = [
-      { question: "Isso é mais um curso de IA?", answer: "Não.\nCurso ensina ferramenta.\nAqui você aprende a LIDERAR gente + IA na operação real.\nSe você quer só 'aprender prompt'… isso não é pra você." },
-      { question: "Eu preciso saber programar ou ter conhecimento técnico?", answer: "Não.\nVocê vai usar IA como líder, não como desenvolvedor.\nO foco é decisão, estratégia e execução — não código." },
-      { question: "Isso funciona pra qualquer área ou só tecnologia?", answer: "Funciona pra qualquer área que tenha pessoas e operação.\nOu seja: praticamente TODAS." },
-      { question: "Quanto tempo eu preciso dedicar?", answer: "Poucas horas já mudam sua forma de liderar.\nA diferença é que aqui você implementa enquanto aprende." },
-      { question: "E se minha empresa ainda não usa IA?", answer: "Melhor ainda.\nVocê vai sair na frente e virar referência interna." },
-      { question: "E se minha empresa já usa IA?", answer: "Então você já viu o problema:\nferramenta sem liderança não gera resultado.\nAqui você resolve isso." },
-      { question: "Isso serve pra quem quer ser promovido?", answer: "Serve principalmente pra isso.\nEsse é o tipo de habilidade que a diretoria procura — e não encontra." },
-      { question: "Sou empresário. Isso ajuda meu negócio ou só minha liderança?", answer: "Os dois.\nVocê aprende a estruturar operação com IA e formar líderes mais eficientes.\nIsso escala empresa, não só carreira." },
-      { question: "Trabalho com RH. Isso faz sentido pra mim?", answer: "Faz mais do que sentido.\nVocê vai sair com base prática pra preparar líderes e times pra nova era.\nQuem não fizer isso agora… vai ficar obsoleto." },
-      { question: "Isso é teórico ou prático?", answer: "Prático.\nTudo foi desenhado pra aplicação imediata na sua rotina." },
-      { question: "E se eu não implementar?", answer: "Então nada muda.\nMas alguém no seu lugar vai implementar… e passar na sua frente." },
-      { question: "Por que essa oferta está liberada com bônus hoje?", answer: "Porque a decisão precisa ser agora.\nEsse é o tipo de movimento que separa quem cresce de quem fica parado." }
+      { question: "Preciso saber programar pra fazer a Imersão H.AI?", answer: "Não. Zero código.\nVocê aprende a USAR IA estrategicamente — não a construir IA.\nÉ gestão, não engenharia." },
+      { question: "Sou empresário solo. Serve pra mim?", answer: "Serve. Na verdade, é perfeito.\nVocê vai aprender a amplificar VOCÊ mesmo com IA antes de contratar ninguém.\nMuitos alunos da PulsarH.AI são solos preparando a escalada." },
+      { question: "Quando acontece a Sessão Estratégica 1:1?", answer: "Você agenda no seu ritmo, em até 30 dias após a matrícula.\nIdeal é depois de assistir os 4 módulos — a sessão rende muito mais.\nMas você tem até 90 dias pra agendar. Não deixa pra última hora, porque eu opero pessoalmente e vagas são limitadas por mês." },
+      { question: "As 22 aulas são vitalícias?", answer: "Sim. Acesso vitalício pelas atualizações.\nMétodo evolui — você evolui junto, sem custo extra." },
+      { question: "Qual a diferença entre a Imersão H.AI e a Mentoria PulsarH.AI?", answer: "Imersão = método autoservido + 1 Sessão 1:1 (R$697).\nMentoria = acompanhamento individual 3-6 meses, eu dentro do seu negócio toda semana (R$5.000).\n\nA Imersão é o onboarding perfeito pra decidir se a Mentoria faz sentido — e você ganha R$1.000 de desconto na Mentoria se avançar em até 30 dias." },
+      { question: "Meu time tem acesso às aulas também?", answer: "Sim. Até 5 logins por matrícula (você + 4 colaboradores).\nPorque o sentido da Imersão H.AI é VOCÊ e SEU TIME aprenderem juntos.\nSem isso, a tese quebra." },
+      { question: "Como funciona a Garantia Cristal Clara?", answer: "Entrou na Sessão + assistiu as 22 aulas + entregou o checklist.\nSe não tiver clareza absoluta do plano de implementação de IA no seu negócio → 100% refund em 7 dias.\nSem perguntas. Sem enrolação.\n\n(Se você não cumpre as 3 etapas, não há garantia — não vendo resultado pra quem não faz a parte dele.)" },
+      { question: "Parcela no cartão tem juros?", answer: "Não. 12x no cartão sem juros.\nPIX tem 5% de desconto." },
+      { question: "E se eu não conseguir fazer a Sessão logo após a matrícula?", answer: "Sem problema — você tem até 90 dias pra agendar.\nMas assiste os 4 módulos antes: a sessão rende 3x mais quando você chega com o diagnóstico já feito." },
+      { question: "Posso fazer mais de uma Sessão Estratégica?", answer: "Na Imersão, 1 sessão inclusa.\nSessões adicionais: R$1.497 cada.\nOu avança pra Mentoria (R$5.000 / 3 meses) — sessões semanais." }
    ];
 
    const testimonials = [
@@ -1544,6 +1542,67 @@ export default function App() {
                </div>
             </section>
 
+            {/* --- SECTION 13: GARANTIA CRISTAL CLARA (dedicada) --- */}
+            <section className="relative py-24 px-6 lg:px-12 bg-[#050410] overflow-hidden border-b border-white/5">
+               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-green-500/10 blur-[140px] rounded-full pointer-events-none"></div>
+
+               <div className="max-w-5xl mx-auto relative z-10">
+                  <Reveal>
+                     <div className="grid md:grid-cols-[auto_1fr] gap-8 md:gap-12 items-center p-8 md:p-12 rounded-3xl border-2 border-green-500/40 bg-gradient-to-br from-green-900/20 via-[#0a0f25] to-[#070514] shadow-[0_0_80px_rgba(34,197,94,0.2)]">
+
+                        {/* Selo Visual */}
+                        <div className="relative w-40 h-40 md:w-52 md:h-52 mx-auto shrink-0">
+                           <div className="absolute inset-0 rounded-full border-[3px] border-green-500/60 bg-green-500/10 flex items-center justify-center backdrop-blur-md shadow-[0_0_40px_rgba(34,197,94,0.4)]">
+                              <div className="text-center">
+                                 <div className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-green-400 mb-1">Garantia</div>
+                                 <div className="text-4xl md:text-5xl font-black text-white">7</div>
+                                 <div className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-green-400 mt-1">dias</div>
+                              </div>
+                           </div>
+                           <div className="absolute -inset-2 rounded-full border border-green-500/20 animate-pulse pointer-events-none"></div>
+                        </div>
+
+                        {/* Copy */}
+                        <div>
+                           <p className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-green-400 mb-3 flex items-center gap-2">
+                              🛡️ Garantia PulsarH.AI Cristal Clara
+                           </p>
+                           <h3 className="text-2xl md:text-4xl font-heading font-black text-white uppercase tracking-tight leading-tight mb-6">
+                              Se você cumprir os 3 compromissos, e mesmo assim não tiver clareza <br className="hidden md:block"/>
+                              <span className="text-green-400">— devolvo 100%.</span>
+                           </h3>
+
+                           <ul className="space-y-3 mb-6">
+                              {[
+                                 'Entrou na sua Sessão Estratégica 1:1',
+                                 'Assistiu as 22 aulas completas',
+                                 'Entregou o Checklist de Implementação (enviado após a sessão)'
+                              ].map((item, i) => (
+                                 <li key={i} className="flex items-start gap-3">
+                                    <div className="w-6 h-6 rounded-full bg-green-500/20 border border-green-500/40 flex items-center justify-center shrink-0 mt-0.5">
+                                       <Check className="w-3.5 h-3.5 text-green-400" />
+                                    </div>
+                                    <span className="text-slate-200 text-base md:text-lg font-light leading-relaxed">{item}</span>
+                                 </li>
+                              ))}
+                           </ul>
+
+                           <div className="p-5 rounded-2xl bg-green-500/10 border border-green-500/20">
+                              <p className="text-white font-bold text-lg md:text-xl leading-snug">
+                                 Devolvo <span className="text-green-400">100% do seu investimento em 7 dias.</span> <br/>
+                                 Sem perguntas. Sem enrolação.
+                              </p>
+                              <p className="text-slate-400 text-xs md:text-sm font-light italic mt-3 leading-relaxed">
+                                 Não vendo resultado pra quem não faz a parte dele. Mas se você fizer a sua e eu não entregar a minha — o dinheiro volta integral, via PIX, na hora.
+                              </p>
+                           </div>
+                        </div>
+
+                     </div>
+                  </Reveal>
+               </div>
+            </section>
+
             {/* --- FAQ --- */}
             <section className="py-16 md:py-24 px-6 lg:px-12 relative bg-background border-t border-white/5">
                <div className="max-w-3xl mx-auto text-center">
@@ -1571,6 +1630,93 @@ export default function App() {
                         <ArrowRight className="w-5 h-5 relative z-10" />
                      </button>
                   </div>
+               </div>
+            </section>
+
+            {/* --- SECTION 15: CTA FINAL + ASSINATURA --- */}
+            <section className="relative py-24 md:py-32 px-6 lg:px-12 bg-gradient-to-b from-[#050410] to-[#020617] overflow-hidden border-t border-white/5">
+               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#C5A572]/10 blur-[160px] rounded-full pointer-events-none"></div>
+               <div className="absolute inset-0 bg-tech-grid opacity-20 pointer-events-none"></div>
+
+               <div className="max-w-5xl mx-auto relative z-10">
+                  <Reveal>
+                     <h2 className="text-3xl md:text-6xl font-heading font-black text-white text-center uppercase tracking-tighter leading-[0.9] mb-8">
+                        Em poucos meses, <br className="hidden md:block"/>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572]">o jogo vira.</span>
+                     </h2>
+                     <p className="text-2xl md:text-3xl font-black text-white text-center mb-16">
+                        Você vai estar em qual lado?
+                     </p>
+                  </Reveal>
+
+                  <Reveal delay={150}>
+                     <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-16 max-w-4xl mx-auto">
+                        <div className="p-6 md:p-7 rounded-2xl border border-[#C5A572]/30 bg-[#C5A572]/5 backdrop-blur-md">
+                           <div className="flex items-start gap-3 mb-3">
+                              <Trophy className="w-6 h-6 text-[#C5A572] shrink-0 mt-0.5" />
+                              <p className="text-[#C5A572] text-[10px] md:text-xs font-black uppercase tracking-[0.2em]">Lado que vira Gestor da Era da IA</p>
+                           </div>
+                           <p className="text-slate-200 text-sm md:text-base font-light leading-relaxed">
+                              Opera com IA e gente juntos. Margem blindada. Time engajado. Concorrente olhando e se perguntando como conseguiu.
+                           </p>
+                        </div>
+                        <div className="p-6 md:p-7 rounded-2xl border border-red-500/30 bg-red-500/5 backdrop-blur-md">
+                           <div className="flex items-start gap-3 mb-3">
+                              <UserMinus className="w-6 h-6 text-red-400 shrink-0 mt-0.5" />
+                              <p className="text-red-400 text-[10px] md:text-xs font-black uppercase tracking-[0.2em]">Lado que esperou pra ver</p>
+                           </div>
+                           <p className="text-slate-200 text-sm md:text-base font-light leading-relaxed">
+                              Assistiu o mercado se mover. Travou no medo. Foi atropelado por quem não esperou — sem capital, sem contratação, só método.
+                           </p>
+                        </div>
+                     </div>
+                  </Reveal>
+
+                  <Reveal delay={300}>
+                     <div className="text-center mb-10">
+                        <p className="text-xl md:text-2xl text-white font-bold mb-2">
+                           A Imersão H.AI é o atalho. <span className="text-[#C5A572]">Eu criei.</span>
+                        </p>
+                        <p className="text-base md:text-lg text-slate-300 font-light">
+                           22 aulas. 1 Sessão 1:1 comigo. Plano por escrito no mesmo dia.
+                        </p>
+                     </div>
+                  </Reveal>
+
+                  <Reveal delay={450}>
+                     <div className="text-center mb-8">
+                        <p className="text-[10px] md:text-xs text-[#C5A572] font-black uppercase tracking-[0.3em] mb-2">Seu investimento:</p>
+                        <p className="text-3xl md:text-5xl font-black text-white mb-1">12x <span className="text-[#C5A572]">R$69,82</span></p>
+                        <p className="text-sm md:text-base text-slate-400 font-light">ou R$697 à vista · PIX com 5% off</p>
+                     </div>
+                  </Reveal>
+
+                  <Reveal delay={600}>
+                     <div className="flex flex-col items-center gap-6 mb-14">
+                        <button onClick={scrollToOffer} className="relative overflow-hidden group px-10 md:px-14 py-5 md:py-6 rounded-2xl bg-gradient-to-r from-[#6B2D8B] via-[#8B5CB8] to-[#C5A572] shadow-[0_0_60px_rgba(197,165,114,0.4)] hover:shadow-[0_0_100px_rgba(197,165,114,0.7)] hover:scale-105 transition-all text-white font-black uppercase tracking-widest text-sm md:text-base flex items-center gap-3">
+                           🎯 QUERO MEU PLANO DE IA AGORA
+                           <ArrowRight className="w-5 h-5" />
+                        </button>
+
+                        <div className="flex items-center gap-3 px-4 py-2 rounded-full border border-green-500/40 bg-green-500/5">
+                           <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                           <span className="text-[11px] md:text-xs font-black uppercase tracking-widest text-green-400">🛡️ Garantia Cristal Clara de 7 dias</span>
+                        </div>
+
+                        <p className="text-[10px] md:text-xs text-slate-500 font-light text-center max-w-md">
+                           Pagamento seguro Hotmart · SSL · Aceita todos os cartões · PIX com 5% off · Acesso imediato às 22 aulas
+                        </p>
+                     </div>
+                  </Reveal>
+
+                  <Reveal delay={800}>
+                     <div className="max-w-2xl mx-auto p-8 rounded-3xl border-l-4 border-[#C5A572] bg-white/[0.02] backdrop-blur-md">
+                        <p className="text-slate-300 text-base md:text-lg font-light italic leading-relaxed mb-4">
+                           "Liderei 4.500 pessoas em operações bilionárias. Hoje opero com 2 humanos + 20 agentes de IA. Vou te ensinar tudo. <strong className="text-white not-italic">Te espero na sessão.</strong>"
+                        </p>
+                        <p className="text-[#C5A572] text-sm font-black uppercase tracking-widest">— Rodrigo Braga</p>
+                     </div>
+                  </Reveal>
                </div>
             </section>
 
