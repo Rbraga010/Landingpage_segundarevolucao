@@ -1,6 +1,6 @@
-
-import React, { useState } from 'react';
-import { Loader2, ArrowRight, Lock, User, Mail, Smartphone, Briefcase, DollarSign, Target, Zap, Clock, Users, ShieldCheck } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Loader2, ArrowRight, Lock, User, Mail, Smartphone, Zap, Clock, Users, ShieldCheck } from 'lucide-react';
+import { captureUtm, getUtm, appendUtmToUrl, trackLead, trackInitiateCheckout } from './utm';
 
 interface RegistrationFormProps {
   btnText?: string;
@@ -30,10 +30,25 @@ export const RegistrationForm = ({ btnText, className = "h-full" }: Registration
   const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/mUZEjZcfs8vJQPN3EnCF/webhook-trigger/ndzaV1VsS9nD1Gx82jdt";
   const CHECKOUT_URL = "https://pay.hotmart.com/M103870619B";
 
+  // Captura UTM params ao carregar (guarda em sessionStorage)
+  useEffect(() => {
+    captureUtm();
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
+    const utm = getUtm();
+
+    // 1. Dispara evento Meta Pixel "Lead" (client-side + server-side via lead-proxy)
+    try {
+      trackLead(formData.email, formData.phone);
+    } catch (err) {
+      console.warn("pixel Lead fail:", err);
+    }
+
+    // 2. Manda pro GoHighLevel (GHL) webhook — mantido pra automacao externa
     try {
       if (GHL_WEBHOOK_URL) {
         await fetch(GHL_WEBHOOK_URL, {
@@ -46,15 +61,21 @@ export const RegistrationForm = ({ btnText, className = "h-full" }: Registration
             role: formData.role,
             revenue: formData.income,
             challenge: formData.challenge,
-            customData: { role: formData.role, income: formData.income, challenge: formData.challenge, source: "Landing Page Workshop LHA" }
+            customData: {
+              role: formData.role,
+              income: formData.income,
+              challenge: formData.challenge,
+              source: "Landing Page Workshop LHA",
+              ...utm,
+            }
           })
         });
       }
     } catch (error) {
-      console.error("Erro ao salvar lead:", error);
+      console.error("Erro ao salvar lead no GHL:", error);
     }
 
-    // Enviar lead ao War Room PulsarH
+    // 3. Manda pro War Room PulsarH (com UTM pra atribuição)
     try {
       await fetch("/api/lead-proxy", {
         method: "POST",
@@ -66,16 +87,33 @@ export const RegistrationForm = ({ btnText, className = "h-full" }: Registration
           role: formData.role,
           income: formData.income,
           challenge: formData.challenge,
-          lp_origin: "IMERSAO"
+          lp_origin: "IMERSAO",
+          utm_source: utm.utm_source,
+          utm_medium: utm.utm_medium,
+          utm_campaign: utm.utm_campaign,
+          utm_content: utm.utm_content,
+          src: utm.src,
+          fbclid: utm.fbclid,
+          gclid: utm.gclid,
         })
       });
     } catch (e) {
       console.warn("War Room: falha ao registrar lead", e);
     }
 
+    // 4. Dispara InitiateCheckout ANTES do redirect (pra Meta casar com Purchase depois)
+    try {
+      trackInitiateCheckout(297);
+    } catch (err) {
+      console.warn("pixel InitiateCheckout fail:", err);
+    }
+
+    // 5. Redireciona pra Hotmart com UTM params anexados (webhook de venda capturara)
+    const checkoutUrl = appendUtmToUrl(CHECKOUT_URL);
+
     setTimeout(() => {
       setLoading(false);
-      window.location.href = CHECKOUT_URL;
+      window.location.href = checkoutUrl;
     }, 1000);
   };
 
