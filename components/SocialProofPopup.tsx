@@ -57,7 +57,7 @@ export const SocialProofPopup: React.FC = () => {
             <span className="text-slate-500 text-[10px] uppercase tracking-tighter">Agora</span>
           </div>
           <p className="text-slate-400 text-[12px] leading-tight">
-            comprou o curso no Pix por <span className="text-green-400 font-bold">R$ 297,00</span>
+            garantiu a Imersão H.AI por <span className="text-green-400 font-bold">R$ 697,00</span>
           </p>
         </div>
       </div>

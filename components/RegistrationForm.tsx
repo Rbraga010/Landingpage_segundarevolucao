@@ -214,7 +214,7 @@ export const RegistrationForm = ({ btnText, className = "h-full" }: Registration
 
         {/* PARCELAMENTO */}
         <div className="mt-3 text-center">
-          <p className="text-green-400 font-bold text-sm">ou 12x de R$24,75</p>
+          <p className="text-green-400 font-bold text-sm">ou 12x de R$69,82 sem juros</p>
         </div>
 
         {/* TRUST BADGES */}

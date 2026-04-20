@@ -108,8 +108,8 @@ export function trackPixel(event: string, data?: Record<string, unknown>): void 
 export function trackLead(email: string, phone?: string): void {
   const utm = getUtm();
   trackPixel("Lead", {
-    content_name: "Imersao Essencia Hibrida",
-    content_category: "Workshop",
+    content_name: "Imersao H.AI - Gestor da Era da IA",
+    content_category: "Imersao",
     ...utm,
   });
   // Pixel server-side complementar via /api/lead-proxy já dispara
@@ -118,12 +118,12 @@ export function trackLead(email: string, phone?: string): void {
 /**
  * Dispara evento "InitiateCheckout" antes de redirecionar pro Hotmart.
  */
-export function trackInitiateCheckout(value: number = 297): void {
+export function trackInitiateCheckout(value: number = 697): void {
   const utm = getUtm();
   trackPixel("InitiateCheckout", {
     value,
     currency: "BRL",
-    content_name: "Imersao Essencia Hibrida",
+    content_name: "Imersao H.AI - Gestor da Era da IA",
     content_ids: ["M103870619B"],
     content_type: "product",
     ...utm,

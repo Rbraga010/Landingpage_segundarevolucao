@@ -117,7 +117,7 @@ export default function App() {
                   event: "PAGE_READY_FOR_LAUNCH",
                   timestamp: new Date().toISOString(),
                   status: "ready",
-                  message: "A página do Workshop LHA + IA está totalmente configurada e pronta para o disparo.",
+                  message: "A página da Imersão H.AI — O Gestor da Era da IA está totalmente configurada e pronta para o disparo.",
                   url: window.location.href
                })
             });
@@ -233,19 +233,26 @@ export default function App() {
                      <Reveal delay={100}>
                         <div className="inline-flex items-center gap-3 px-4 py-1.5 glass-pill mb-8 border-[#C5A572]/20 bg-[#C5A572]/5 backdrop-blur-sm">
                            <div className="w-1.5 h-1.5 rounded-full bg-[#C5A572] animate-pulse shadow-[0_0_10px_rgba(197,165,114,0.8)]"></div>
-                           <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-[#C5A572] drop-shadow-md">A 2a Revolucao da IA ja comecou</span>
+                           <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-[#C5A572] drop-shadow-md">Imersão H.AI — O Gestor da Era da IA</span>
                         </div>
                      </Reveal>
 
                      <Reveal delay={200}>
-                        <h1 className="text-xl md:text-2xl lg:text-4xl font-bold leading-snug tracking-tight text-white mb-6">
-                           O mercado nao quer mais lideres que so entendem de gente. Nem lideres que so entendem de IA. Quer quem lidera <span className="text-[#C5A572] font-black uppercase">OS DOIS</span> na mesma operacao.
+                        <h1 className="text-xl md:text-2xl lg:text-4xl font-black leading-tight tracking-tight text-white mb-4">
+                           Liderei operações bilionárias por 21 anos.<br/>
+                           <span className="text-slate-400 font-medium">4.500 pessoas sob meu comando.</span>
                         </h1>
                      </Reveal>
 
+                     <Reveal delay={300}>
+                        <h2 className="text-lg md:text-xl lg:text-2xl font-bold leading-snug tracking-tight text-white mb-6">
+                           Hoje minha empresa faz <span className="text-[#C5A572] font-black">3x mais resultado</span> com <span className="text-[#C5A572] font-black">2 funcionários</span> e <span className="text-[#C5A572] font-black">20 agentes de IA</span>.
+                        </h2>
+                     </Reveal>
+
                      <Reveal delay={400}>
-                        <p className="text-lg md:text-xl font-light text-slate-300 leading-relaxed max-w-xl mb-12 italic border-l-2 border-[#C5A572]/30 pl-6">
-                           Imersao PulsarH — O metodo pratico das <strong className="font-bold text-white not-italic">5 Dimensoes do Lider na Era da IA.</strong>
+                        <p className="text-base md:text-lg font-light text-slate-300 leading-relaxed max-w-xl mb-10 italic border-l-2 border-[#C5A572]/30 pl-6">
+                           Em poucos meses, pequeno empresário vai ser dividido em 2 grupos: quem virou <strong className="font-bold text-white not-italic">Gestor da Era da IA</strong> — e quem foi atropelado. <strong className="font-bold text-white not-italic">Te ensino a ser o primeiro. Você e seu time, juntos.</strong>
                         </p>
                      </Reveal>
 
@@ -253,14 +260,85 @@ export default function App() {
                         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
                            <button onClick={scrollToOffer} className="relative overflow-hidden group px-8 py-4 rounded-xl md:rounded-2xl border border-[#C5A572]/40 bg-[#C5A572]/10 hover:bg-[#C5A572]/20 backdrop-blur-xl transition-all shadow-[0_0_30px_rgba(197,165,114,0.15)] hover:shadow-[0_0_50px_rgba(197,165,114,0.4)] flex items-center justify-center gap-3">
                               <span className="text-[#C5A572] group-hover:text-[#E8D5B0] font-bold uppercase tracking-widest text-xs md:text-sm relative z-10 transition-colors drop-shadow-md">
-                                 QUERO LIDERAR A REVOLUCAO
+                                 🎯 QUERO MEU PLANO DE IA
                               </span>
                               <div className="absolute inset-0 bg-gradient-to-r from-[#C5A572]/0 via-[#C5A572]/20 to-[#C5A572]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform -translate-x-full group-hover:translate-x-full"></div>
                            </button>
+                           <div className="text-xs md:text-sm text-slate-400 font-light">
+                              <div>12x de <strong className="text-white font-bold">R$69,82</strong> · à vista R$697</div>
+                              <div className="text-[10px] uppercase tracking-widest text-slate-500 mt-1">Garantia Cristal Clara · Sessão 1:1 inclusa</div>
+                           </div>
                         </div>
                      </Reveal>
                      
                   </div>
+               </div>
+            </section>
+
+            {/* --- NEW SECTION: CONTADORES PULSARH (ANTES × DEPOIS) --- */}
+            <section className="relative py-20 px-6 lg:px-12 bg-[#050410] overflow-hidden border-y border-white/5">
+               <div className="max-w-6xl mx-auto relative z-10">
+                  <Reveal>
+                     <div className="text-center mb-12">
+                        <h3 className="text-[#C5A572]/70 font-bold uppercase tracking-[0.3em] text-[10px] md:text-xs mb-3">A operação que roda enquanto você lê</h3>
+                        <h2 className="text-xl md:text-3xl font-heading font-black text-white uppercase tracking-tight leading-tight">
+                           A prova do método é a <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572]">minha própria empresa.</span>
+                        </h2>
+                     </div>
+                  </Reveal>
+
+                  <div className="grid lg:grid-cols-2 gap-6 md:gap-10">
+                     <Reveal delay={100}>
+                        <div className="p-6 md:p-8 rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-md">
+                           <p className="text-[10px] text-slate-500 font-black uppercase tracking-[0.3em] mb-6">Rodrigo Braga · ANTES (até 2024)</p>
+                           <div className="grid grid-cols-3 gap-4">
+                              <div className="text-center">
+                                 <div className="text-2xl md:text-4xl font-black text-white mb-1">21</div>
+                                 <div className="text-[10px] text-slate-400 uppercase tracking-wider font-bold">anos liderando</div>
+                              </div>
+                              <div className="text-center">
+                                 <div className="text-2xl md:text-4xl font-black text-white mb-1">4.500+</div>
+                                 <div className="text-[10px] text-slate-400 uppercase tracking-wider font-bold">pessoas geridas</div>
+                              </div>
+                              <div className="text-center">
+                                 <div className="text-2xl md:text-4xl font-black text-white mb-1">R$Bi</div>
+                                 <div className="text-[10px] text-slate-400 uppercase tracking-wider font-bold">operações</div>
+                              </div>
+                           </div>
+                           <p className="text-xs text-slate-500 font-light italic mt-6 text-center">21 anos no corporativo até decidir virar o jogo.</p>
+                        </div>
+                     </Reveal>
+
+                     <Reveal delay={250}>
+                        <div className="p-6 md:p-8 rounded-2xl border-2 border-[#C5A572]/40 bg-gradient-to-br from-[#C5A572]/10 to-[#6B2D8B]/10 backdrop-blur-md shadow-[0_0_40px_rgba(197,165,114,0.15)]">
+                           <p className="text-[10px] text-[#C5A572] font-black uppercase tracking-[0.3em] mb-6 flex items-center gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-[#C5A572] animate-pulse"></div>
+                              Rodrigo Braga · HOJE (PulsarH.ai)
+                           </p>
+                           <div className="grid grid-cols-3 gap-4">
+                              <div className="text-center">
+                                 <div className="text-2xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#C5A572] to-[#E8D5B0] mb-1">2</div>
+                                 <div className="text-[10px] text-slate-300 uppercase tracking-wider font-bold">funcionários</div>
+                              </div>
+                              <div className="text-center">
+                                 <div className="text-2xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#C5A572] to-[#E8D5B0] mb-1">20</div>
+                                 <div className="text-[10px] text-slate-300 uppercase tracking-wider font-bold">agentes IA</div>
+                              </div>
+                              <div className="text-center">
+                                 <div className="text-2xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#C5A572] to-[#E8D5B0] mb-1">3x</div>
+                                 <div className="text-[10px] text-slate-300 uppercase tracking-wider font-bold">de ROI</div>
+                              </div>
+                           </div>
+                           <p className="text-xs text-slate-300 font-light italic mt-6 text-center">6 meses estudando IA com obsessão. Resultado: <strong className="text-white not-italic">operação enxuta, margem blindada.</strong></p>
+                        </div>
+                     </Reveal>
+                  </div>
+
+                  <Reveal delay={400}>
+                     <p className="text-center text-sm md:text-base text-slate-400 font-light mt-10 max-w-3xl mx-auto">
+                        Isso não é teoria. É o método <strong className="text-white">PULSAR+H</strong> aplicado na minha própria empresa — rodando todos os dias, com resultados auditáveis. <br className="hidden md:block"/> E <strong className="text-[#C5A572]">replicável pro seu negócio</strong>.
+                     </p>
+                  </Reveal>
                </div>
             </section>
 
@@ -283,9 +361,9 @@ export default function App() {
 
                   <div className="grid md:grid-cols-3 gap-6 mb-16">
                      {[
-                        { icon: "🎯", num: "12", label: "aulas de 15 min", desc: "Direto ao ponto. Sem teoria inutil. Assista no seu ritmo." },
-                        { icon: "👤", num: "1:1", label: "com Rodrigo Braga", desc: "So voce e ele. 30 minutos resolvendo O SEU problema." },
-                        { icon: "🤖", num: "1", label: "IA.gente criado", desc: "Voce SAI com seu agente funcionando. Sem codigo." },
+                        { icon: "🎯", num: "22", label: "aulas em 4 módulos", desc: "Diagnóstico do Gestor → IA em você → IA no time → Implementação. ~6h de método aplicado." },
+                        { icon: "👤", num: "1:1", label: "90 min com Rodrigo", desc: "Sessão Estratégica dentro do SEU negócio. Seu Plano de Implementação de IA por escrito, no mesmo dia." },
+                        { icon: "🤖", num: "∞", label: "Skills dos 18 Agentes", desc: "Biblioteca completa dos prompts e personas que eu rodo no War Room — liberada pra você rodar no seu." },
                      ].map((item, i) => (
                         <Reveal key={i} delay={i * 100}>
                            <div className="glass-card p-6 md:p-8 border-[#6B2D8B]/20 bg-gradient-to-b from-[#6B2D8B]/10 to-transparent rounded-2xl hover:border-[#C5A572]/40 transition-all h-full text-center group hover:shadow-[0_0_40px_rgba(197,165,114,0.1)]">
@@ -301,13 +379,13 @@ export default function App() {
                   <Reveal delay={400}>
                      <div className="text-center">
                         <p className="text-xl text-slate-300 font-light mb-4">
-                           Nao e teoria. Nao e palestra. E <strong className="text-white font-bold">implementacao.</strong>
+                           Não é teoria. Não é palestra. É <strong className="text-white font-bold">implementação no seu CNPJ.</strong>
                         </p>
                         <p className="text-2xl text-[#C5A572] font-black mb-8">
-                           R$297 ou 12x de R$24,75
+                           12x R$69,82 · ou R$697 à vista
                         </p>
                         <button onClick={scrollToOffer} className="btn-neon py-4 px-8 text-sm md:text-base tracking-widest flex items-center justify-center gap-3 mx-auto">
-                           QUERO IMPLEMENTAR AGORA
+                           QUERO MEU PLANO DE IA
                         </button>
                      </div>
                   </Reveal>
@@ -791,7 +869,88 @@ export default function App() {
                      </div>
                   </Reveal>
                </div>
-            </section>\n\n                        {/* --- SECTION 7: OFFER --- */}
+            </section>
+
+            {/* --- NEW SECTION: WAR ROOM AO VIVO --- */}
+            <section className="relative py-24 px-6 lg:px-12 bg-[#050410] overflow-hidden border-b border-white/5">
+               <div className="absolute inset-0 bg-tech-grid opacity-20 pointer-events-none"></div>
+               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#6B2D8B]/10 blur-[140px] rounded-full pointer-events-none"></div>
+
+               <div className="max-w-6xl mx-auto relative z-10">
+                  <Reveal>
+                     <div className="text-center mb-12">
+                        <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-[#C5A572]/20 bg-[#C5A572]/5 mb-6">
+                           <div className="w-1.5 h-1.5 rounded-full bg-[#C5A572] animate-pulse"></div>
+                           <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#C5A572]">Operação ao vivo</span>
+                        </div>
+                        <h2 className="text-2xl md:text-5xl font-heading font-black text-white uppercase tracking-tighter leading-tight mb-6">
+                           Venha ver o <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572]">motor ligado.</span>
+                        </h2>
+                        <p className="text-lg md:text-xl text-slate-300 font-light max-w-3xl mx-auto leading-relaxed">
+                           Este é o <strong className="text-white">War Room</strong>. A mesma infra que roda minha empresa hoje — e que você vai aprender a construir na sua escala, pro seu negócio.
+                        </p>
+                     </div>
+                  </Reveal>
+
+                  <Reveal delay={150}>
+                     <div className="relative rounded-2xl border border-white/10 bg-gradient-to-br from-[#0a0f25] to-[#070514] overflow-hidden shadow-[0_0_80px_rgba(107,45,139,0.2)]">
+                        <div className="absolute top-4 left-4 z-10 flex items-center gap-2">
+                           <div className="flex gap-1.5">
+                              <div className="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+                              <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
+                              <div className="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
+                           </div>
+                           <div className="text-[10px] font-mono text-slate-500 ml-2">sala-de-guerra-pulsar-h.vercel.app/cerebro</div>
+                        </div>
+                        <div className="pt-10 pb-6 px-6 md:px-10 grid md:grid-cols-2 gap-6">
+                           <div className="space-y-4">
+                              <div className="p-4 rounded-xl border border-[#C5A572]/20 bg-[#C5A572]/5">
+                                 <div className="flex items-center gap-3 mb-2">
+                                    <Brain className="w-5 h-5 text-[#C5A572]"/>
+                                    <span className="text-[11px] font-bold uppercase tracking-widest text-[#C5A572]">Cérebro</span>
+                                 </div>
+                                 <p className="text-slate-300 text-sm font-light">18 agentes especialistas com persona, metodologia e memória ativa — Alfredo (comercial), Betina (copy), Léo Dias (radar), Dani (SDR), Donna (agenda)…</p>
+                              </div>
+                              <div className="p-4 rounded-xl border border-[#6B2D8B]/20 bg-[#6B2D8B]/5">
+                                 <div className="flex items-center gap-3 mb-2">
+                                    <Users className="w-5 h-5 text-[#8B5CB8]"/>
+                                    <span className="text-[11px] font-bold uppercase tracking-widest text-[#8B5CB8]">Prospecção</span>
+                                 </div>
+                                 <p className="text-slate-300 text-sm font-light">Dani atendendo lead no WhatsApp e Instagram automaticamente — com handoff humano no clique.</p>
+                              </div>
+                           </div>
+                           <div className="space-y-4">
+                              <div className="p-4 rounded-xl border border-green-500/20 bg-green-500/5">
+                                 <div className="flex items-center gap-3 mb-2">
+                                    <BarChart4 className="w-5 h-5 text-green-400"/>
+                                    <span className="text-[11px] font-bold uppercase tracking-widest text-green-400">Performance</span>
+                                 </div>
+                                 <p className="text-slate-300 text-sm font-light">ROAS por campanha em tempo real — Pixel + Conversions API + atribuição via UTM por Sale.</p>
+                              </div>
+                              <div className="p-4 rounded-xl border border-red-500/20 bg-red-500/5">
+                                 <div className="flex items-center gap-3 mb-2">
+                                    <MessageCircle className="w-5 h-5 text-red-400"/>
+                                    <span className="text-[11px] font-bold uppercase tracking-widest text-red-400">Cockpit</span>
+                                 </div>
+                                 <p className="text-slate-300 text-sm font-light">Pulse mandando report diário de vendas e ROAS às 20h no meu Telegram — Donna agendando tudo às 14h.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div className="px-6 md:px-10 py-6 border-t border-white/5 bg-black/20">
+                           <p className="text-xs text-center text-slate-500 font-mono uppercase tracking-widest">&gt; O que roda aqui, roda no seu também — com SEU método, SEU time, SEU cliente.</p>
+                        </div>
+                     </div>
+                  </Reveal>
+
+                  <Reveal delay={300}>
+                     <p className="text-center text-sm md:text-base text-slate-400 font-light mt-10 max-w-3xl mx-auto">
+                        Nenhum outro programa de IA no Brasil mostra a infra rodando. <strong className="text-white">Eu mostro.</strong> Porque eu opero.
+                     </p>
+                  </Reveal>
+               </div>
+            </section>
+
+                        {/* --- SECTION 7: OFFER --- */}
             <section id="section-offer" className="py-24 px-6 lg:px-12 relative overflow-hidden bg-background border-y border-white/5 scroll-mt-28">
                <div className="absolute inset-0 bg-tech-grid opacity-30 pointer-events-none"></div>
                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
@@ -809,16 +968,17 @@ export default function App() {
 
                   <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mb-16">
                      <div className="glass-card bg-slate-900/60 p-10 border border-primary/20 rounded-3xl text-center shadow-[0_0_30px_rgba(197,165,114,0.1)] hover:-translate-y-2 transition-transform">
-                        <div className="text-6xl font-black text-primary mb-6 drop-shadow-md">4</div>
-                        <p className="text-slate-300 text-lg font-light">Módulos estruturados pra reprogramar sua forma de liderar</p>
+                        <div className="text-6xl font-black text-primary mb-6 drop-shadow-md">22</div>
+                        <p className="text-slate-300 text-lg font-light">Aulas em 4 módulos estratégicos — Diagnóstico → IA em você → IA no time → Implementação</p>
+                     </div>
+                     <div className="glass-card bg-slate-900/60 p-10 border-2 border-[#C5A572]/50 rounded-3xl text-center shadow-[0_0_40px_rgba(197,165,114,0.2)] hover:-translate-y-2 transition-transform relative">
+                        <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-[#C5A572] text-black text-[9px] font-black uppercase tracking-widest rounded-full">DIFERENCIAL ÚNICO</div>
+                        <div className="text-6xl font-black text-primary mb-6 drop-shadow-md">1:1</div>
+                        <p className="text-slate-300 text-lg font-light"><strong className="text-white">Sessão Estratégica 90min comigo</strong> — saindo com seu Plano de Implementação de IA por escrito, no mesmo dia</p>
                      </div>
                      <div className="glass-card bg-slate-900/60 p-10 border border-primary/20 rounded-3xl text-center shadow-[0_0_30px_rgba(197,165,114,0.1)] hover:-translate-y-2 transition-transform">
-                        <div className="text-6xl font-black text-primary mb-6 drop-shadow-md">12</div>
-                        <p className="text-slate-300 text-lg font-light">Aulas focadas em aplicação real para liderar gente + IA.gentes</p>
-                     </div>
-                     <div className="glass-card bg-slate-900/60 p-10 border border-primary/20 rounded-3xl text-center shadow-[0_0_30px_rgba(197,165,114,0.1)] hover:-translate-y-2 transition-transform">
-                        <div className="text-6xl font-black text-primary mb-6 drop-shadow-md">1</div>
-                        <p className="text-slate-300 text-lg font-light">Sessão de mentoria INDIVIDUAL estratégica pra ajustar sua liderança na era da IA</p>
+                        <div className="text-6xl font-black text-primary mb-6 drop-shadow-md">∞</div>
+                        <p className="text-slate-300 text-lg font-light"><strong className="text-white">Skills dos 18 Agentes</strong> + Playbooks PULSAR+H liberados pro seu negócio</p>
                      </div>
                   </div>
 
@@ -832,35 +992,41 @@ export default function App() {
                      <div className="flex flex-col md:flex-row items-center justify-between border-y border-white/10 py-12 mb-12 gap-8 relative">
                         <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-1 h-12 bg-green-500 rounded-full blur-sm"></div>
                         <div className="text-center md:text-left">
-                           <p className="text-slate-500 font-black uppercase tracking-widest text-xs mb-3">Investimento Único:</p>
-                           <p className="text-4xl md:text-6xl text-green-400 font-black tracking-tighter drop-shadow-[0_0_20px_rgba(34,197,94,0.4)]">R$ 297,00</p>
+                           <p className="text-slate-500 font-black uppercase tracking-widest text-xs mb-3">Valor real do pacote: <span className="line-through text-slate-600">R$ 4.688</span></p>
+                           <p className="text-[10px] uppercase tracking-widest text-[#C5A572] font-black mb-2">Seu investimento hoje:</p>
+                           <p className="text-3xl md:text-5xl text-green-400 font-black tracking-tighter drop-shadow-[0_0_20px_rgba(34,197,94,0.4)]">12x R$ 69,82</p>
+                           <p className="text-sm text-slate-400 font-light mt-2">ou R$ 697 à vista · PIX com 5% off</p>
                         </div>
                         <div className="text-center md:text-right">
                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#C5A572]/30 bg-[#C5A572]/5 mb-4">
                               <div className="w-2 h-2 rounded-full bg-[#C5A572] animate-pulse"></div>
                               <span className="text-[10px] font-black uppercase tracking-widest text-[#C5A572]">Lote de Abertura</span>
                            </div>
-                           <p className="text-slate-400 text-xs uppercase tracking-widest font-bold">Vagas limitadas por turma</p>
+                           <p className="text-slate-400 text-xs uppercase tracking-widest font-bold">Sessão 1:1 feita pessoalmente<br/>Vagas limitadas por mês</p>
                         </div>
                      </div>
 
                      <div className="bg-white/[0.03] rounded-2xl p-6 md:p-8 border border-white/5 mb-12 relative overflow-hidden group">
-                        <div className="absolute top-0 right-0 p-4 bg-green-500 text-black text-[12px] font-black uppercase tracking-widest rounded-bl-2xl shadow-xl z-20">Presente</div>
+                        <div className="absolute top-0 right-0 p-4 bg-green-500 text-black text-[12px] font-black uppercase tracking-widest rounded-bl-2xl shadow-xl z-20">Incluso</div>
                         <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-green-500/5 blur-[100px] rounded-full"></div>
-                        
+
                         <div className="relative z-10 text-center mb-10">
-                           <p className="text-primary font-black uppercase tracking-widest text-sm mb-4">Fazendo seu cadastro hoje você vai levar:</p>
+                           <p className="text-primary font-black uppercase tracking-widest text-sm mb-4">Tudo o que você recebe ao entrar:</p>
                            <h4 className="text-xl md:text-2xl font-black text-white uppercase tracking-tight mb-4 leading-tight">
-                              3 BÔNUS ESPECIAIS <br/>
-                              <span className="text-green-400 underline decoration-green-500/30 underline-offset-8">DE R$ 994 POR ZERO</span>
+                              O PACOTE COMPLETO <br/>
+                              <span className="text-green-400 underline decoration-green-500/30 underline-offset-8">R$ 4.688 POR R$ 697</span>
                            </h4>
                         </div>
 
                         <ul className="space-y-4 relative z-10">
                            {[
-                              { name: "Curso Liderança Humanizada Aplicada", price: "R$297" },
-                              { name: "Kit c/ 10 Ferramentas Práticas do Líder", price: "R$470" },
-                              { name: "PulsarH System Prompt", price: "R$227" }
+                              { name: "22 aulas gravadas em 4 módulos (~6h)", price: "R$1.997" },
+                              { name: "Sessão Estratégica 1:1 com Rodrigo (90min)", price: "R$1.997" },
+                              { name: "Plano de Implementação Personalizado (PDF)", price: "Incluso" },
+                              { name: "Comunidade PulsarH por 3 meses + aula semanal", price: "R$497" },
+                              { name: "Biblioteca de Skills dos 18 Agentes PulsarH", price: "R$497" },
+                              { name: "Biblioteca de Playbooks PULSAR+H", price: "R$197" },
+                              { name: "Garantia Cristal Clara de 7 dias", price: "Inestimável" }
                            ].map((bonus, i) => (
                               <li key={i} className="flex flex-col md:flex-row md:items-center justify-between p-5 bg-black/40 rounded-2xl border border-white/5 gap-4 group/item hover:border-green-500/20 transition-colors">
                                  <span className="text-slate-200 font-medium flex items-center gap-4">
@@ -876,7 +1042,12 @@ export default function App() {
                      </div>
 
                      <div className="mt-4">
-                        <RegistrationForm btnText="🔵 GARANTIR MINHA VAGA AGORA" />
+                        <RegistrationForm btnText="🎯 QUERO MEU PLANO DE IA" />
+                     </div>
+                     <div className="mt-6 text-center">
+                        <p className="text-[11px] text-slate-500 font-light max-w-lg mx-auto leading-relaxed">
+                           🛡️ <strong className="text-slate-300 uppercase tracking-wider text-[10px]">Garantia Cristal Clara:</strong> Se você entrou na Sessão, assistiu as 22 aulas e entregou o checklist — e mesmo assim não tiver clareza absoluta do plano — devolvo 100% em 7 dias. Sem perguntas.
+                        </p>
                      </div>
                   </div>
                </div>
@@ -952,8 +1123,8 @@ export default function App() {
                                     <Fingerprint className="w-6 h-6" />
                                  </div>
                                  <div>
-                                    <p className="text-white font-bold text-sm">Método L.H.A.</p>
-                                    <p className="text-[10px] text-primary uppercase tracking-wider">Criador Oficial</p>
+                                    <p className="text-white font-bold text-sm">Método PULSAR+H</p>
+                                    <p className="text-[10px] text-primary uppercase tracking-wider">Fundador PulsarH.AI</p>
                                  </div>
                               </div>
                            </div>
@@ -967,16 +1138,22 @@ export default function App() {
                         </h2>
                         <p className="text-primary font-bold tracking-wider uppercase text-sm mb-8 flex items-center gap-2">
                            <div className="w-8 h-[2px] bg-primary"></div>
-                           Mentor de Executivos
+                           Fundador da PulsarH.AI · Gestor da Era da IA
+                        </p>
+                        <p className="text-slate-300 text-lg leading-relaxed mb-4 font-light">
+                           <strong className="text-white font-bold">21 anos comandando operações bilionárias no corporativo.</strong> Estruturas com mais de 4.500 pessoas sob meu comando direto. Sala de diretoria, power plays, P&L de 10 dígitos.
+                        </p>
+                        <p className="text-slate-300 text-lg leading-relaxed mb-4 font-light">
+                           Em 2024 vi concorrentes menores crescerem mais rápido. Não era contratação. Não era capital. <strong className="text-white font-bold">Era método.</strong> Eles estavam pondo IA pra trabalhar <em>dentro</em> da operação — sem demitir uma pessoa.
                         </p>
                         <p className="text-slate-300 text-lg leading-relaxed mb-8 font-light">
-                           Ex-executivo da C&A por 21 anos, fundador do Instituto PulsarH e criador do Método L.H.A. (Liderança Humanizada Aplicada). Atua na formação de líderes preparados para sustentar resultados com consciência, consistência e autoridade no cenário real de 2026.
+                           Passei 6 meses estudando IA com obsessão e fundei a <strong className="text-white font-bold">PulsarH.AI</strong>. Hoje minha empresa roda com <strong className="text-[#C5A572] font-bold">2 funcionários humanos e 20 agentes de IA</strong> no War Room. ROI 3x acima da média. Margem blindada.
                         </p>
                         <ul className="space-y-6 mb-12">
                            {[
-                              "+3.700 líderes formados e treinados",
-                              "21 anos de experiência prática em liderança corporativa",
-                              "Criador do Método L.H.A., usado por líderes que não aceitam perder espaço para algoritmos, RH despreparado ou modismos"
+                              "21 anos de liderança corporativa — operações bilionárias, 4.500+ pessoas",
+                              "Fundador da PulsarH.AI — método PULSAR+H aplicado em operação própria",
+                              "Único programa no Brasil com Sessão Estratégica 1:1 dentro do SEU negócio"
                            ].map((item, i) => (
                               <li key={i} className="flex items-start gap-4">
                                  <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-1">
