@@ -481,6 +481,61 @@ export default function App() {
                </div>
             </section>
 
+            {/* --- SECTION 5: DOR-MARTELO (3 DORES PME) --- */}
+            <section className="relative py-20 px-6 lg:px-12 bg-[#070514] overflow-hidden">
+               <div className="max-w-6xl mx-auto relative z-10">
+                  <Reveal>
+                     <div className="text-center mb-14">
+                        <h2 className="text-2xl md:text-4xl font-heading font-black text-white uppercase tracking-tight leading-tight">
+                           Se você é pequeno ou médio empresário, <br className="hidden md:block"/>
+                           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572]">tenho 3 perguntas pra te fazer.</span>
+                        </h2>
+                     </div>
+                  </Reveal>
+
+                  <div className="grid md:grid-cols-3 gap-5 md:gap-6">
+                     {[
+                        {
+                           emoji: '🔥',
+                           title: '"Todo mundo fala de IA — ninguém fala do MEU negócio."',
+                           body: 'Você viu 50 vídeos sobre ChatGPT. Fez 3 cursos de IA. Ainda não sabe por onde começar no que importa: implementar IA dentro da SUA operação. Curso genérico te ensina teoria. Nenhum desenha o plano pro seu CNPJ, sua equipe, seu cliente.',
+                           color: '#EF4444'
+                        },
+                        {
+                           emoji: '⚡',
+                           title: '"Meu time já tá sobrecarregado. Não dá pra contratar mais."',
+                           body: 'Você sabe que precisa acelerar. Mas cada novo processo vira peso nas mesmas costas. Você não precisa de mais gente. Precisa de IA treinada pra trabalhar DO LADO da sua gente — não no lugar dela.',
+                           color: '#C5A572'
+                        },
+                        {
+                           emoji: '😰',
+                           title: '"Vou ficar pra trás. Meu concorrente tá entrando na IA antes de mim."',
+                           body: 'Você vê a indústria se mover e trava. Medo de errar, medo de perder dinheiro, medo de demitir. A verdade: em poucos meses não vai ser "vantagem competitiva ter IA". Vai ser "critério de sobrevivência" — igual site foi em 2005.',
+                           color: '#6B2D8B'
+                        }
+                     ].map((card, i) => (
+                        <Reveal key={i} delay={i * 120}>
+                           <div className="relative h-full p-6 md:p-7 rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur-md hover:border-white/20 transition-all group overflow-hidden">
+                              <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: `linear-gradient(90deg, transparent, ${card.color}, transparent)` }}></div>
+                              <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full blur-[80px] opacity-15 group-hover:opacity-30 transition-opacity" style={{ background: card.color }}></div>
+                              <div className="relative z-10">
+                                 <div className="text-4xl mb-4">{card.emoji}</div>
+                                 <h3 className="text-white font-bold text-base md:text-lg leading-snug mb-4">{card.title}</h3>
+                                 <p className="text-slate-400 text-sm font-light leading-relaxed">{card.body}</p>
+                              </div>
+                           </div>
+                        </Reveal>
+                     ))}
+                  </div>
+
+                  <Reveal delay={400}>
+                     <p className="text-center text-base md:text-lg text-slate-300 font-light italic mt-12 max-w-2xl mx-auto">
+                        Se bateu alguma dessas, você tá no lugar certo. <strong className="text-white not-italic">Continua rolando.</strong>
+                     </p>
+                  </Reveal>
+               </div>
+            </section>
+
             {/* --- NEW SECTION: CHEGA DE IMERSAO PRA 300 PESSOAS --- */}
             <section className="relative py-24 px-6 lg:px-12 bg-[#070514] overflow-hidden">
                <div className="max-w-5xl mx-auto relative z-10">
@@ -946,16 +1001,16 @@ export default function App() {
                   <Reveal>
                      <div className="glass-card bg-primary/5 border border-primary/20 p-8 md:p-12 rounded-3xl h-full flex flex-col shadow-[0_0_30px_rgba(197,165,114,0.05)]">
                         <h3 className="text-xl md:text-3xl font-heading font-black text-white uppercase mb-8 flex items-center gap-4">
-                           Isso aqui é pra você que:
+                           ✅ A Imersão H.AI É pra você se...
                         </h3>
                         <ul className="space-y-6 flex-1 mb-10">
                            {[
-                              "Já lidera pessoas e sente que está ficando para trás na tecnologia",
-                              "Sabe que está sobrecarregado e precisa escalar resultado sem trabalhar mais",
-                              "Quer ser promovido, reconhecido e disputado — não apenas “mais um gestor”",
-                              "Percebe que IA não é opcional… mas não sabe como implementar no time",
-                              "É empresário e precisa aprender a liderar Gente + IA.gentes enquanto forma novos líderes dentro da operação",
-                              "Atua em RH e precisa preparar líderes e times para a nova era da liderança"
+                              "Você é pequeno ou médio empresário (até ~50 funcionários)",
+                              "Tem um negócio operando (faturando) e quer escalar sem dobrar folha",
+                              "Entende que IA exige método — não é só plugar ChatGPT",
+                              "Valoriza seu time e quer amplificar cada pessoa (não demitir)",
+                              "Topa pôr a mão na massa no próprio negócio",
+                              "Entende que R$697 é investimento, não despesa"
                            ].map((item, i) => (
                               <li key={i} className="flex items-start gap-4">
                                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0 mt-1" />
@@ -964,9 +1019,9 @@ export default function App() {
                            ))}
                         </ul>
                         <div className="mt-auto border-t border-white/10 pt-8">
-                           <p className="text-slate-400 font-light italic mb-6">Se você leu isso e pensou: <br/> <strong className="text-white text-lg block mt-2 not-italic">“é exatamente isso que está acontecendo comigo”</strong></p>
+                           <p className="text-slate-400 font-light italic mb-6">Se você leu isso e pensou: <br/> <strong className="text-white text-lg block mt-2 not-italic">"é exatamente o meu momento"</strong></p>
                            <button onClick={scrollToOffer} className="btn-neon w-full px-6 py-4 text-xs md:text-sm tracking-widest flex items-center justify-center gap-2">
-                              🔵 ENTÃO CLIQUE E ENTRE AGORA
+                              🎯 QUERO MEU PLANO DE IA
                            </button>
                         </div>
                      </div>
@@ -975,22 +1030,16 @@ export default function App() {
                   <Reveal delay={100}>
                      <div className="glass-card bg-red-900/10 border border-red-500/20 p-8 md:p-12 rounded-3xl h-full flex flex-col shadow-[0_0_30px_rgba(239,68,68,0.05)]">
                         <h3 className="text-xl md:text-2xl font-heading font-black text-white uppercase mb-8 flex items-center gap-4">
-                           Isso NÃO é pra você que:
+                           ❌ NÃO é pra você se...
                         </h3>
                         <ul className="space-y-6 flex-1 mb-10">
                            {[
-                              "Quer só “entender IA” por curiosidade",
-                              "Acha que liderança é só motivar equipe",
-                              "Não está disposto a mudar como trabalha",
-                              "Procura mais um curso pra consumir e esquecer",
-                              "Fica brincando de fazer pergunta no ChatGPT e acha que já “domina IA”",
-                              "Grita com o time, pressiona resultado e chama isso de liderança",
-                              "Acredita que delegar tecnologia pro TI resolve o problema",
-                              "Se esconde atrás de excesso de reunião porque não sabe estruturar operação",
-                              "Vive ocupado o dia inteiro… mas não consegue escalar resultado",
-                              "Acha que produtividade individual resolve problema de time",
-                              "Espera a empresa “se adaptar primeiro” pra depois agir",
-                              "Já percebeu que está ficando para trás… e mesmo assim não faz nada"
+                              "Você é funcionário CLT sem poder de decisão sobre implementação",
+                              'Você tá procurando "IA milagre" que fatura sozinha enquanto você dorme',
+                              "Você não tem tempo de dedicar à Sessão Estratégica 1:1",
+                              "Seu plano é demitir gente e trocar por bots",
+                              "Você quer alguém fazer por você (aí é mentoria, não imersão)",
+                              "Você não tem R$697 disponível — sem problema, volta quando tiver"
                            ].map((item, i) => (
                               <li key={i} className="flex items-start gap-4">
                                  <X className="w-6 h-6 text-red-500 shrink-0 mt-1" />
@@ -999,12 +1048,105 @@ export default function App() {
                            ))}
                         </ul>
                         <div className="mt-auto border-t border-white/10 pt-8">
-                           <p className="text-slate-400 font-light italic mb-4">Se você quer conforto…</p>
+                           <p className="text-slate-400 font-light italic mb-4">Se você quer atalho fácil…</p>
                            <p className="text-white font-black text-2xl uppercase tracking-widest mb-8">Sai agora.</p>
                            <button onClick={scrollToOffer} className="btn-neon w-full px-6 py-4 text-xs md:text-sm tracking-widest flex items-center justify-center gap-2">
-                              SE QUER DOMÍNIO, ENTRE AGORA
+                              SE TOPA O JOGO DE VERDADE, ENTRA
                            </button>
                         </div>
+                     </div>
+                  </Reveal>
+               </div>
+            </section>
+
+            {/* --- SECTION 8: SESSÃO ESTRATÉGICA 1:1 (DIFERENCIAL ÚNICO) --- */}
+            <section className="relative py-24 px-6 lg:px-12 bg-[#070514] overflow-hidden border-b border-white/5">
+               <div className="absolute -top-40 right-0 w-[600px] h-[600px] bg-[#C5A572]/10 blur-[140px] rounded-full pointer-events-none"></div>
+               <div className="absolute -bottom-40 left-0 w-[600px] h-[600px] bg-[#6B2D8B]/10 blur-[140px] rounded-full pointer-events-none"></div>
+
+               <div className="max-w-6xl mx-auto relative z-10">
+                  <Reveal>
+                     <div className="text-center mb-14">
+                        <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-[#C5A572]/30 bg-[#C5A572]/5 mb-6">
+                           <Crown className="w-4 h-4 text-[#C5A572]" />
+                           <span className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] text-[#C5A572]">Diferencial único no mercado BR</span>
+                        </div>
+                        <h2 className="text-2xl md:text-5xl font-heading font-black text-white uppercase tracking-tighter leading-[0.95] mb-6">
+                           O que NENHUM curso, NENHUMA mentoria <br className="hidden md:block"/>
+                           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] via-[#8B5CB8] to-[#C5A572]">e NENHUM guru te entrega.</span>
+                        </h2>
+                        <p className="text-xl md:text-2xl text-white font-black mt-8">
+                           90 minutos. 1 a 1. <span className="text-[#C5A572]">Eu, você e seu negócio.</span>
+                        </p>
+                     </div>
+                  </Reveal>
+
+                  <Reveal delay={150}>
+                     <p className="text-center text-base md:text-lg text-slate-300 font-light max-w-3xl mx-auto mb-12 leading-relaxed">
+                        Depois que você assiste as 22 aulas, agenda comigo uma <strong className="text-white">Sessão Estratégica Individual.</strong> Aqui o jogo muda: sai da teoria, entra no SEU CNPJ.
+                     </p>
+                  </Reveal>
+
+                  {/* Timeline dos 90 min */}
+                  <Reveal delay={250}>
+                     <div className="mb-14">
+                        <h3 className="text-xs md:text-sm font-black uppercase tracking-[0.3em] text-[#C5A572]/80 text-center mb-8">O que acontece nos 90 minutos:</h3>
+                        <div className="space-y-3 max-w-4xl mx-auto">
+                           {[
+                              { time: '0-10min', task: 'Revisão do seu diagnóstico (você preenche um template antes da call)', color: '#6B2D8B' },
+                              { time: '10-40min', task: 'Mapeamento dos 3 processos prioritários pra IA entrar no seu negócio primeiro — baseado no SEU faturamento, equipe, dores', color: '#8B5CB8' },
+                              { time: '40-70min', task: 'Desenho ao vivo do seu Roadmap de Implementação de 90 dias — semana por semana', color: '#C5A572' },
+                              { time: '70-85min', task: 'Te mostro onde faz sentido ir além (Mentoria ou Formação, se servir) + suas perguntas', color: '#E8D5B0' },
+                              { time: '85-90min', task: 'Você sai com o Plano de Implementação Personalizado PDF — com seu nome, seu CNPJ, seus processos', color: '#FFD700' }
+                           ].map((row, i) => (
+                              <div key={i} className="flex items-center gap-4 md:gap-6 p-4 md:p-5 rounded-xl border border-white/5 bg-white/[0.03] backdrop-blur-sm hover:border-[#C5A572]/20 transition-all">
+                                 <div className="shrink-0 w-20 md:w-28 text-right">
+                                    <span className="text-xs md:text-sm font-black uppercase tracking-wider" style={{ color: row.color }}>{row.time}</span>
+                                 </div>
+                                 <div className="w-[1px] h-8 bg-white/10"></div>
+                                 <p className="text-slate-300 text-sm md:text-base font-light leading-relaxed flex-1">{row.task}</p>
+                              </div>
+                           ))}
+                        </div>
+                     </div>
+                  </Reveal>
+
+                  {/* O que você sai levando */}
+                  <Reveal delay={400}>
+                     <div className="max-w-4xl mx-auto p-6 md:p-10 rounded-3xl border-2 border-[#C5A572]/30 bg-gradient-to-br from-[#0a0f25] to-[#070514] shadow-[0_0_60px_rgba(197,165,114,0.15)]">
+                        <h3 className="text-xs md:text-sm font-black uppercase tracking-[0.3em] text-[#C5A572] mb-6 text-center">No final, você leva:</h3>
+                        <ul className="space-y-4">
+                           {[
+                              'PDF personalizado de implementação de IA pro seu negócio',
+                              '3 processos identificados e priorizados',
+                              'Roadmap de 90 dias (o que fazer na semana 1, 2-4, 5-8, 9-12)',
+                              'KPIs pra medir se tá funcionando',
+                              'Acesso ao meu WhatsApp por 7 dias após a sessão pra dúvidas de execução'
+                           ].map((item, i) => (
+                              <li key={i} className="flex items-start gap-3">
+                                 <CheckCircle2 className="w-5 h-5 text-[#C5A572] shrink-0 mt-0.5" />
+                                 <span className="text-slate-200 text-base font-light leading-relaxed">{item}</span>
+                              </li>
+                           ))}
+                        </ul>
+                        <div className="mt-8 pt-6 border-t border-white/10">
+                           <p className="text-slate-300 italic font-light text-base md:text-lg leading-relaxed text-center">
+                              "O que eu faria no seu lugar, semana por semana. Por escrito. Com seu nome em cima."
+                           </p>
+                           <p className="text-[#C5A572] text-xs uppercase tracking-widest font-bold text-center mt-3">— Rodrigo, durante a Sessão</p>
+                        </div>
+                     </div>
+                  </Reveal>
+
+                  {/* Escassez */}
+                  <Reveal delay={600}>
+                     <div className="mt-10 text-center">
+                        <p className="text-sm md:text-base text-slate-400 font-light italic">
+                           <strong className="text-[#C5A572] not-italic">Vagas limitadas por mês</strong> — porque eu faço pessoalmente. Sem delegação.
+                        </p>
+                        <button onClick={scrollToOffer} className="btn-neon mt-6 py-4 px-8 text-sm md:text-base tracking-widest flex items-center justify-center gap-3 mx-auto">
+                           🎯 QUERO MINHA SESSÃO 1:1
+                        </button>
                      </div>
                   </Reveal>
                </div>
