@@ -869,7 +869,7 @@ export default function App() {
                         <h3 className="text-2xl md:text-5xl font-heading font-black text-white text-center mb-12 uppercase tracking-tight">Aqui você vai <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572]">aprender...</span></h3>
                         
                         <div className="space-y-4">
-                           <AccordionItem title="MÓDULO 1 — O PONTO DE RUPTURA (O CHÃO SUMIU)" icon={<Eye className="w-5 h-5" />}>
+                           <AccordionItem title="MÓDULO 1 — DIAGNÓSTICO DO GESTOR (VOCÊ PRIMEIRO)" icon={<Eye className="w-5 h-5" />}>
                               <div className="space-y-8">
                                  <div>
                                     <p className="text-white text-lg font-light italic">Desconstruir a falsa sensação de segurança do líder tradicional e injetar a urgência da ação imediata.</p>
@@ -891,7 +891,7 @@ export default function App() {
                               </div>
                            </AccordionItem>
 
-                           <AccordionItem title="MÓDULO 2 — AS 5 DIMENSÕES DO COMANDO (QUEM FICA E QUEM SAI)" icon={<Layers className="w-5 h-5" />}>
+                           <AccordionItem title="MÓDULO 2 — IA COMO EXTENSÃO DO GESTOR (IA EM VOCÊ)" icon={<Layers className="w-5 h-5" />}>
                               <div className="space-y-8">
                                  <div>
                                     <p className="text-white text-lg font-light italic">Instalar o mapa de competências da elite e identificar as vulnerabilidades ocultas na sua liderança.</p>
@@ -921,7 +921,7 @@ export default function App() {
                               </div>
                            </AccordionItem>
 
-                           <AccordionItem title="MÓDULO 3 — IMPACTO IMEDIATO: 7 DIAS PARA A VIRADA" icon={<Zap className="w-5 h-5" />}>
+                           <AccordionItem title="MÓDULO 3 — IA NA EQUIPE (IA EM TODOS DO SEU TIME)" icon={<Zap className="w-5 h-5" />}>
                               <div className="space-y-8">
                                  <div>
                                     <p className="text-white text-lg font-light italic">Implementação prática e ROI instantâneo. Três ferramentas prontas para rodar na sua operação na mesma semana.</p>
@@ -943,7 +943,7 @@ export default function App() {
                               </div>
                            </AccordionItem>
 
-                           <AccordionItem title="MÓDULO 4 — O SISTEMA OPERACIONAL PULSARH" icon={<Cpu className="w-5 h-5" />}>
+                           <AccordionItem title="MÓDULO 4 — IMPLEMENTAÇÃO NO NEGÓCIO (ROADMAP 90 DIAS)" icon={<Cpu className="w-5 h-5" />}>
                               <div className="space-y-8">
                                  <div>
                                     <p className="text-white text-lg font-light italic">A visão do todo. O mapa completo para sair da imersão e entrar na jornada de mestre da nova era.</p>
@@ -1227,6 +1227,93 @@ export default function App() {
                      <p className="text-center text-sm md:text-base text-slate-400 font-light mt-10 max-w-3xl mx-auto">
                         Nenhum outro programa de IA no Brasil mostra a infra rodando. <strong className="text-white">Eu mostro.</strong> Porque eu opero.
                      </p>
+                  </Reveal>
+               </div>
+            </section>
+
+            {/* --- SECTION 10: CONTRA-NARRATIVA (anti-Startse/G-bot/Olist) --- */}
+            <section className="relative py-24 px-6 lg:px-12 bg-[#070514] overflow-hidden border-b border-white/5">
+               <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-red-500/5 blur-[140px] rounded-full pointer-events-none"></div>
+               <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#C5A572]/10 blur-[140px] rounded-full pointer-events-none"></div>
+
+               <div className="max-w-6xl mx-auto relative z-10">
+                  <Reveal>
+                     <div className="text-center mb-14">
+                        <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-red-500/30 bg-red-500/5 mb-6">
+                           <ShieldAlert className="w-4 h-4 text-red-500" />
+                           <span className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] text-red-400">Aviso importante</span>
+                        </div>
+                        <h2 className="text-2xl md:text-5xl font-heading font-black text-white uppercase tracking-tighter leading-[0.95] mb-6">
+                           A indústria da IA te vende uma mentira. <br className="hidden md:block"/>
+                           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572]">Eu vou te contar a verdade.</span>
+                        </h2>
+                     </div>
+                  </Reveal>
+
+                  <Reveal delay={150}>
+                     <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-[#0a0f25] to-[#070514] overflow-hidden backdrop-blur-md">
+                        {/* Header */}
+                        <div className="grid md:grid-cols-2 border-b border-white/10">
+                           <div className="p-5 md:p-6 border-b md:border-b-0 md:border-r border-white/10 bg-red-500/5">
+                              <div className="flex items-center gap-3">
+                                 <XCircle className="w-5 h-5 text-red-500 shrink-0" />
+                                 <span className="text-xs md:text-sm font-black uppercase tracking-widest text-red-400">❌ A indústria da IA diz...</span>
+                              </div>
+                           </div>
+                           <div className="p-5 md:p-6 bg-[#C5A572]/5">
+                              <div className="flex items-center gap-3">
+                                 <CheckCircle2 className="w-5 h-5 text-[#C5A572] shrink-0" />
+                                 <span className="text-xs md:text-sm font-black uppercase tracking-widest text-[#C5A572]">✅ A Imersão H.AI entrega...</span>
+                              </div>
+                           </div>
+                        </div>
+
+                        {/* 4 pares de comparação */}
+                        {[
+                           {
+                              them: '"Tenha um time de agentes IA que trabalham 24/7 — demita o seu"',
+                              us: 'Tenha um time de gente potencializada por IA que rende 3x — sem demitir uma pessoa'
+                           },
+                           {
+                              them: '"De R$240k pra R$10k — economize trocando humano por IA"',
+                              us: 'De R$240k pra R$720k — escale com o mesmo time, só amplificando cada um com IA'
+                           },
+                           {
+                              them: '"Automação plug-and-play — é só plugar e esquecer"',
+                              us: 'Método PulsarH.AI — IA personalizada pro SEU processo, feita com quem conhece seu negócio: você'
+                           },
+                           {
+                              them: '"Compra a ferramenta, vê vídeos no YouTube, vira especialista"',
+                              us: 'Assiste 22 aulas dirigidas + 1 Sessão 1:1 dentro do seu CNPJ — sai do mesmo dia com um plano'
+                           }
+                        ].map((row, i, arr) => (
+                           <div key={i} className={`grid md:grid-cols-2 ${i < arr.length - 1 ? 'border-b border-white/5' : ''}`}>
+                              <div className="p-5 md:p-6 border-b md:border-b-0 md:border-r border-white/5 bg-red-500/[0.02] hover:bg-red-500/[0.04] transition-colors">
+                                 <p className="text-slate-400 text-sm md:text-base font-light italic leading-relaxed line-through decoration-red-500/30 decoration-[1px]">{row.them}</p>
+                              </div>
+                              <div className="p-5 md:p-6 bg-[#C5A572]/[0.02] hover:bg-[#C5A572]/[0.05] transition-colors">
+                                 <p className="text-slate-200 text-sm md:text-base font-medium leading-relaxed">{row.us}</p>
+                              </div>
+                           </div>
+                        ))}
+                     </div>
+                  </Reveal>
+
+                  {/* Manifesto final */}
+                  <Reveal delay={400}>
+                     <div className="mt-12 text-center max-w-3xl mx-auto">
+                        <div className="space-y-4 p-6 md:p-10 rounded-3xl border-2 border-[#C5A572]/30 bg-gradient-to-br from-[#0a0f25] to-[#070514] shadow-[0_0_60px_rgba(197,165,114,0.15)]">
+                           <p className="text-lg md:text-2xl text-white font-bold leading-snug">
+                              A indústria quer que você <span className="text-red-400">demita pra lucrar.</span>
+                           </p>
+                           <p className="text-lg md:text-2xl text-white font-bold leading-snug">
+                              Eu quero que você <span className="text-[#C5A572]">amplifique pra crescer.</span>
+                           </p>
+                           <p className="text-base md:text-lg text-slate-300 font-light italic pt-4 border-t border-white/10">
+                              São duas visões de mundo diferentes. <strong className="text-white not-italic">Escolhe a sua.</strong>
+                           </p>
+                        </div>
+                     </div>
                   </Reveal>
                </div>
             </section>
