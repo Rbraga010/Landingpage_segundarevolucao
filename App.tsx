@@ -204,7 +204,7 @@ export default function App() {
                      <Reveal delay={100}>
                         <div className="inline-flex items-center gap-3 px-4 py-1.5 glass-pill mb-8 border-[#C5A572]/20 bg-[#C5A572]/5 backdrop-blur-sm">
                            <div className="w-1.5 h-1.5 rounded-full bg-[#C5A572] animate-pulse shadow-[0_0_10px_rgba(197,165,114,0.8)]"></div>
-                           <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-[#C5A572] drop-shadow-md">PARA EMPRESÁRIOS QUE JÁ CONSTRUÍRAM ALGO REAL</span>
+                           <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-[#C5A572] drop-shadow-md">PARA QUEM JÁ CONSTRUIU ALGO REAL</span>
                         </div>
                      </Reveal>
 
@@ -225,13 +225,13 @@ export default function App() {
                         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
                            <button onClick={scrollToOffer} className="relative overflow-hidden group px-8 py-4 rounded-xl md:rounded-2xl border border-[#C5A572]/40 bg-[#C5A572]/10 hover:bg-[#C5A572]/20 backdrop-blur-xl transition-all shadow-[0_0_30px_rgba(197,165,114,0.15)] hover:shadow-[0_0_50px_rgba(197,165,114,0.4)] flex items-center justify-center gap-3">
                               <span className="text-[#C5A572] group-hover:text-[#E8D5B0] font-bold uppercase tracking-widest text-xs md:text-sm relative z-10 transition-colors drop-shadow-md">
-                                 QUERO ESCALAR COM CONTROLE — R$ 697
+                                 QUERO O COMANDO DE VOLTA
                               </span>
                               <div className="absolute inset-0 bg-gradient-to-r from-[#C5A572]/0 via-[#C5A572]/20 to-[#C5A572]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform -translate-x-full group-hover:translate-x-full"></div>
                            </button>
                            <div className="text-xs md:text-sm text-slate-400 font-light">
-                              <div>ou 12x de <strong className="text-white font-bold">R$ 69,82</strong> sem juros</div>
-                              <div className="text-[10px] uppercase tracking-widest text-slate-500 mt-1">Garantia 7 dias · Acesso imediato</div>
+                              <div>Acesso imediato · Garantia de 7 dias</div>
+                              <div className="text-[10px] uppercase tracking-widest text-slate-500 mt-1">100% online · Lote de abertura</div>
                            </div>
                         </div>
                      </Reveal>
@@ -247,7 +247,7 @@ export default function App() {
                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#6B2D8B]/10 blur-[120px] rounded-full pointer-events-none"></div>
                <div className="max-w-4xl mx-auto relative z-10">
                   <Reveal>
-                     <p className="text-[#C5A572]/70 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4 text-center">RECONHECIMENTO</p>
+                     <p className="text-[#C5A572]/70 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4 text-center">VOCÊ VAI SE VER AQUI</p>
                      <h2 className="text-2xl md:text-4xl font-heading font-black text-white uppercase tracking-tight leading-tight text-center mb-10">
                         Você construiu uma empresa que <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572]">depende de você.</span>
                      </h2>
@@ -276,7 +276,7 @@ export default function App() {
                <div className="max-w-6xl mx-auto relative z-10">
                   <Reveal>
                      <div className="text-center mb-12">
-                        <p className="text-[#C5A572]/70 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4">OS 4 OBSTÁCULOS</p>
+                        <p className="text-[#C5A572]/70 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4">O QUE TRAVA SEU PRÓXIMO SALTO</p>
                         <h2 className="text-2xl md:text-4xl font-heading font-black text-white uppercase tracking-tight leading-tight mb-4">
                            4 obstáculos que limitam o crescimento de <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572]">empresário bom.</span>
                         </h2>
@@ -345,7 +345,7 @@ export default function App() {
                <div className="max-w-5xl mx-auto relative z-10">
                   <Reveal>
                      <div className="text-center mb-12">
-                        <p className="text-[#C5A572]/70 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4">QUEBRA DE CRENÇA</p>
+                        <p className="text-[#C5A572]/70 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4">A VERDADE QUE NINGUÉM TE CONTOU</p>
                         <h2 className="text-2xl md:text-4xl font-heading font-black text-white uppercase tracking-tight leading-tight mb-6">
                            Empresário comum tenta fazer mais.<br/>
                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572]">Empresário que cresce agora faz diferente.</span>
@@ -401,7 +401,7 @@ export default function App() {
                <div className="max-w-6xl mx-auto relative z-10">
                   <Reveal>
                      <div className="text-center mb-14">
-                        <p className="text-[#C5A572]/70 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4">VISÃO DE FUTURO</p>
+                        <p className="text-[#C5A572]/70 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4">A SEMANA QUE VOCÊ MERECE</p>
                         <h2 className="text-2xl md:text-4xl font-heading font-black text-white uppercase tracking-tight leading-tight mb-4">
                            Como sua semana fica quando<br/>
                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572]">o sistema certo está rodando.</span>
@@ -473,7 +473,7 @@ export default function App() {
                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#6B2D8B]/10 blur-[120px] rounded-full pointer-events-none"></div>
                <div className="max-w-4xl mx-auto relative z-10 text-center">
                   <Reveal>
-                     <p className="text-[#C5A572] font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4">A SOLUÇÃO</p>
+                     <p className="text-[#C5A572] font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4">O CAMINHO PRA SAIR DO LOOP</p>
                      <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-black text-white uppercase tracking-tighter leading-tight mb-8">
                         Foi exatamente pra isso que criamos a<br/>
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] via-[#8B5CB8] to-[#C5A572]">Imersão H.AI.</span>
@@ -500,7 +500,7 @@ export default function App() {
                <div className="max-w-6xl mx-auto relative z-10">
                   <Reveal>
                      <div className="text-center mb-14">
-                        <p className="text-[#C5A572]/70 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4">O MECANISMO</p>
+                        <p className="text-[#C5A572]/70 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4">POR QUE FUNCIONA QUANDO O RESTO FALHA</p>
                         <h2 className="text-2xl md:text-4xl font-heading font-black text-white uppercase tracking-tighter leading-tight mb-4">
                            Você não precisa virar técnico.<br/>
                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572]">Precisa dominar 3 coisas.</span>
@@ -558,7 +558,7 @@ export default function App() {
                <div className="max-w-6xl mx-auto relative z-10">
                   <Reveal>
                      <div className="text-center mb-14">
-                        <p className="text-[#C5A572]/70 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4">A PROVA</p>
+                        <p className="text-[#C5A572]/70 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4">DONOS QUE JÁ VIRARAM A CHAVE</p>
                         <h2 className="text-2xl md:text-4xl font-heading font-black text-white uppercase tracking-tighter leading-tight mb-4">
                            Não é teoria.<br/>
                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572]">Já está rodando em operações reais.</span>
@@ -634,7 +634,7 @@ export default function App() {
                <div className="max-w-5xl mx-auto relative z-10">
                   <Reveal>
                      <div className="text-center mb-14">
-                        <p className="text-[#C5A572]/70 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4">O QUE VOCÊ DOMINA AO SAIR</p>
+                        <p className="text-[#C5A572]/70 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4">O ARSENAL QUE SAI COM VOCÊ</p>
                         <h2 className="text-2xl md:text-4xl font-heading font-black text-white uppercase tracking-tighter leading-tight mb-4">
                            5 conquistas concretas.<br/>
                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572]">Aplicação imediata.</span>
@@ -719,7 +719,7 @@ export default function App() {
                <div className="max-w-4xl mx-auto relative z-10">
                   <Reveal>
                      <div className="text-center mb-12">
-                        <p className="text-[#C5A572]/70 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4">QUEBRA DE OBJEÇÕES</p>
+                        <p className="text-[#C5A572]/70 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4">O QUE VOCÊ ESTÁ PENSANDO AGORA</p>
                         <h2 className="text-2xl md:text-4xl font-heading font-black text-white uppercase tracking-tighter leading-tight mb-4">
                            {`"`}Mas Rodrigo...{`"`}<br/>
                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572]">as 4 dúvidas que todo empresário tem antes de entrar.</span>
@@ -852,7 +852,7 @@ export default function App() {
 
                         <div>
                            <p className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-green-400 mb-3 flex items-center gap-2">
-                              🛡️ Garantia de 7 dias · Risco zero pra você
+                              🛡️ RISCO ZERO PRO SEU LADO
                            </p>
                            <h3 className="text-2xl md:text-4xl font-heading font-black text-white uppercase tracking-tight leading-tight mb-6">
                               Você entra hoje.<br className="hidden md:block"/>
@@ -901,7 +901,7 @@ export default function App() {
                      <div className="text-center mb-10">
                         <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-red-500/30 bg-red-500/5 mb-6">
                            <Flame className="w-4 h-4 text-red-400" />
-                           <span className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] text-red-400">Urgência real</span>
+                           <span className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] text-red-400">A JANELA ESTÁ FECHANDO</span>
                         </div>
                         <h2 className="text-2xl md:text-4xl font-heading font-black text-white uppercase tracking-tighter leading-tight mb-4">
                            Lote de abertura.<br/>
@@ -960,7 +960,7 @@ export default function App() {
 
                <div className="max-w-4xl mx-auto relative z-10">
                   <Reveal>
-                     <p className="text-[#C5A572] font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-6 text-center">A DECISÃO</p>
+                     <p className="text-[#C5A572] font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-6 text-center">A DECISÃO É SUA</p>
                      <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-black text-white text-center uppercase tracking-tighter leading-[0.95] mb-10">
                         O mercado já mudou.<br className="hidden md:block"/>
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572]">A questão é se sua empresa acompanha.</span>
