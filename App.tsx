@@ -77,6 +77,34 @@ const Reveal: React.FC<{ children: React.ReactNode; className?: string; delay?: 
    );
 };
 
+// CTA contextual reutilizavel — copy conectada ao tema da secao, scroll suave pro #section-offer
+const SectionCTA: React.FC<{
+   label: string;
+   subtext?: string;
+   delay?: number;
+}> = ({ label, subtext, delay = 0 }) => {
+   const scrollToOffer = () => document.getElementById('section-offer')?.scrollIntoView({ behavior: 'smooth' });
+   return (
+      <div className="mt-12 flex flex-col items-center gap-3" style={{ transitionDelay: `${delay}ms` }}>
+         <button
+            onClick={scrollToOffer}
+            className="group relative overflow-hidden inline-flex items-center gap-3 px-7 md:px-9 py-3.5 md:py-4 rounded-2xl border border-[#C5A572]/40 bg-gradient-to-r from-[#C5A572]/10 via-[#C5A572]/15 to-[#C5A572]/10 hover:from-[#C5A572]/20 hover:to-[#C5A572]/20 backdrop-blur-xl transition-all shadow-[0_0_30px_rgba(197,165,114,0.15)] hover:shadow-[0_0_50px_rgba(197,165,114,0.4)]"
+         >
+            <span className="text-[#C5A572] group-hover:text-[#E8D5B0] font-bold uppercase tracking-widest text-[11px] md:text-sm transition-colors">
+               {label}
+            </span>
+            <ArrowRight className="w-4 h-4 text-[#C5A572] group-hover:translate-x-1 transition-transform" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#C5A572]/0 via-[#C5A572]/20 to-[#C5A572]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform -translate-x-full group-hover:translate-x-full"></div>
+         </button>
+         {subtext && (
+            <p className="text-[10px] md:text-[11px] text-slate-500 uppercase tracking-[0.2em] font-bold">
+               {subtext}
+            </p>
+         )}
+      </div>
+   );
+};
+
 const AccordionItem: React.FC<{ title: string; children: React.ReactNode; icon?: React.ReactNode }> = ({ title, children, icon }) => {
    const [isOpen, setIsOpen] = useState(false);
    return (
@@ -266,6 +294,10 @@ export default function App() {
                         </p>
                      </div>
                   </Reveal>
+
+                  <Reveal delay={300}>
+                     <SectionCTA label="QUERO PARAR DE SER O GARGALO" subtext="Imersão H.AI · Lote de abertura" />
+                  </Reveal>
                </div>
             </section>
 
@@ -335,6 +367,10 @@ export default function App() {
                         </p>
                      </div>
                   </Reveal>
+
+                  <Reveal delay={650}>
+                     <SectionCTA label="QUERO DESTRAVAR ESSES 4 OBSTÁCULOS" subtext="Aplicação prática em 90 dias" />
+                  </Reveal>
                </div>
             </section>
 
@@ -390,6 +426,10 @@ export default function App() {
                         ))}
                      </div>
                   </Reveal>
+
+                  <Reveal delay={400}>
+                     <SectionCTA label="QUERO ESTAR DO LADO DIREITO DA TABELA" subtext="Empresário que escala em 2026" />
+                  </Reveal>
                </div>
             </section>
 
@@ -435,6 +475,10 @@ export default function App() {
                         Isso não é projeção.<br/>
                         <strong className="text-white not-italic text-lg md:text-xl">É o que acontece quando o método certo entra na operação.</strong>
                      </p>
+                  </Reveal>
+
+                  <Reveal delay={650}>
+                     <SectionCTA label="QUERO ESSA SEMANA NA MINHA EMPRESA" subtext="Sistema rodando em 90 dias" />
                   </Reveal>
                </div>
             </section>
@@ -489,6 +533,10 @@ export default function App() {
                            Em <span className="text-[#C5A572]">90 dias</span> você opera diferente.
                         </p>
                      </div>
+                  </Reveal>
+
+                  <Reveal delay={400}>
+                     <SectionCTA label="QUERO ENTRAR NA IMERSÃO H.AI" subtext="Acesso imediato · Garantia 7 dias" />
                   </Reveal>
                </div>
             </section>
@@ -547,6 +595,10 @@ export default function App() {
                         </Reveal>
                      ))}
                   </div>
+
+                  <Reveal delay={400}>
+                     <SectionCTA label="QUERO DOMINAR ESSAS 3 COISAS" subtext="Liderança Híbrida · IA Aplicada · PULSAR+H" />
+                  </Reveal>
                </div>
             </section>
 
@@ -624,6 +676,10 @@ export default function App() {
                         </div>
                      </Reveal>
                   </div>
+
+                  <Reveal delay={600}>
+                     <SectionCTA label="QUERO SER O PRÓXIMO CASE DESSA LISTA" subtext="+200 donos já aplicaram" />
+                  </Reveal>
                </div>
             </section>
 
@@ -689,7 +745,7 @@ export default function App() {
 
                   {/* Bônus */}
                   <Reveal delay={500}>
-                     <div className="mt-12 p-6 md:p-10 rounded-3xl border-2 border-[#C5A572]/30 bg-gradient-to-br from-[#0a0f25] to-[#070514] shadow-[0_0_60px_rgba(197,165,114,0.15)]">
+                     <div className="mt-12 p-6 md:p-10 rounded-3xl border-2 border-[#C5A572]/30 bg-gradient-to-br from-[#0a0f25] to-[#070514] shadow-[0_0_60px_rgba(197,165,114,0.15)] mb-12">
                         <p className="text-[#C5A572] font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-6 text-center">Bônus inclusos</p>
                         <ul className="grid md:grid-cols-2 gap-5 max-w-3xl mx-auto">
                            {[
@@ -708,6 +764,10 @@ export default function App() {
                            ))}
                         </ul>
                      </div>
+                  </Reveal>
+
+                  <Reveal delay={700}>
+                     <SectionCTA label="QUERO ESSE ARSENAL TRABALHANDO COMIGO" subtext="5 módulos + 4 bônus · R$ 697" />
                   </Reveal>
                </div>
             </section>
@@ -742,90 +802,187 @@ export default function App() {
                         </Reveal>
                      ))}
                   </div>
+
+                  <Reveal delay={500}>
+                     <SectionCTA label="DÚVIDAS RESPONDIDAS — QUERO ENTRAR" subtext="Risco zero · Garantia de 7 dias" />
+                  </Reveal>
                </div>
             </section>
 
             {/* ============================================================== */}
-            {/* BLOCO 11 — OFERTA                                                */}
+            {/* BLOCO 11 — OFERTA (redesign light · destaque entregaveis+bonus)  */}
             {/* ============================================================== */}
-            <section id="section-offer" className="py-24 px-6 lg:px-12 relative overflow-hidden bg-background border-y border-white/5 scroll-mt-28">
-               <div className="absolute inset-0 bg-tech-grid opacity-30 pointer-events-none"></div>
-               <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
+            <section id="section-offer" className="py-20 md:py-28 px-6 lg:px-12 relative overflow-hidden scroll-mt-28" style={{ background: 'linear-gradient(180deg, #FAF6EE 0%, #FFFFFF 50%, #F5EFE3 100%)' }}>
 
-               <div className="max-w-7xl mx-auto relative z-10">
-                  <div className="text-center mb-16">
-                     <p className="text-primary font-bold uppercase tracking-[0.3em] text-sm md:text-base mb-6 animate-pulse">LOTE DE ABERTURA · ACESSO IMEDIATO</p>
-                     <h2 className="text-2xl md:text-5xl lg:text-6xl font-heading font-black text-white tracking-tight uppercase mb-8 leading-tight">
-                        Tudo que está incluso<br className="hidden md:block"/>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] to-[#C5A572]">na sua entrada hoje.</span>
-                     </h2>
-                  </div>
+               {/* Brand accent ornaments (suaves no fundo claro) */}
+               <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C5A572]/40 to-transparent"></div>
+               <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#6B2D8B]/40 to-transparent"></div>
+               <div className="absolute top-20 right-10 w-72 h-72 bg-[#C5A572]/15 blur-[120px] rounded-full pointer-events-none"></div>
+               <div className="absolute bottom-20 left-10 w-72 h-72 bg-[#6B2D8B]/10 blur-[120px] rounded-full pointer-events-none"></div>
 
-                  <div className="max-w-4xl mx-auto glass-card border-2 border-green-500/50 bg-gradient-to-br from-slate-900 to-[#0a0f25] p-6 md:p-10 rounded-2xl md:rounded-3xl relative shadow-[0_0_120px_rgba(34,197,94,0.25)]">
+               <div className="max-w-6xl mx-auto relative z-10">
 
-                     <div className="bg-white/[0.03] rounded-2xl p-6 md:p-8 border border-white/5 mb-12 relative overflow-hidden">
-                        <div className="absolute top-0 right-0 p-3 md:p-4 bg-green-500 text-black text-[10px] md:text-[12px] font-black uppercase tracking-widest rounded-bl-2xl shadow-xl z-20">Incluso</div>
-                        <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-green-500/5 blur-[100px] rounded-full"></div>
-
-                        <div className="relative z-10 text-center mb-10 mt-4">
-                           <p className="text-primary font-black uppercase tracking-widest text-sm mb-4">O pacote completo</p>
-                           <h4 className="text-xl md:text-2xl font-black text-white uppercase tracking-tight mb-4 leading-tight">
-                              <span className="text-slate-500 line-through">R$ 6.691</span> POR<br/>
-                              <span className="text-green-400 underline decoration-green-500/30 underline-offset-8">R$ 697</span>
-                           </h4>
+                  {/* HEADER — eyebrow + headline + sub */}
+                  <Reveal>
+                     <div className="text-center mb-14 md:mb-16">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#C5A572]/40 bg-[#C5A572]/10 mb-6">
+                           <Flame className="w-3.5 h-3.5 text-[#C5A572]" />
+                           <span className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.25em] text-[#8A6F3D]">Lote de abertura · acesso imediato</span>
                         </div>
-
-                        <ul className="space-y-4 relative z-10">
-                           {[
-                              { name: "5 módulos completos do método H.AI", price: "R$ 1.997" },
-                              { name: "Sessão 1:1 com Rodrigo Braga", price: "R$ 2.500" },
-                              { name: "Acesso ao War Room ao vivo (3 meses)", price: "R$ 997" },
-                              { name: "Implementação da sua 1ª IA.gente em 7 dias", price: "R$ 1.197" },
-                              { name: "Comunidade fechada de empresários", price: "Incluso" }
-                           ].map((bonus, i) => (
-                              <li key={i} className="flex flex-col md:flex-row md:items-center justify-between p-5 bg-black/40 rounded-2xl border border-white/5 gap-4 hover:border-green-500/20 transition-colors">
-                                 <span className="text-slate-200 font-medium flex items-center gap-4">
-                                    <div className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center border border-green-500/20 shrink-0">
-                                       <CheckCircle2 className="text-green-500 w-5 h-5" />
-                                    </div>
-                                    {bonus.name}
-                                 </span>
-                                 <span className="text-slate-600 line-through font-mono text-sm shrink-0">{bonus.price}</span>
-                              </li>
-                           ))}
-                           <li className="flex flex-col md:flex-row md:items-center justify-between p-5 bg-green-500/10 rounded-2xl border border-green-500/30 gap-4">
-                              <span className="text-white font-black uppercase tracking-wider flex items-center gap-4">
-                                 <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center border border-green-500/40 shrink-0">
-                                    <Trophy className="text-green-400 w-5 h-5" />
-                                 </div>
-                                 Valor total real
-                              </span>
-                              <span className="text-green-400 font-black text-xl md:text-2xl tracking-tight shrink-0">R$ 6.691</span>
-                           </li>
-                        </ul>
-                     </div>
-
-                     {/* Caixa de oferta */}
-                     <div className="text-center mb-10 p-6 md:p-8 rounded-2xl border-2 border-[#C5A572]/30 bg-gradient-to-br from-[#0a0f25] to-[#070514]">
-                        <p className="text-[10px] md:text-xs uppercase tracking-widest text-[#C5A572] font-black mb-3">Hoje, no lote de abertura:</p>
-                        <p className="text-4xl md:text-6xl text-green-400 font-black tracking-tighter drop-shadow-[0_0_20px_rgba(34,197,94,0.4)] mb-2">R$ 697</p>
-                        <p className="text-base md:text-lg text-white font-bold mb-3">à vista</p>
-                        <p className="text-sm md:text-base text-slate-400 font-light mb-4">ou <strong className="text-white">12x de R$ 69,82</strong> sem juros</p>
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-red-500/30 bg-red-500/5">
-                           <Flame className="w-3.5 h-3.5 text-red-400" />
-                           <span className="text-[10px] md:text-xs font-black uppercase tracking-widest text-red-400">Lote limitado · próximo lote sobe pra R$ 1.197</span>
-                        </div>
-                     </div>
-
-                     <div className="mt-4">
-                        <RegistrationForm btnText="QUERO MINHA VAGA NO LOTE DE ABERTURA" />
-                     </div>
-                     <div className="mt-6 text-center">
-                        <p className="text-[11px] text-slate-500 font-light max-w-lg mx-auto leading-relaxed">
-                           🛡️ <strong className="text-slate-300 uppercase tracking-wider text-[10px]">Garantia de 7 dias:</strong> Você entra, acessa todos os módulos, participa da Sessão 1:1, conhece o War Room. Se não for pra você, devolvemos 100%. Risco zero.
+                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-black tracking-tight uppercase mb-5 leading-[1.05]" style={{ color: '#0a0f25' }}>
+                           Tudo que está incluso<br className="hidden md:block"/>
+                           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2D8B] via-[#8B5CB8] to-[#C5A572]">na sua entrada hoje.</span>
+                        </h2>
+                        <p className="text-base md:text-lg font-light max-w-2xl mx-auto leading-relaxed" style={{ color: '#475569' }}>
+                           Pacote completo do método. Sem letra miúda. <strong className="font-bold" style={{ color: '#0a0f25' }}>Acesso imediato após pagamento.</strong>
                         </p>
                      </div>
+                  </Reveal>
+
+                  {/* GRID — entregaveis (esquerda) + bonus (direita) */}
+                  <div className="grid lg:grid-cols-5 gap-6 md:gap-8 mb-12">
+
+                     {/* COLUNA ENTREGÁVEIS — 3/5 */}
+                     <Reveal delay={100} className="lg:col-span-3">
+                        <div className="h-full rounded-3xl p-7 md:p-9 bg-white border border-[#0a0f25]/10 shadow-[0_8px_40px_rgba(10,15,37,0.08)] relative overflow-hidden">
+                           <div className="absolute top-0 right-0 px-4 py-2 bg-gradient-to-r from-[#6B2D8B] to-[#8B5CB8] text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-bl-2xl shadow-lg z-10">Você leva pra casa</div>
+
+                           <div className="mb-7 mt-3">
+                              <p className="text-[11px] font-black uppercase tracking-[0.25em] mb-2" style={{ color: '#6B2D8B' }}>5 entregáveis concretos</p>
+                              <h3 className="text-xl md:text-2xl font-black tracking-tight leading-tight" style={{ color: '#0a0f25' }}>
+                                 O método aplicado, do diagnóstico à implementação.
+                              </h3>
+                           </div>
+
+                           <ul className="space-y-3.5">
+                              {[
+                                 { icon: BookOpen, name: "5 módulos completos do método H.AI", price: "R$ 1.997", note: "22 aulas · acesso vitalício" },
+                                 { icon: Crown, name: "Sessão 1:1 com Rodrigo Braga", price: "R$ 2.500", note: "Diagnóstico ao vivo da sua operação" },
+                                 { icon: Users, name: "War Room ao vivo (3 meses)", price: "R$ 997", note: "Encontros mensais com empresários aplicando" },
+                                 { icon: Cpu, name: "Implementação da 1ª IA.gente em 7 dias", price: "R$ 1.197", note: "Entrega prática · não promessa" },
+                                 { icon: Network, name: "Comunidade fechada de empresários", price: "Incluso", note: "Rede com mesmo nível de jogo" }
+                              ].map((item, i) => (
+                                 <li key={i} className="group flex items-start gap-4 p-4 md:p-5 rounded-2xl border bg-gradient-to-br from-white to-[#FAF6EE] hover:shadow-[0_4px_20px_rgba(107,45,139,0.12)] transition-all" style={{ borderColor: 'rgba(10,15,37,0.08)' }}>
+                                    <div className="w-11 h-11 md:w-12 md:h-12 rounded-xl flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 transition-transform" style={{ background: 'linear-gradient(135deg, #6B2D8B 0%, #C5A572 100%)' }}>
+                                       <item.icon className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                                    </div>
+                                    <div className="flex-1 min-w-0">
+                                       <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 mb-1">
+                                          <p className="font-bold text-sm md:text-base leading-snug" style={{ color: '#0a0f25' }}>{item.name}</p>
+                                          <span className="text-xs md:text-sm font-mono shrink-0 line-through" style={{ color: '#94a3b8' }}>{item.price}</span>
+                                       </div>
+                                       <p className="text-xs md:text-sm font-light leading-relaxed" style={{ color: '#64748b' }}>{item.note}</p>
+                                    </div>
+                                 </li>
+                              ))}
+                           </ul>
+
+                           <div className="mt-6 flex items-center justify-between p-4 md:p-5 rounded-2xl border-2" style={{ borderColor: '#C5A572', background: 'linear-gradient(135deg, rgba(197,165,114,0.08) 0%, rgba(107,45,139,0.05) 100%)' }}>
+                              <div className="flex items-center gap-3">
+                                 <Trophy className="w-5 h-5" style={{ color: '#8A6F3D' }} />
+                                 <span className="text-sm md:text-base font-black uppercase tracking-wider" style={{ color: '#0a0f25' }}>Valor total real</span>
+                              </div>
+                              <span className="font-black text-xl md:text-2xl tracking-tight" style={{ color: '#8A6F3D' }}>R$ 6.691</span>
+                           </div>
+                        </div>
+                     </Reveal>
+
+                     {/* COLUNA BONUS — 2/5 */}
+                     <Reveal delay={200} className="lg:col-span-2">
+                        <div className="h-full rounded-3xl p-7 md:p-9 bg-gradient-to-br from-[#FAF6EE] to-white border-2 shadow-[0_8px_40px_rgba(197,165,114,0.18)] relative overflow-hidden" style={{ borderColor: '#C5A572' }}>
+                           <div className="absolute -top-12 -right-12 w-40 h-40 bg-[#C5A572]/15 blur-[60px] rounded-full pointer-events-none"></div>
+                           <div className="absolute top-0 right-0 px-4 py-2 bg-gradient-to-r from-[#C5A572] to-[#E8D5B0] text-[#0a0f25] text-[10px] font-black uppercase tracking-[0.2em] rounded-bl-2xl shadow-lg z-10 flex items-center gap-1.5">
+                              <Gift className="w-3 h-3" /> Bônus
+                           </div>
+
+                           <div className="relative z-10 mb-6 mt-3">
+                              <p className="text-[11px] font-black uppercase tracking-[0.25em] mb-2" style={{ color: '#8A6F3D' }}>Exclusivos do lote de abertura</p>
+                              <h3 className="text-xl md:text-2xl font-black tracking-tight leading-tight" style={{ color: '#0a0f25' }}>
+                                 4 vantagens só pra quem entra agora.
+                              </h3>
+                           </div>
+
+                           <ul className="space-y-3.5 relative z-10">
+                              {[
+                                 { icon: '🎯', title: 'Diagnóstico 1:1 ao vivo', body: 'Rodrigo na sua operação, sua dor real' },
+                                 { icon: '🚪', title: 'War Room ao vivo (3 meses)', body: 'Encontros mensais · empresários aplicando' },
+                                 { icon: '🤖', title: 'IA.gente operacional em 7 dias', body: 'Implementação real, não tutorial' },
+                                 { icon: '👥', title: 'Comunidade fechada', body: 'Rede com empresário do seu nível' }
+                              ].map((b, i) => (
+                                 <li key={i} className="flex items-start gap-3 p-3.5 rounded-2xl bg-white/80 border" style={{ borderColor: 'rgba(197,165,114,0.25)' }}>
+                                    <span className="text-2xl shrink-0 mt-0.5">{b.icon}</span>
+                                    <div className="flex-1 min-w-0">
+                                       <p className="font-bold text-sm md:text-base leading-snug mb-0.5" style={{ color: '#0a0f25' }}>{b.title}</p>
+                                       <p className="text-xs md:text-sm font-light leading-relaxed" style={{ color: '#64748b' }}>{b.body}</p>
+                                    </div>
+                                 </li>
+                              ))}
+                           </ul>
+                        </div>
+                     </Reveal>
                   </div>
+
+                  {/* CAIXA DE PREÇO + CTA — destaque máximo */}
+                  <Reveal delay={300}>
+                     <div className="max-w-3xl mx-auto rounded-3xl p-8 md:p-12 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0a0f25 0%, #1a1248 50%, #0a0f25 100%)', boxShadow: '0 20px 80px rgba(107,45,139,0.35)' }}>
+                        <div className="absolute inset-0 bg-tech-grid opacity-15 pointer-events-none"></div>
+                        <div className="absolute -top-20 -right-20 w-64 h-64 bg-[#C5A572]/25 blur-[100px] rounded-full pointer-events-none"></div>
+                        <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-[#6B2D8B]/25 blur-[100px] rounded-full pointer-events-none"></div>
+
+                        <div className="relative z-10 text-center mb-8">
+                           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#C5A572]/40 bg-[#C5A572]/10 mb-5">
+                              <div className="w-1.5 h-1.5 rounded-full bg-[#C5A572] animate-pulse"></div>
+                              <span className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.25em] text-[#C5A572]">Investimento de hoje</span>
+                           </div>
+                           <div className="flex items-baseline justify-center gap-3 mb-2 flex-wrap">
+                              <span className="text-2xl md:text-3xl font-bold text-slate-500 line-through decoration-red-500/40 decoration-2">R$ 6.691</span>
+                              <span className="text-[10px] md:text-xs font-black uppercase tracking-widest text-slate-400">por apenas</span>
+                           </div>
+                           <p className="text-5xl md:text-7xl font-black tracking-tighter mb-2" style={{ color: '#C5A572', textShadow: '0 0 30px rgba(197,165,114,0.5)' }}>
+                              R$ 697
+                           </p>
+                           <p className="text-base md:text-lg text-white font-bold mb-1">à vista</p>
+                           <p className="text-sm md:text-base text-slate-300 font-light">ou <strong className="text-white">12x de R$ 69,82</strong> sem juros</p>
+                           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-red-500/40 bg-red-500/10 mt-5">
+                              <Flame className="w-3.5 h-3.5 text-red-400" />
+                              <span className="text-[10px] md:text-xs font-black uppercase tracking-widest text-red-300">Próximo lote sobe pra R$ 1.197</span>
+                           </div>
+                        </div>
+
+                        <div className="relative z-10">
+                           <RegistrationForm btnText="QUERO MINHA VAGA NO LOTE DE ABERTURA" />
+                        </div>
+
+                        <div className="relative z-10 mt-6 grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
+                           <div className="flex items-center gap-2.5 p-3 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
+                              <div className="w-8 h-8 rounded-full bg-green-500/15 border border-green-500/30 flex items-center justify-center shrink-0">
+                                 <Check className="w-4 h-4 text-green-400" />
+                              </div>
+                              <span className="text-[11px] md:text-xs font-bold uppercase tracking-wide text-slate-200">Garantia 7 dias</span>
+                           </div>
+                           <div className="flex items-center gap-2.5 p-3 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
+                              <div className="w-8 h-8 rounded-full bg-[#C5A572]/15 border border-[#C5A572]/30 flex items-center justify-center shrink-0">
+                                 <Zap className="w-4 h-4 text-[#C5A572]" />
+                              </div>
+                              <span className="text-[11px] md:text-xs font-bold uppercase tracking-wide text-slate-200">Acesso imediato</span>
+                           </div>
+                           <div className="flex items-center gap-2.5 p-3 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
+                              <div className="w-8 h-8 rounded-full bg-[#6B2D8B]/20 border border-[#6B2D8B]/40 flex items-center justify-center shrink-0">
+                                 <Lock className="w-4 h-4 text-[#8B5CB8]" />
+                              </div>
+                              <span className="text-[11px] md:text-xs font-bold uppercase tracking-wide text-slate-200">Pagamento seguro</span>
+                           </div>
+                        </div>
+                     </div>
+                  </Reveal>
+
+                  {/* Garantia rodapé — pequeno selo abaixo */}
+                  <Reveal delay={450}>
+                     <p className="text-center text-xs md:text-sm font-light max-w-xl mx-auto mt-8 leading-relaxed" style={{ color: '#475569' }}>
+                        🛡️ <strong className="font-bold uppercase tracking-wider text-[11px] md:text-xs" style={{ color: '#0a0f25' }}>Risco zero:</strong> 7 dias pra acessar tudo, fazer a Sessão 1:1, entrar no War Room. Se não for pra você, devolvemos 100% do valor pago.
+                     </p>
+                  </Reveal>
+
                </div>
             </section>
 
@@ -887,6 +1044,10 @@ export default function App() {
 
                      </div>
                   </Reveal>
+
+                  <Reveal delay={300}>
+                     <SectionCTA label="ACEITO O RISCO ZERO — QUERO COMEÇAR" subtext="7 dias pra testar tudo · Devolução 100%" />
+                  </Reveal>
                </div>
             </section>
 
@@ -947,6 +1108,10 @@ export default function App() {
                         Quando essas 12 vagas esgotarem, o lote de abertura encerra.<br/>
                         <strong className="text-white not-italic">Próximo lote sobe automaticamente.</strong>
                      </p>
+                  </Reveal>
+
+                  <Reveal delay={650}>
+                     <SectionCTA label="QUERO GARANTIR UMA DAS 12 VAGAS" subtext="Lote de abertura · R$ 697 · 12x sem juros" />
                   </Reveal>
                </div>
             </section>
